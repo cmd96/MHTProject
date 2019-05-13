@@ -1,15 +1,13 @@
-package  Project.MileSton;
+package  MileSton;
+
+import Project.exception.ProjectExeption;
+import com.sun.org.apache.xpath.internal.operations.String;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-
-import Project.exception.ProjectExeption;
-import com.sun.org.apache.bcel.internal.generic.Select;
-import com.sun.org.apache.xpath.internal.operations.String;
-import jdk.nashorn.internal.objects.annotations.Where;
 
 public class MileSton {
 
