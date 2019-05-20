@@ -40,7 +40,7 @@ public class MileSton {
     }
     public MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
 //        qwery thart retun the reqwest mileson
-        java.lang.String found_mile= "Select * from Project.MileSton.MileSton WHERE MileStonID = "+mile_num;
+        java.lang.String found_mile= "Select * from MileSton WHERE MileStonID = "+mile_num;
         ResultSet rs;
         try {
 

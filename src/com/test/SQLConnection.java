@@ -2,50 +2,80 @@ package com.test;
 //package com.microsoft;
 //public class ConnectionSQL
 
-import java.awt.*;
-import java.net.URI;
-import java.sql.*;
+import Project.MileSton.MileSton;
+import Project.db.handling.MileStonDBHandling;
+import Project.exception.ProjectExeption;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SQLConnection {
 
-    public static void main(String[] args) {
-
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=FinalProject;integratedSecurity=true;";
+    public static void main(String[] args) throws ProjectExeption, SQLException {
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
-            String SQL = "SELECT * FROM Users";
-            ResultSet rs = stmt.executeQuery(SQL);
+            MileSton trying = MileSton.get_MileSton(con, 16);
+//            trying.set_ProjectID(55555);
+            trying.set_MileStonID(MileSton.create_Mile_Id());
+            trying.set_ResponsiboleWriterId(555555);
+            System.out.println(trying.get_DateToEnd());
 
-            // Iterate through the data in the result set and display it.
-            while (rs.next()) {
-                System.out.println(rs.getString("UserName") + " " + rs.getString("Password"));
-            }
+            String sql;
+            sql = "INSERT INTO MileStons values(";
+//            sql += "ID" +8 + ",";
+            sql += 1 + ", ";
+            sql += 11 + ", ";
+            sql += 1 + ", ";
+            sql += 1+ ", ";
+            sql += 1 +",";
+            sql += String.format("%d", 10-10-2010)+",";
+            sql += String.format("%d", 10-10-2010)+",";
+            sql += String.format("%d", 10-10-2010)+",";
+            sql += String.format("%d", 10-10-2010)+")";
+
+            stmt.executeUpdate(sql);
+            MileStonDBHandling.Update_MileSton(con,trying);
+            MileStonDBHandling.insert(con,trying);
+            MileStonDBHandling.delete(con,trying.get_MileStonID());
+            MileStonDBHandling.Copy_MileSton(con,trying.get_MileStonID());
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new ProjectExeption("failed to update mileston", e);
         }
-        try {
-            Desktop desktop = java.awt.Desktop.getDesktop();
-            URI oURL = new URI("http://localhost:8000/index.jsp");
-            desktop.browse(oURL);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//            trying.set_MileStonID(MileSton.create_Mile_Id());
+//            trying.set_ProjectID(345);
+//            System.out.println(trying.get_MileStonID());
+//            MileStonDBHandling.delete(con,11);
+//            MileStonDBHandling.Update_MileSton(con,trying);
+//            String sql = "DELETE * FROM MileSton WHERE MileStonID = " + trying.get_MileStonID();
+
+////            MileStonDBHandling.delete(con, 18 );
+//            MileStonDBHandling.Update_MileSton( con, trying);
+        //            String SQL = "SELECT * FROM Users";
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 }
 
+//
+//             Iterate through the data in the result set and display it.
+//            while (rs.next()) {
+//                System.out.println(rs.getString("UserName") + " " + rs.getString("Password"));
+//            }
+//
+//            print(trying);
 
-
-
-
-
-
-
-
-
-
-
-
-
+//        }
+//        try {
+//            Desktop desktop = java.awt.Desktop.getDesktop();
+//            URI oURL = new URI("http://localhost:8000/index.jsp");
+//            desktop.browse(oURL);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 
 ////// package com.microsoft;

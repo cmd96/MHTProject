@@ -1,11 +1,12 @@
 package  Project.MileSton;
 
+import Project.exception.ProjectExeption;
+
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-import java.lang.String;
-import Project.exception.ProjectExeption;
 
 public class MileSton {
 
@@ -39,7 +40,7 @@ public class MileSton {
         return NumOfMile;
     }
         public MileSton() {
-       // super();
+        super();
     }
 
 
@@ -53,6 +54,11 @@ public class MileSton {
         this.ProjectID = ProjectID;
     }
 
+
+    public void set_MileStonID(int MileStonID) {
+        this.MileStonID = MileStonID;
+    }
+
     public int get_MileStonID() {
         return MileStonID;
     }
@@ -60,6 +66,7 @@ public class MileSton {
 //    public void set_MileStonID(int MileStonID) {
 //        this.MileStonID = MileStonID;
 //    }
+
     public int get_ProjectManagmentID() {
         return ProjectManagmentID;
     }
@@ -95,9 +102,7 @@ public class MileSton {
     public Date get_DateToEnd() {
         return DateToEnd;
     }
-// Don't let todo set in Date To End
     public void set_DateToEnd(Date DateToEnd) {
-
         this.DateToEnd = DateToEnd;
     }
 
@@ -106,59 +111,60 @@ public class MileSton {
     }
 
     public void set_DateDone(Date DateDone) {
-        this.DateToEnd = DateDone;
+        this.DateDone = DateDone;
     }
 
     public Date get_DatePlan() {
         return DatePlan;
     }
 
-    public static MileSton  get_MileSton(Connection con, int mile_num) throws ProjectExeption {
-//        qwery thart retun the reqwest mileson
-
-        String sql;
-//        String sql;
-        MileSton mile = null;
-
-        sql = "SELECT ProjectID, MileStonID, ProjectManagmentID, ResponsiboleWriterId, TDescription, DateStart, DateToEnd , DatePlan " +
-                "FROM MileSton MileSton " +
-                "WHERE MileStonID = " + "mile_num";
-
-//        try {
-//        MileSton found_mile=
-//                            SELECT *
-//                            FROM Project.MileSton.MileSton;
-//                            WHERE MileStonID=mile_num
-//
-//
-//            Statement stmt = con.createStatement();
-//            stmt.executeUpdate(found_mile);
-            try {
-
-                Statement stmt = con.createStatement();
-                MileSton rs = (MileSton) stmt.executeQuery(sql);
-//                rs.next();
-                mile.set_ProjectID(rs.get_ProjectID());
-//                mile.set_MileStonID(rs.get_MileStonID());
-                mile.set_ProjectManagmentID(rs.get_ProjectManagmentID());
-                mile.set_ResponsiboleWriterId(rs.get_ResponsiboleWriterId());
-                mile.set_TDescription(rs.get_TDescription());
-                mile.set_DateStart(rs.get_DateStart());
-                mile.set_DateToEnd(rs.get_DateToEnd());
-                mile.set_DateDone(rs.get_DateDone());
-//                mile.set_DatePlan(rs.get_DatePlan(9));
-                return mile;
-
-            }
-            catch (SQLException e) {
-                throw new ProjectExeption("query failed", e);
-
-            }
-//        return found_mile;
-        }
-
+    public void set_DatePlan(Date DatePlan) {
+        this.DatePlan = DatePlan;
+    }
+    public void print(MileSton mileSton){
+        System.out.println("projectID:" +get_ProjectID());
+        System.out.println("Mile ID:"+ get_MileStonID());
+        System.out.println("Project Manager Id"+ get_ProjectManagmentID());
+        System.out.println("Responsibity Write Id"+ get_ResponsiboleWriterId());
+        System.out.println("Desctiption"+ get_TDescription());
+        System.out.println("Daate Start"+ get_DateStart());
+        System.out.println("Date to end"+ get_DateToEnd());
+        System.out.println("Date Plan"+ get_DatePlan());
+        System.out.println("Date Done" +get_DateDone());
 
     }
+
+
+//I CHECK IT !!!!!
+    public static MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
+//        qwery that retrun the mileson
+        String sql;
+        MileSton mile = new MileSton();
+        sql = "SELECT * FROM MileStons " +
+                "WHERE ID ="+  mile_num;
+        try {
+
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                mile.set_ProjectID(rs.getInt("ProjectID"));
+                mile.set_MileStonID(rs.getInt("ID"));
+                mile.set_ProjectManagmentID(rs.getInt("ProjectManagerId"));
+                mile.set_ResponsiboleWriterId(rs.getInt("ResponsiboleWriterId"));
+                mile.set_TDescription(rs.getString("Description"));
+                mile.set_DateStart(rs.getDate("DateStart"));
+                mile.set_DateToEnd(rs.getDate("DateToEnd"));
+                mile.set_DatePlan(rs.getDate("DatePlan"));
+                mile.set_DateDone(rs.getDate("DateDone"));
+                }
+            return mile;
+        }
+        catch (SQLException e) {
+            throw new ProjectExeption(" failed to get mileSton", e);
+
+        }
+    }
+}
 
 
 
