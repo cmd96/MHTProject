@@ -4,7 +4,10 @@ import Project.MileSton.MileSton;
 import Project.db.managers.MileStonManager;
 import Project.exception.ProjectExeption;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class MileStonDBHandling implements MileStonManager {
@@ -19,10 +22,11 @@ public class MileStonDBHandling implements MileStonManager {
 //                mileSton.get_ProjectManagmentID()+ mileSton.get_ResponsiboleWriterId()+
 //                mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
 //                mileSton.get_DatePlan()+mileSton.get_DateDone();
-        sql="INSERT INTO MileStons (MileStonID,ProjectManagmentID,ResponsiboleWriterId,TDescription,DateStart,DateToEnd,DatePlan,DateDone) values "+ mileSton.get_MileStonID()+
-                mileSton.get_ProjectManagmentID()+ mileSton.get_ResponsiboleWriterId()+
-                mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
-                mileSton.get_DatePlan()+mileSton.get_DateDone();
+        int demo=mileSton.get_MileStonID();
+//        Date d= DateFormat('2002-02-02');
+//        sql= "INSERT INTO MileStons(ID,ProjectId,ProjectManagerId) VALUES"+(mileSton.get_MileStonID(),mileSton.get_ProjectID(),mileSton.get_ProjectManagmentID());
+//        sql= "INSERT INTO MileStons (ID) VALUES" +("22");
+        sql= "INSERT INTO MileStons (ProjectId) ׂׂVALUES "+(mileSton.get_ProjectManagmentID() );
         try {
             Statement stmt = con.createStatement();
             stmt.executeQuery(sql);

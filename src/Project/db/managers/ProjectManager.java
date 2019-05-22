@@ -17,7 +17,7 @@ public interface  ProjectManager {
         static void Copy_Project(Connection con, int mileston_num) throws ProjectExeption {
         }
 
-        static void delete_Project(Connection con, int mile_num) throws ProjectExeption {
+        static void delete_Project(Connection con, int Project_num) throws ProjectExeption {
         }
 //    Client query (Connection con, long id) throws ProjectExeption;
 //    Client[] queryAllClients(Connection con);

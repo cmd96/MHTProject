@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/handling/MileStonDBHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/Project/db/handling/MileStonDBHandling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/managers/MileStonManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/Project/db/managers/MileStonManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/SQLConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/SQLConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MileSton/MileSton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MileSton/MileSton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tester/Creat_Projects/Create_Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/handling/MileStonDBHandling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/handling/ProjectDBHandling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/managers/ProjectManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/test/SQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/SQLConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,18 +48,19 @@
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.260" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5449" />
+          <entry key="java" value="6514" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5447" />
-          <entry key="SQL" value="2" />
+          <entry key="JAVA" value="6504" />
+          <entry key="SQL" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="453">
-              <caret line="138" column="93" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
+              <caret line="138" column="93" lean-forward="true" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#create_Mile_Id#0;class#MileSton#0" />
@@ -99,11 +97,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="128">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="74" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#delete#0;class#MileStonDBHandling#0" />
                 <element signature="method#history_DateToEnd#0;class#MileStonDBHandling#0" />
                 <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
               </folding>
@@ -114,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MileSton/MileSton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="272">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="method#get_MileSton#0;class#MileSton#0" />
               </folding>
@@ -123,18 +120,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="281">
+              <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
                 <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
                 <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-                <element signature="method#delete_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-                <element signature="e#521#589#0" />
               </folding>
             </state>
           </provider>
@@ -143,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="68">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insert#0;class#ProjectDBHandling#0" />
@@ -168,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creat_Projects/Create_Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="884">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getProject#0;class#Create_Project#0" />
@@ -182,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="175">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -226,7 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>a</find>
       <find>input</find>
       <find>s-layout__content</find>
       <find>overlay</find>
@@ -256,6 +250,7 @@
       <find>get_mil</find>
       <find>getNumsOfMiles</find>
       <find>NumsOfMiles</find>
+      <find>Project</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -288,12 +283,12 @@
         <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
         <option value="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" />
         <option value="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" />
-        <option value="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" />
         <option value="$PROJECT_DIR$/src/MileSton/MileSton.java" />
-        <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
         <option value="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" />
-        <option value="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" />
         <option value="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" />
+        <option value="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" />
+        <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
+        <option value="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" />
       </list>
     </option>
   </component>
@@ -327,6 +322,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Tester" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Tester" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,18 +362,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Tester" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Tester" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -770,6 +765,7 @@
       <workItem from="1557760810494" duration="28201000" />
       <workItem from="1558446805239" duration="6121000" />
       <workItem from="1558537510119" duration="4509000" />
+      <workItem from="1558545851791" duration="8986000" />
     </task>
     <servers />
   </component>
@@ -782,13 +778,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132680000" />
+    <option name="totallyTimeSpent" value="141666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.2181208" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" sideWeight="0.502439" side_tool="true" weight="0.20738254" />
       <window_info id="Image Layers" order="3" />
@@ -799,7 +795,7 @@
       <window_info id="DB Browser" order="8" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7657718" weight="0.34042552" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7657718" visible="true" weight="0.34042552" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39858156" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -833,28 +829,46 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java</url>
-          <line>12</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/test/SQLConnection.java</url>
-          <line>20</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/test/SQLConnection.java</url>
-          <line>21</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java</url>
-          <line>20</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/test/SQLConnection.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/test/SQLConnection.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/test/SQLConnection.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -966,8 +980,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creat_Projects/Create_Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getProject#0;class#Create_Project#0" />
+            <element signature="method#get_project_flow#0;class#Create_Project#0" />
           </folding>
         </state>
       </provider>
@@ -993,7 +1026,7 @@
     <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
-          <caret line="138" column="93" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
+          <caret line="138" column="93" lean-forward="true" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#create_Mile_Id#0;class#MileSton#0" />
@@ -1005,57 +1038,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Creat_Projects/Create_Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getProject#0;class#Create_Project#0" />
-            <element signature="method#get_project_flow#0;class#Create_Project#0" />
+            <element signature="method#insert#0;class#ProjectDBHandling#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MileSton/MileSton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="method#get_MileSton#0;class#MileSton#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#delete_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="e#521#589#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="175">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1064,24 +1071,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="128">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="74" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#delete#0;class#MileStonDBHandling#0" />
             <element signature="method#history_DateToEnd#0;class#MileStonDBHandling#0" />
             <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
+    <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+        <state relative-caret-position="281">
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#insert#0;class#ProjectDBHandling#0" />
+            <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
+            <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
+            <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
           </folding>
         </state>
       </provider>
