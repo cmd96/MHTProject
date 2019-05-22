@@ -63,7 +63,7 @@ public class MileSton {
         return MileStonID;
     }
 //     Don't let todo set to Mileston ID
-//    public void set_MileStonID(int MileStonID) {
+//    public void set_MileStonID(i nt MileStonID) {
 //        this.MileStonID = MileStonID;
 //    }
 

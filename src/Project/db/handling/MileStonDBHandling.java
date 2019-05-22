@@ -10,12 +10,16 @@ import java.sql.*;
 public class MileStonDBHandling implements MileStonManager {
 
     public static void insert(Connection con, MileSton mileSton) throws ProjectExeption {
-       MileSton insert_mile=new MileSton(mileSton.get_ProjectID() ,mileSton.get_MileStonID(),
-                mileSton.get_ProjectManagmentID(),mileSton.get_ResponsiboleWriterId(),
-                mileSton.get_TDescription(),mileSton.get_DateStart(),mileSton.get_DateToEnd(),
-                mileSton.get_DatePlan(),mileSton.get_DateDone());
+//       MileSton insert_mile=new MileSton(mileSton.get_ProjectID() ,mileSton.get_MileStonID(),
+//                mileSton.get_ProjectManagmentID(),mileSton.get_ResponsiboleWriterId(),
+//                mileSton.get_TDescription(),mileSton.get_DateStart(),mileSton.get_DateToEnd(),
+//                mileSton.get_DatePlan(),mileSton.get_DateDone());
         String sql;
-        sql = "INSERT INTO MileStons values "+ mileSton.get_ProjectID() + mileSton.get_MileStonID()+
+//        sql = "INSERT INTO MileStons values "+ mileSton.get_ProjectID() + mileSton.get_MileStonID()+
+//                mileSton.get_ProjectManagmentID()+ mileSton.get_ResponsiboleWriterId()+
+//                mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
+//                mileSton.get_DatePlan()+mileSton.get_DateDone();
+        sql="INSERT INTO MileStons (MileStonID,ProjectManagmentID,ResponsiboleWriterId,TDescription,DateStart,DateToEnd,DatePlan,DateDone) values "+ mileSton.get_MileStonID()+
                 mileSton.get_ProjectManagmentID()+ mileSton.get_ResponsiboleWriterId()+
                 mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
                 mileSton.get_DatePlan()+mileSton.get_DateDone();

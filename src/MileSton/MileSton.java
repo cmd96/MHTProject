@@ -40,13 +40,13 @@ public class MileSton {
     }
     public MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
 //        qwery thart retun the reqwest mileson
-        java.lang.String found_mile= "Select * from MileSton WHERE MileStonID = "+mile_num;
+        java.lang.String found_mile= "Select * from MileStons WHERE MileStonID = "+mile_num;
         ResultSet rs;
         try {
 
             Statement stmt = con.createStatement();
             rs = stmt.executeQuery(found_mile);
-
+//            System.out.println(rs);
         } catch (SQLException e) {
             throw new ProjectExeption("Get the MileSton  faild!!", e);
         }
