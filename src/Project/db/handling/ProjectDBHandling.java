@@ -22,5 +22,13 @@ public class ProjectDBHandling implements ProjectManager{
                 SQLException e) {
             throw new ProjectExeption("failed to delete mile ston", e);
         }
+        String sql = "DELETE FROM Projects WHERE ID = " + Project_num;
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+        } catch (
+                SQLException e) {
+            throw new ProjectExeption("failed to delete mile ston", e);
+        }
     }
 }
