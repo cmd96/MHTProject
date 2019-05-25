@@ -13,12 +13,7 @@ import java.sql.Statement;
 public class SQLConnection {
 
 
-<<<<<<< HEAD
-    public static void main(String[] args) throws ProjectExeption, SQLException {
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
-=======
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=MHTProject;integratedSecurity=true;";
->>>>>>> change DB name
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
 //            MileSton mileSton = MileSton.get_MileSton(con,16);

@@ -47,89 +47,33 @@
     <session id="2093239192">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-<<<<<<< HEAD
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.260" value="1" />
           <entry key="project.opened" value="4" />
-=======
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.134" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="2" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.30" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.4" value="3" />
-          <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="20" />
->>>>>>> change DB name
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-<<<<<<< HEAD
           <entry key="java" value="6563" />
-=======
-          <entry key="class" value="1" />
-          <entry key="css" value="7" />
-          <entry key="java" value="40" />
-          <entry key="jsp" value="10" />
-          <entry key="sql" value="6" />
-          <entry key="txt" value="1" />
-          <entry key="xml" value="13" />
->>>>>>> change DB name
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-<<<<<<< HEAD
           <entry key="JAVA" value="6553" />
           <entry key="SQL" value="10" />
-=======
-          <entry key="CLASS" value="1" />
-          <entry key="CSS" value="7" />
-          <entry key="JAVA" value="40" />
-          <entry key="JSP" value="10" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="6" />
-          <entry key="XML" value="13" />
->>>>>>> change DB name
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-<<<<<<< HEAD
           <entry key="java" value="9" />
-=======
-          <entry key="css" value="126" />
-          <entry key="dummy" value="3" />
-          <entry key="java" value="1208" />
-          <entry key="jsp" value="484" />
-          <entry key="txt" value="87" />
-          <entry key="xml" value="6" />
->>>>>>> change DB name
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-<<<<<<< HEAD
           <entry key="JAVA" value="9" />
-=======
-          <entry key="CSS" value="126" />
-          <entry key="JAVA" value="1208" />
-          <entry key="JSP" value="484" />
-          <entry key="PLAIN_TEXT" value="90" />
-          <entry key="XML" value="6" />
->>>>>>> change DB name
         </counts>
       </usages-collector>
     </session>
@@ -139,7 +83,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="453">
               <caret line="138" column="93" lean-forward="true" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
               <folding>
@@ -150,10 +93,6 @@
                 <element signature="method#print#0;class#MileSton#0" />
                 <element signature="method#get_MileSton#0;class#MileSton#0" />
               </folding>
-=======
-            <state relative-caret-position="238">
-              <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
->>>>>>> change DB name
             </state>
           </provider>
         </entry>
@@ -161,13 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="111">
               <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-end-line="67" />
-=======
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
->>>>>>> change DB name
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#history_DateToEnd#0;class#MileStonDBHandling#0" />
@@ -178,7 +112,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/MileSton/MileSton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -186,28 +119,15 @@
               <folding>
                 <element signature="method#get_MileSton#0;class#MileSton#0" />
               </folding>
-=======
-        <entry file="file://$PROJECT_DIR$/web/hello.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
->>>>>>> change DB name
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
               <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/com/test/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
->>>>>>> change DB name
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
@@ -218,7 +138,6 @@
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -249,13 +168,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="884">
               <caret line="76" selection-start-line="76" selection-end-line="76" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
->>>>>>> change DB name
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getProject#0;class#Create_Project#0" />
@@ -266,7 +178,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="124">
@@ -283,16 +194,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#76#77#0" expanded="true" />
-                <element signature="e#101#102#0" expanded="true" />
-              </folding>
->>>>>>> change DB name
             </state>
           </provider>
         </entry>
@@ -300,13 +201,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="187">
               <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-=======
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
->>>>>>> change DB name
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -336,7 +232,6 @@
       <find>button</find>
       <find>butt</find>
       <find>close</find>
-<<<<<<< HEAD
       <find>get</find>
       <find>static</find>
       <find>//            print</find>
@@ -358,9 +253,6 @@
       <find>getNumsOfMiles</find>
       <find>NumsOfMiles</find>
       <find>Project</find>
-=======
-      <find>FinalProject</find>
->>>>>>> change DB name
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -386,15 +278,11 @@
         <option value="$PROJECT_DIR$/web/hellostyle.css" />
         <option value="$PROJECT_DIR$/web/hello.jsp" />
         <option value="$PROJECT_DIR$/src/com/test/AddProject.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/test/User.java" />
         <option value="$PROJECT_DIR$/src/com/test/LoginController.java" />
-=======
->>>>>>> change DB name
         <option value="$PROJECT_DIR$/src/exception/ProjectExeption.java" />
         <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
         <option value="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" />
         <option value="$PROJECT_DIR$/src/MileSton/MileSton.java" />
         <option value="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" />
@@ -402,14 +290,6 @@
         <option value="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" />
         <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
         <option value="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" />
-=======
-        <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-        <option value="$PROJECT_DIR$/src/com/test/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/com/test/User.java" />
->>>>>>> change DB name
       </list>
     </option>
   </component>
@@ -432,11 +312,7 @@
       <select />
     </treeState>
   </component>
-<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
-=======
-  <component name="ProjectFrameBounds" extendedState="7">
->>>>>>> change DB name
     <option name="x" value="975" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -452,18 +328,8 @@
         <subPane>
           <expand>
             <path>
-<<<<<<< HEAD
               <item name="Tester" type="58d84e3e:PackageViewProjectNode" />
               <item name="Tester" type="616d4139:PackageViewModuleNode" />
-=======
-              <item name="Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tester" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tester" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
->>>>>>> change DB name
             </path>
           </expand>
           <select />
@@ -473,7 +339,6 @@
         <subPane>
           <expand>
             <path>
-<<<<<<< HEAD
               <item name="MHTProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MHTProject" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -493,31 +358,11 @@
               <item name="MHTProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="MileSton" type="462c0819:PsiDirectoryNode" />
-=======
-              <item name="Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tester" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
->>>>>>> change DB name
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Tester" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Tester" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
->>>>>>> change DB name
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -527,13 +372,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558542079109" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558816005702" />
-    <property name="last_opened_file_path" value="D:/המסמכים שלי/מסמכים/תשעט/פרויקט/bank" />
->>>>>>> change DB name
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -586,15 +426,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-=======
-    <configuration name="hello.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/hello.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="loginFaild.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8000/loginFaild.jsp">
-      <method v="2" />
-    </configuration>
->>>>>>> change DB name
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8000/index.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -669,7 +500,6 @@
         </option>
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="index.jsp (2)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8000/index.jsp" />
       <deployment>
@@ -818,10 +648,6 @@
     <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8000/index.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
-=======
-    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
->>>>>>> change DB name
       <deployment>
         <artifact name="Tester:war exploded">
           <settings>
@@ -830,12 +656,8 @@
         </artifact>
       </deployment>
       <server-settings>
-<<<<<<< HEAD
         <option name="BASE_DIRECTORY_NAME" value="index_jsp_MHTProject_2" />
         <option name="HTTP_PORT" value="8000" />
-=======
-        <option name="BASE_DIRECTORY_NAME" value="index_jsp_Tester" />
->>>>>>> change DB name
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -843,11 +665,7 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
-<<<<<<< HEAD
         <option name="DEBUG_PORT" value="52929" />
-=======
-        <option name="DEBUG_PORT" value="55761" />
->>>>>>> change DB name
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -908,23 +726,12 @@
       <item itemvalue="Tomcat Server.index.jsp (3)" />
       <item itemvalue="Application.ConnectionSQL (1)" />
       <item itemvalue="Application.SQLConnection" />
-<<<<<<< HEAD
-=======
-      <item itemvalue="JavaScript Debug.hello.jsp" />
-      <item itemvalue="JavaScript Debug.loginFaild.jsp" />
-      <item itemvalue="Tomcat Server.index.jsp" />
->>>>>>> change DB name
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SQLConnection" />
         <item itemvalue="Tomcat Server.index.jsp" />
         <item itemvalue="Application.ConnectionSQL (1)" />
-<<<<<<< HEAD
-=======
-        <item itemvalue="JavaScript Debug.loginFaild.jsp" />
-        <item itemvalue="JavaScript Debug.hello.jsp" />
->>>>>>> change DB name
       </list>
     </recent_temporary>
   </component>
@@ -955,17 +762,12 @@
       <workItem from="1557327568512" duration="1953000" />
       <workItem from="1557340420990" duration="652000" />
       <workItem from="1557341135411" duration="30023000" />
-<<<<<<< HEAD
       <workItem from="1557758597849" duration="331000" />
       <workItem from="1557758957232" duration="1572000" />
       <workItem from="1557760810494" duration="28201000" />
       <workItem from="1558446805239" duration="6121000" />
       <workItem from="1558537510119" duration="4509000" />
       <workItem from="1558545851791" duration="9396000" />
-=======
-      <workItem from="1557774702809" duration="3523000" />
-      <workItem from="1558210298320" duration="3774000" />
->>>>>>> change DB name
     </task>
     <servers />
   </component>
@@ -978,22 +780,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="142076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22147651" />
-=======
-    <option name="totallyTimeSpent" value="105513000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.21275167" />
->>>>>>> change DB name
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" sideWeight="0.502439" side_tool="true" weight="0.20738254" />
       <window_info id="Image Layers" order="3" />
@@ -1003,32 +795,19 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="DB Browser" order="8" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7657718" visible="true" weight="0.34042552" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39858156" />
-=======
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.53221476" visible="true" weight="0.2284041" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39970717" />
->>>>>>> change DB name
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329429" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329429" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2342282" side_tool="true" weight="0.9631206" />
       <window_info anchor="bottom" id="Application Servers" order="11" weight="0.329429" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329429" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32907802" />
-=======
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.46778524" side_tool="true" visible="true" weight="0.2284041" />
-      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.329429" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.329429" />
->>>>>>> change DB name
       <window_info anchor="bottom" id="DB Execution Console" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
@@ -1110,14 +889,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/microsoft/Project.java" />
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/User.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a48dbbd4-acd4-4d57-9040-a1015597f854/console.sql" />
-=======
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a48dbbd4-acd4-4d57-9040-a1015597f854/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
->>>>>>> change DB name
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1167,7 +940,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/microsoft/UpdateMileSton.java" />
     <entry file="file://$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="408">
           <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
         </state>
@@ -1196,30 +968,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-=======
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MileSton/MileSton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/ProjectExeption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
->>>>>>> change DB name
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
@@ -1237,65 +990,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-=======
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13869">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/codeStyles/Project.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/sqldialects.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dbnavigator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Tester.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/AddProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
->>>>>>> change DB name
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Creat_Projects/Create_Project.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
@@ -1312,24 +1012,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-=======
-    <entry file="file://$PROJECT_DIR$/web/hello.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
->>>>>>> change DB name
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="187">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-=======
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
->>>>>>> change DB name
           <folding>
             <element signature="e#76#77#0" expanded="true" />
             <element signature="e#101#102#0" expanded="true" />
@@ -1337,17 +1026,10 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="138" column="93" lean-forward="true" selection-start-line="138" selection-start-column="93" selection-end-line="138" selection-end-column="93" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
->>>>>>> change DB name
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#create_Mile_Id#0;class#MileSton#0" />
@@ -1359,7 +1041,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1382,33 +1063,19 @@
             <element signature="method#history_DateToEnd#0;class#MileStonDBHandling#0" />
             <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
           </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
->>>>>>> change DB name
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="272">
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="method#get_MileSton#0;class#MileSton#0" />
-=======
-        <state relative-caret-position="119">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> change DB name
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -1423,19 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-=======
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
->>>>>>> change DB name
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#insert#0;class#ProjectDBHandling#0" />
