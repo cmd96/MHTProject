@@ -17,16 +17,16 @@ public class LoginController extends HttpServlet {
         String pw=request.getParameter("password");
 
         User user=new User();
-//        boolean isUserExist=user.isExist(un,pw);
-//        if(isUserExist){
-//            System.out.println("hello");
-//            response.sendRedirect("hello.jsp");
-//        }
-//
-//        else {
-//            System.out.println("faild");
-//            response.sendRedirect("loginFaild.jsp");
-//        }
+        boolean isUserExist=true;//user.isExist(un,pw);
+        if(isUserExist){
+            System.out.println("hello");
+            response.sendRedirect("hello.jsp");
+        }
+
+        else {
+            System.out.println("faild");
+            response.sendRedirect("loginFaild.jsp");
+        }
 
         return;
     }

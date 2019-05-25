@@ -14,7 +14,6 @@ public class User {
     public boolean isExist(String un, String pw,Connection con,Statement stmt) throws SQLException {
         boolean returnValue=true;
         System.out.println("try connection");
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=FinalProject;integratedSecurity=true;";
 
             System.out.println("try connection 1");
             String SQL = "SELECT * FROM Users";
