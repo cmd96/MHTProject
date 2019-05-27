@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/History/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/History/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,12 +44,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="273" />
+          <entry key="java" value="274" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="273" />
+          <entry key="JAVA" value="274" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -108,12 +107,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="298">
+              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
-                <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
+                <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
               </folding>
             </state>
           </provider>
@@ -748,7 +747,7 @@
       <workItem from="1558816030577" duration="4918000" />
       <workItem from="1558857700723" duration="8091000" />
       <workItem from="1558876087358" duration="3846000" />
-      <workItem from="1558953409760" duration="360000" />
+      <workItem from="1558953409760" duration="455000" />
     </task>
     <servers />
   </component>
@@ -761,7 +760,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159425000" />
+    <option name="totallyTimeSpent" value="159520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -815,7 +814,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java</url>
-          <line>42</line>
+          <line>73</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -1063,12 +1062,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="298">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
+            <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
           </folding>
         </state>
       </provider>
