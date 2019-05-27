@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="SQL Server (Microsoft) - Project@localhost" uuid="833f9a84-306f-4d27-8af7-9b93dee0fd4e">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
-    </data-source>
-<<<<<<< HEAD
-    <data-source name="SQL Server (Microsoft) - Project@localhost [2]" uuid="f1e1bcf1-9fe6-45cc-a993-198dd58fa913">
-=======
-    <data-source name="MHTProject@localhost" uuid="e2760352-bc7d-41fb-ba33-fecb7a2b493b">
->>>>>>> change DB name
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
-    </data-source>
-  </component>
+    <component name="dataSourceStorageLocal">
+        <data-source name="SQL Server (Microsoft) - Project@localhost" uuid="833f9a84-306f-4d27-8af7-9b93dee0fd4e">
+            <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
+        </data-source>
+        <data-source name="SQL Server (Microsoft) - Project@localhost [2]" uuid="f1e1bcf1-9fe6-45cc-a993-198dd58fa913">
+            <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
+        </data-source>
+    </component>
 </project>

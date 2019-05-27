@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
 
     <!--for shira-->
     <data-source source="LOCAL" name="SQL Server (Microsoft) - Project@localhost" uuid="833f9a84-306f-4d27-8af7-9b93dee0fd4e">
@@ -21,62 +20,35 @@
       <driver-properties>
         <property name="applicationName" value="DataGrip" />
         <property name="appName" value="DataGrip" />
-        </driver-properties>
-        </data-source>
-        </component>
-        </project>
-
-
-    <!--&lt;!&ndash;Chemdi workspace&ndash;&gt;-->
-    <!--<data-source source="LOCAL" name="Server" uuid="a48dbbd4-acd4-4d57-9040-a1015597f854">-->
-      <!--<driver-ref>sqlserver.ms</driver-ref>-->
-      <!--<synchronize>true</synchronize>-->
-      <!--<jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>-->
-      <!--<jdbc-url>jdbc:sqlserver://localhost:1433;database=FinalProject</jdbc-url>-->
-      <!--<driver-properties>-->
-        <!--<property name="applicationName" value="Tester" />-->
-        <!--<property name="databaseName" value="FinalProject" />-->
-        <!--<property name="appName" value="DataGrip" />-->
-      <!--</driver-properties>-->
-    <!--</data-source>-->
-    <!--<data-source source="LOCAL" name="FinalProject@localhost" uuid="e2760352-bc7d-41fb-ba33-fecb7a2b493b">-->
-      <!--<driver-ref>sqlserver.ms</driver-ref>-->
-      <!--<synchronize>true</synchronize>-->
-      <!--<jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>-->
-      <!--<jdbc-url>jdbc:sqlserver://localhost:1433;database=FinalProject</jdbc-url>-->
-      <!--<driver-properties>-->
-        <!--<property name="applicationName" value="Tester" />-->
-        <!--<property name="databaseName" value="FinalProject" />-->
-        <!--<property name="columnEncryptionSetting" value="Enabled" />-->
-        <!--<property name="serverName" value="DESKTOP-DELBUAM\SQLEXPRESS" />-->
-      <!--</driver-properties>-->
-    <!--</data-source>-->
-  <!--</component>-->
-<!--</project>-->
-=======
-    <data-source source="LOCAL" name="Server" uuid="a48dbbd4-acd4-4d57-9040-a1015597f854">
-      <driver-ref>sqlserver.ms</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost:1433;database=MHTProject</jdbc-url>
-      <driver-properties>
-        <property name="applicationName" value="Tester" />
-        <property name="databaseName" value="MHTProject" />
-        <property name="appName" value="DataGrip" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="MHTProject@localhost" uuid="e2760352-bc7d-41fb-ba33-fecb7a2b493b">
-      <driver-ref>sqlserver.ms</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost:1433;database=MHTProject</jdbc-url>
-      <driver-properties>
-        <property name="applicationName" value="Tester" />
-        <property name="databaseName" value="MHTProject" />
-        <property name="columnEncryptionSetting" value="Enabled" />
-        <property name="serverName" value="DESKTOP-DELBUAM\SQLEXPRESS" />
       </driver-properties>
     </data-source>
   </component>
 </project>
->>>>>>> change DB name
+
+
+        <!--&lt;!&ndash;Chemdi workspace&ndash;&gt;-->
+        <!--<data-source source="LOCAL" name="Server" uuid="a48dbbd4-acd4-4d57-9040-a1015597f854">-->
+        <!--<driver-ref>sqlserver.ms</driver-ref>-->
+        <!--<synchronize>true</synchronize>-->
+        <!--<jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>-->
+        <!--<jdbc-url>jdbc:sqlserver://localhost:1433;database=FinalProject</jdbc-url>-->
+        <!--<driver-properties>-->
+        <!--<property name="applicationName" value="Tester" />-->
+        <!--<property name="databaseName" value="FinalProject" />-->
+        <!--<property name="appName" value="DataGrip" />-->
+        <!--</driver-properties>-->
+        <!--</data-source>-->
+        <!--<data-source source="LOCAL" name="FinalProject@localhost" uuid="e2760352-bc7d-41fb-ba33-fecb7a2b493b">-->
+        <!--<driver-ref>sqlserver.ms</driver-ref>-->
+        <!--<synchronize>true</synchronize>-->
+        <!--<jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>-->
+        <!--<jdbc-url>jdbc:sqlserver://localhost:1433;database=FinalProject</jdbc-url>-->
+        <!--<driver-properties>-->
+        <!--<property name="applicationName" value="Tester" />-->
+        <!--<property name="databaseName" value="FinalProject" />-->
+        <!--<property name="columnEncryptionSetting" value="Enabled" />-->
+        <!--<property name="serverName" value="DESKTOP-DELBUAM\SQLEXPRESS" />-->
+        <!--</driver-properties>-->
+        <!--</data-source>-->
+        <!--</component>-->
+        <!--</project>-->
