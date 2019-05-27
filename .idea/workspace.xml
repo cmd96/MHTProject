@@ -44,12 +44,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="274" />
+          <entry key="java" value="275" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="274" />
+          <entry key="JAVA" value="275" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -107,11 +107,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="264">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
+                <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
                 <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
               </folding>
             </state>
@@ -747,7 +748,7 @@
       <workItem from="1558816030577" duration="4918000" />
       <workItem from="1558857700723" duration="8091000" />
       <workItem from="1558876087358" duration="3846000" />
-      <workItem from="1558953409760" duration="455000" />
+      <workItem from="1558953409760" duration="514000" />
     </task>
     <servers />
   </component>
@@ -760,7 +761,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159520000" />
+    <option name="totallyTimeSpent" value="159579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -814,7 +815,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java</url>
-          <line>73</line>
+          <line>92</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -1062,11 +1063,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        <state relative-caret-position="264">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
+            <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
             <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
           </folding>
         </state>

@@ -71,6 +71,25 @@ public interface  ProjectManager {
         }
 
         static void delete_Project(Connection con, int Project_num) throws ProjectExeption {
+            String SQL = "DELETE FROM MileStons WHERE ProjectId = " + Project_num;
+            try {
+                Statement stmt = con.createStatement();
+                stmt.executeUpdate(SQL);
+            } catch (
+                    SQLException e) {
+                throw new ProjectExeption("failed to delete mile ston", e);
+            }
+            String sql = "DELETE FROM Projects WHERE ID = " + Project_num;
+            try {
+                Statement stmt = con.createStatement();
+                stmt.executeUpdate(sql);
+            } catch (
+                    SQLException e) {
+                throw new ProjectExeption("failed to delete proect", e);
+            }
+
+
+
         }
 //    Client query (Connection con, long id) throws ProjectExeption;
 //    Client[] queryAllClients(Connection con);
