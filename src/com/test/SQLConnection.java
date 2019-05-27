@@ -6,15 +6,17 @@ import java.net.URI;
 import java.sql.*;
 
 public class SQLConnection {
-
+    public static  Connection commonConnection;
     public static void main(String[] args) {
 
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
+            System.out.println("gjsikasljikpsfld['jiklofadsklad");
+System.out.println(con);
             String SQL = "SELECT * FROM Users";
             ResultSet rs = stmt.executeQuery(SQL);
-
+            commonConnection = con;
             // Iterate through the data in the result set and display it.
             while (rs.next()) {
                 System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));

@@ -69,7 +69,7 @@
             <a class="button" href="#popup3">הוסף אבן דרך</a>
         </div>
 
-        <form id="popup1" class="overlay" action="AddProject" method="post">
+        <form id="popup1" class="overlay" action="User" >
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>הוסף פרויקט</h2>
@@ -78,7 +78,7 @@
                     <label for="projName"><b>שם פרויקט</b></label>
                     <input type="text" placeholder="שם פרויקט" name="projName" required>
                 </div>
-                <button type="submit" value="Login">אישור</button>
+                <button type="submit" value="Login" >אישור</button>
             </div>
         </form>
 

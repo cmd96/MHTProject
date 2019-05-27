@@ -10,14 +10,20 @@ public class User {
 
         return user;
     }
+    void tester ()
+    {
+        System.out.println("joigfjroigjeroijierj");
+    }
+    public boolean isExist(String un, String pw) throws SQLException {
+        Connection con = SQLConnection.commonConnection;
 
-    public boolean isExist(String un, String pw,Connection con,Statement stmt) throws SQLException {
         boolean returnValue=true;
         System.out.println("try connection");
 
             System.out.println("try connection 1");
             String SQL = "SELECT * FROM Users";
             System.out.println("try connection 2");
+            Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
             System.out.println("try connection 3");
 

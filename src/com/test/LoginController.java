@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Servlet implementation class LoginController
@@ -17,7 +18,12 @@ public class LoginController extends HttpServlet {
         String pw=request.getParameter("password");
 
         User user=new User();
-        boolean isUserExist=true;//user.isExist(un,pw);
+        boolean isUserExist=true;
+        try {
+            user.isExist(un,pw);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if(isUserExist){
             System.out.println("hello");
             response.sendRedirect("hello.jsp");
