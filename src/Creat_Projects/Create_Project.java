@@ -10,8 +10,8 @@ import java.util.Date;
 
 public class Create_Project {
     //    private static int NumOfMile = 1;
+    private int ID;
     private int ProjectManagmentID ;
-    private int ProjectID;
     private int ResponsiboleWriterId;
     private String TDescription;
     private int NumsOfMiles;
@@ -22,8 +22,8 @@ public class Create_Project {
 
     public Create_Project(int ProjectManagmentID,int ProjectID,int ResponsiboleWriterId , String TDescription,int NumsOfMiles,Date start,Date done, String Company_Repository) {
         super();
+        this.ID=ProjectID;
         this.ProjectManagmentID=ProjectManagmentID;
-        this.ProjectID=ProjectID;
         this.ResponsiboleWriterId = ResponsiboleWriterId;
         this.TDescription=TDescription;
         this.NumsOfMiles=NumsOfMiles;
@@ -35,12 +35,29 @@ public class Create_Project {
     public Create_Project() {
         super();
     }
+    public Create_Project get_Project(Connection con, int project_num) throws ProjectExeption {
+//        qwery thart retun the reqwest mileson
+        String sql= "Select * from Projects WHERE ID = "+ project_num;
+        ResultSet rs;
+        try {
+            Statement stmt = con.createStatement();
+            rs = stmt.executeQuery(sql);
+            System.out.println(rs.getInt("ID"));
+
+
+//            System.out.println(rs);
+        } catch (SQLException e) {
+            throw new ProjectExeption("Get the MileSton  faild!!", e);
+        }
+
+        return (Create_Project) rs;
+    }
 
     public int getProjectManagmentID(){
         return ProjectManagmentID;
     }
     public int getProjectID() {
-        return ProjectID;
+        return ID;
     }
     public  int getResponsiboleWriterId(){return ResponsiboleWriterId;}
     public  String  getTDescription(){return TDescription;}
@@ -48,12 +65,13 @@ public class Create_Project {
     public Date getDateDone(){return  DateDone;}
     public String getCompany_Repository(){return this.Company_Repository;}
     public int getNumsOfMiles(){return  this.NumsOfMiles;}
+    public  void setNumsOfMiles(int NumsOfMiles){this.NumsOfMiles= NumsOfMiles;}
     public void setProjectManagmentID(int projectManagmentID) {
         ProjectManagmentID = projectManagmentID;
     }
 
     public void setProjectID(int projectID) {
-        ProjectID = projectID;
+        ID = projectID;
     }
 
     public void setResponsiboleWriterId(int responsiboleWriterId) {
@@ -79,15 +97,16 @@ public class Create_Project {
 
     public  static  Create_Project getProject(Connection con,int pro_num) throws ProjectExeption{
         Create_Project project =new Create_Project();
-        String sql = "SELECT * FROM MileStons WHERE  ID="+pro_num;
+        String sql = "SELECT * FROM Projects WHERE  ID="+pro_num;
         try {
             Statement stmt =con.createStatement();
             ResultSet rs =stmt.executeQuery(sql);
             while (rs.next()) {
                 project.setProjectID(rs.getInt("ID"));
-                project.setProjectManagmentID(rs.getInt("ProjectManagerId"));
+                project.setProjectManagmentID(rs.getInt("ProjectManagmentID"));
                 project.setResponsiboleWriterId(rs.getInt("ResponsiboleWriterId"));
-                project.setTDescription(rs.getString("Description"));
+                project.setTDescription(rs.getString("TDescription"));
+                project.setNumsOfMiles((rs.getInt("NumsOfMiles")));
                 project.setDateStart(rs.getDate("DateStart"));
                 project.setDateDone(rs.getDate("DateDone"));
                 project.setCompany_Repository(rs.getString("Company_Repository"));

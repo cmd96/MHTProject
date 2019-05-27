@@ -2,32 +2,64 @@ package com.test;
 //package com.microsoft;
 //public class ConnectionSQL
 
-import Project.db.handling.ProjectDBHandling;
 import Project.exception.ProjectExeption;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class SQLConnection {
-
 
     public static void main(String[] args) throws ProjectExeption, SQLException {
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
-//            MileSton mileSton = MileSton.get_MileSton(con,16);
-            ProjectDBHandling.delete(con,2);
+            System.out.println("ooo");
+            ResultSet rs
+                    ;
+                String sql= "Select * FROM History WHERE IDChanged = " + 33;
+                rs= stmt.executeQuery(sql);
+                System.out.println(rs.getInt("IDChanged"));
+            } catch (SQLException e) {
+                throw new ProjectExeption("Get the History by ID  faild!!", e);
+            }
+//            return (History) rs;
+
+
+
+//            History h = History.get_History_by_id(con,1);
+//            System.out.println(h.getProjectOrMile());
+//            System.out.println(h.getCFrom());
+
+//            MileSton mileSton = MileSton.get_MileSton(con,45);
+//            System.out.println(mileSton.get_ResponsiboleWriterId());
+//            mileSton.set_MileStonID(88);
+
+//                String sql;
+//                sql = "INSERT INTO MileStons values "+(mileSton.get_ProjectID() + mileSton.get_MileStonID()+
+//                        mileSton.get_ProjectManagmentID()+mileSton.get_ResponsiboleWriterId()+
+//                        mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
+//                        mileSton.get_DatePlan()+mileSton.get_DateDone());
+//                ResultSet rs= stmt.executeQuery(sql);
+//                System.out.println("ggg "+ rs.getInt("ProjectId"));
+//                rs.insertRow();
+
+            }
+
+//            MileStonDBHandling.insert(con,mileSton);
+//            System.out.println(mileSton.get_ResponsiboleWriterId());
+//            Create_Project ct= Create_Project.getProject(con,777);
+//            ct.setProjectManagmentID(9999);
+//            System.out.println("tepo  "+ ct.getCompany_Repository());
+
+//            ProjectDBHandling.Update_Project(con,ct);
+//            ProjectDBHandling.delete(con,23);
             //            int jj = mileSton.get_MileStonID();
 //            String  sql= "INSERT INTO MileStons (ID,ProjectId,ProductID,ProjectManagerId,ResponsiboleWriterId) VALUES (2,2,2,2,2)";
 //            System.out.println(sql);
 //            MileStonDBHandling.delete(con,3);
 //            stmt.executeQuery("INSERT INTO MileStons (ID,ProjectId,ProductID,ProjectManagerId,ResponsiboleWriterId) VALUES (2,2,2,2,2)");
-        }
-            catch (SQLException e) {
-                throw new ProjectExeption("failed to inset mileSton", e);
-            }
+//            catch (SQLException e) {
+//                throw new ProjectExeption("failed to inset mileSton", e);
+//            }
             //              MileSton.get_MileSton(con,16);
 //            ResultSet rs= (ResultSet) Create_Project.get_project_flow(con,2);
 //            while (rs.next()) {
@@ -74,7 +106,7 @@ public class SQLConnection {
 //            e.printStackTrace();
 //        }
 
-    }
+
 
 
 //

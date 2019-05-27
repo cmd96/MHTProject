@@ -4,10 +4,7 @@ import Project.MileSton.MileSton;
 import Project.db.managers.MileStonManager;
 import Project.exception.ProjectExeption;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class MileStonDBHandling implements MileStonManager {
@@ -17,30 +14,34 @@ public class MileStonDBHandling implements MileStonManager {
 //                mileSton.get_ProjectManagmentID(),mileSton.get_ResponsiboleWriterId(),
 //                mileSton.get_TDescription(),mileSton.get_DateStart(),mileSton.get_DateToEnd(),
 //                mileSton.get_DatePlan(),mileSton.get_DateDone());
-        String sql;
-//        sql = "INSERT INTO MileStons values "+ mileSton.get_ProjectID() + mileSton.get_MileStonID()+
-//                mileSton.get_ProjectManagmentID()+ mileSton.get_ResponsiboleWriterId()+
-//                mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
-//                mileSton.get_DatePlan()+mileSton.get_DateDone();
         int demo=mileSton.get_MileStonID();
-//        Date d= DateFormat('2002-02-02');
-//        sql= "INSERT INTO MileStons(ID,ProjectId,ProjectManagerId) VALUES"+(mileSton.get_MileStonID(),mileSton.get_ProjectID(),mileSton.get_ProjectManagmentID());
-//        sql= "INSERT INTO MileStons (ID) VALUES" +("22");
-        sql= "INSERT INTO MileStons (ProjectId) ׂׂVALUES "+(mileSton.get_ProjectManagmentID() );
+////        Date d= DateFormat('2002-02-02');
+//        String sql;
+//        sql= "INSERT INTO MileStons VALUES " + (mileSton.get_MileStonID()+" "+mileSton.get_ProjectID()+" " +mileSton.get_ProjectManagmentID());
+////        sql= "INSERT INTO MileStons (ID) VALUES" +("22");
+//        sql= "INSERT INTO MileStons  ׂׂVALUES " mileSton.get_ProjectManagmentID(),(mileSton.get_DateToEnd();
         try {
+            String sql;
+            sql = "INSERT INTO MileStons values "+(mileSton.get_ProjectID() + mileSton.get_MileStonID()+
+                    mileSton.get_ProjectManagmentID()+mileSton.get_ResponsiboleWriterId()+
+                    mileSton.get_TDescription()+mileSton.get_DateStart()+ mileSton.get_DateToEnd()+
+                    mileSton.get_DatePlan()+mileSton.get_DateDone());
+
             Statement stmt = con.createStatement();
-            stmt.executeQuery(sql);
-            }
+            ResultSet rs= stmt.executeQuery(sql);
+            rs.insertRow();
+
+        }
         catch (SQLException e) {
             throw new ProjectExeption("failed to inset mileSton", e);
         }
     }
     public static void Update_MileSton(Connection con, MileSton mileston) throws ProjectExeption {
-        MileSton mile = mileston.get_MileSton(con, mileston.get_MileStonID());
-        System.out.println(mile.get_DateStart());
-        System.out.println(mile.get_DateToEnd());
-        System.out.println(mileston.get_MileStonID());
-        System.out.println(mileston.get_ProjectID());
+//        MileSton mile = mileston.get_MileSton(con, mileston.get_MileStonID());
+//        System.out.println(mile.get_DateStart());
+//        System.out.println(mile.get_DateToEnd());
+//        System.out.println(mileston.get_MileStonID());
+//        System.out.println(mileston.get_ProjectID());
         try{
             String sql;
             sql = "UPDATE MileStons SET ";
@@ -51,7 +52,7 @@ public class MileStonDBHandling implements MileStonManager {
             sql += "ResponsiboleWriterId = '" + mileston.get_ResponsiboleWriterId() + "', ";
             sql += "Description = '" + mileston.get_TDescription() + "', ";
             sql += "DateStart = '" + mileston.get_DateStart() + "' ";
-//            sql += "DateToEnd = '" + mileston.get_DateToEnd() + "' ";
+            sql += "DateToEnd = '" + mileston.get_DateToEnd().toString() + "' ";
 //            sql += "DatePlan = '" + mileston.get_DatePlan() + "' ";
 //            sql += "DateDone = '" + mile.get_DateDone() + "' ";
             sql += "WHERE ID = " + mileston.get_MileStonID();
@@ -75,7 +76,7 @@ public class MileStonDBHandling implements MileStonManager {
         }
     }
 
-    private void history_DateToEnd(MileSton mile, Date dateToEndPlan, java.util.Date dateToEndChange) {
+    private void history(MileSton mile, Date dateToEndPlan, java.util.Date dateToEndChange) {
 
     }
 

@@ -14,7 +14,7 @@ public interface  ProjectManager {
         static void Update_Project(Connection con, Create_Project project) throws ProjectExeption {
         }
 
-        static void Copy_Project(Connection con, int mileston_num) throws ProjectExeption {
+        static void Copy_Project(Connection con, int project_num) throws ProjectExeption {
         }
 
         static void delete_Project(Connection con, int Project_num) throws ProjectExeption {
