@@ -10,6 +10,10 @@ import java.sql.Statement;
 import java.text.ParseException;
 
 public class ProjectDBHandling implements ProjectManager{
+//    void tester()
+//    {
+//        System.out.println("ojjmufhvuihvhviuh");
+//    }
     public  void  insert(Connection con, Create_Project project) throws ParseException{
     }
 
