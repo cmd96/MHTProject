@@ -1,5 +1,12 @@
 package History;
 
+import Project.exception.ProjectExeption;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class History {
     private int ID;
     private int ProjectOrMile; //if ==1-> become from Project if==2-> become from milesston
