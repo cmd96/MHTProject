@@ -2,9 +2,13 @@ package com.test;
 //package com.microsoft;
 //public class ConnectionSQL
 
+import Project.db.handling.ProjectDBHandling;
 import Project.exception.ProjectExeption;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SQLConnection {
 
@@ -12,15 +16,15 @@ public class SQLConnection {
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
-            System.out.println("ooo");
-            ResultSet rs
-                    ;
-                String sql= "Select * FROM History WHERE IDChanged = " + 33;
-                rs= stmt.executeQuery(sql);
-                System.out.println(rs.getInt("IDChanged"));
-            } catch (SQLException e) {
-                throw new ProjectExeption("Get the History by ID  faild!!", e);
-            }
+//            System.out.println("ooo");
+//            ResultSet rs
+//                    ;
+//                String sql= "Select * FROM History WHERE IDChanged = " + 33;
+//                rs= stmt.executeQuery(sql);
+//                System.out.println(rs.getInt("IDChanged"));
+//            } catch (SQLException e) {
+//                throw new ProjectExeption("Get the History by ID  faild!!", e);
+//            }
 //            return (History) rs;
 
 
@@ -29,8 +33,7 @@ public class SQLConnection {
 //            System.out.println(h.getProjectOrMile());
 //            System.out.println(h.getCFrom());
 
-//            MileSton mileSton = MileSton.get_MileSton(con,45);
-//            System.out.println(mileSton.get_ResponsiboleWriterId());
+            ProjectDBHandling.delete(con,44);
 //            mileSton.set_MileStonID(88);
 
 //                String sql;
@@ -91,7 +94,7 @@ public class SQLConnection {
 //            MileStonDBHandling.delete(con,trying.get_MileStonID());
 //            MileStonDBHandling.Copy_MileSton(con,trying.get_MileStonID());
 
-        }
+        }}
 //            trying.set_MileStonID(MileSton.create_Mile_Id());
 //            trying.set_ProjectID(345);
 //            System.out.println(trying.get_MileStonID());

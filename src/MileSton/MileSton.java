@@ -40,7 +40,7 @@ public class MileSton {
     public MileSton() {
        // super();
     }
-    public MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
+    public static MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
 //        qwery thart retun the reqwest mileson
         java.lang.String sql= "Select * from MileStons WHERE ID = "+mile_num;
         ResultSet rs;
