@@ -20,7 +20,7 @@ public class LoginController extends HttpServlet {
         User user=new User();
         boolean isUserExist=true;
         try {
-            user.isExist(un,pw);
+            isUserExist=user.isExist(un,pw);
         } catch (SQLException e) {
             e.printStackTrace();
         }

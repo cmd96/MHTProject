@@ -1,39 +1,37 @@
 package com.test;
 
 
-import java.awt.*;
-import java.net.URI;
-import java.sql.*;
+import java.sql.Connection;
 
 public class SQLConnection {
     public static  Connection commonConnection;
-    public static void main(String[] args) {
-
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
-
-        try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
-            System.out.println("gjsikasljikpsfld['jiklofadsklad");
-System.out.println(con);
-            String SQL = "SELECT * FROM Users";
-            ResultSet rs = stmt.executeQuery(SQL);
-            commonConnection = con;
-            // Iterate through the data in the result set and display it.
-            while (rs.next()) {
-                System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        try {
-            Desktop desktop = java.awt.Desktop.getDesktop();
-            URI oURL = new URI("http://localhost:8000/index.jsp");
-            desktop.browse(oURL);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
+//    public static void main(String[] args) {
+//
+//        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
+//
+//        try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
+//            System.out.println("gjsikasljikpsfld['jiklofadsklad");
+//System.out.println(con);
+//            String SQL = "SELECT * FROM Users";
+//            ResultSet rs = stmt.executeQuery(SQL);
+//            commonConnection = con;
+//            // Iterate through the data in the result set and display it.
+//            while (rs.next()) {
+//                System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            Desktop desktop = java.awt.Desktop.getDesktop();
+//            URI oURL = new URI("http://localhost:8000/index.jsp");
+//            desktop.browse(oURL);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 }
 
 
