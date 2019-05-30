@@ -18,10 +18,10 @@ public class LoginController extends HttpServlet {
         String pw=request.getParameter("password");
 
         User user=new User();
-        boolean isUserExist=true;
+        boolean isUserExist = false;
         try {
             isUserExist=user.isExist(un,pw);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         if(isUserExist){
