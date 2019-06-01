@@ -16,6 +16,12 @@ public class SQLConnection {
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
 
         try (Connection con = DriverManager.getConnection(url); Statement stmt = con.createStatement();) {
+            ProjectDBHandling.Copy_Project(con,1);
+//            Create_Project c= Create_Project.getProject(con,33);
+//            c.setNumsOfMiles(77);
+//            ProjectDBHandling.Update_Project(con,c);
+//            MileSton mileSton=new MileSton("sss",2,2,2,"sss");
+//            MileStonDBHandling.insert(con, mileSton);
 //            System.out.println("ooo");
 //            ResultSet rs
 //                    ;
@@ -32,8 +38,9 @@ public class SQLConnection {
 //            History h = History.get_History_by_id(con,1);
 //            System.out.println(h.getProjectOrMile());
 //            System.out.println(h.getCFrom());
-
-            ProjectDBHandling.delete(con,44);
+//            MileSton m= MileSton.get_MileSton(con,2);
+//            System.out.println(m.get_ResponsiboleWriterId());
+//            ProjectDBHandling.delete(con,44);
 //            mileSton.set_MileStonID(88);
 
 //                String sql;

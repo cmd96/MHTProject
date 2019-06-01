@@ -9,20 +9,20 @@ import java.sql.Statement;
 
 public class History {
     private int ID;
-    private int ProjectOrMile; //if ==1-> become from Project if==2-> become from product if==3->mileston
-    private int IDChanged;
+    private int LavelChange; //if ==1-> become from Project if==2-> become from product if==3->mileston
+    private int IdItem;
     private String RowChanged;
-    private  String CFrom;
-    private String CTo;
+    private  String ChagedFrom;
+    private String ChangedTo;
 
-    public History(int ID, int ProjectOrMileID,int IDChanged,String RowChanged, String CFrom,String CTo){
+    public History( int LavelChange,int IdItem,String RowChanged, String ChagedFrom,String ChangedTo){
         super();
-        this.ID=ID;
-        this.ProjectOrMile = ProjectOrMile;
-        this.IDChanged =IDChanged;
+//        this.ID=ID;
+        this.LavelChange = LavelChange;
+        this.IdItem =IdItem;
         this.RowChanged= RowChanged;
-        this.CFrom= CFrom;
-        this.CTo= CTo;
+        this.ChagedFrom= ChagedFrom;
+        this.ChangedTo= ChangedTo;
     }
     public  History(){
 //        super();
@@ -63,24 +63,24 @@ public class History {
     }
     public  int getID(){return this.ID;}
 
-    public int getProjectOrMile() {
-        return ProjectOrMile;
+    public int get_LavelChange() {
+        return LavelChange;
     }
 
-    public int getIDChanged() {
-        return IDChanged;
+    public int get_IdItem() {
+        return IdItem;
     }
 
-    public String getRowChanged() {
+    public String RowChanged() {
         return RowChanged;
     }
 
-    public String getCFrom() {
-        return CFrom;
+    public String ChagedFrom() {
+        return ChagedFrom;
     }
 
-    public String getCTo() {
-        return CTo;
+    public String ChangedTo() {
+        return ChangedTo;
     }
 
 

@@ -1,6 +1,6 @@
 package Project.db.managers;
 
-import Project.MileSton.MileSton;
+import MileSton.MileSton;
 import Project.exception.ProjectExeption;
 
 import java.sql.Connection;

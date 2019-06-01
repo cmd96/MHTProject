@@ -12,30 +12,27 @@ import java.util.Date;
 public class MileSton {
 
     private int ID;
-    private int ProjectID;
-    private int ProductID;
-    private int ProjectManagmentID ;
-    private int ResponsiboleWriterId;
-    private String TDescription;
+    private String name;
+    private int poductID;
+    private int projectID ;
+    private int ResponsibleWriter;
     private Date DateStart;
     private Date DateToEnd;
-    private Date DateDone;
-    private Date DatePlan;
+    private String Description;
 
 
-    public MileSton(int ProjectID,int MileStonID, int ProductID,int ProManID ,int ResWrID, String Descript,Date start,Date end,Date done,Date plan) {
+
+    public MileSton(String name, int poductID,int projectID ,int ResponsibleWriter, Date DateStart,Date DateToEnd,String Description) {
         super();
-        this.ID=MileStonID;
-        this.ProjectID=ProjectID;
-        this.ProductID=ProductID;
-        this.ProjectManagmentID = ProManID;
-        this.ResponsiboleWriterId=ResWrID;
-        this.TDescription=Descript;
-        this.DateStart=start;
-        this.DateToEnd=end;
-        this.DateDone=done;
-        this.DatePlan=plan;
-    }
+//        this.ID=ID;
+        this.name=name;
+        this.poductID=poductID;
+        this.projectID = projectID;
+        this.ResponsibleWriter=ResponsibleWriter;
+        this.DateStart=DateStart;
+        this.DateToEnd=DateToEnd;
+        this.Description=Description;
+        }
 
     public MileSton() {
        // super();
@@ -55,56 +52,47 @@ public class MileSton {
 
         return (MileSton) rs;
     }
+    public int get_ID(){return this.ID;}
 
-
-
-    public int get_ProjectID() {
-        return ProjectID;
+    public String get_name() {
+        return name;
     }
     //Don't let todo set to Project ID
-    public void set_ProjectID(int ProjectID) {
-        this.ProjectID = ProjectID;
+    public void set_name(String name){this.name=name;}
+    public int get_poductID(){return this.poductID; }
+    public void set_poductID(int poductID) {
+        this.poductID = poductID;
     }
 
-    public int get_MileStonID() {
-        return ID;
+    public int get_projectID() {
+        return projectID;
     }
 //     Don't let todo set to Mileston ID
 //    public void set_MileStonID(int MileStonID) {
 //        this.MileStonID = MileStonID;
 //    }
-    public int get_ProductId(){return  ProductID;}
-    public void set_ProductId(int product_id){this.ProductID=product_id;}
-    public int get_ProjectManagmentID() {
-        return ProjectManagmentID;
+    public void set_projectID(int projectID){this.projectID=projectID;}
+    public int get_ResponsibleWriter() {
+        return ResponsibleWriter;
     }
 
-    public void set_ProjectManagmentID(int ProjectManagmentID) {
-        this.ProjectManagmentID = ProjectManagmentID;
+    public void set_ResponsibleWriter(int ResponsibleWriter) {
+        this.ResponsibleWriter = ResponsibleWriter;
     }
 
-    public int get_ResponsiboleWriterId() {
-        return ResponsiboleWriterId;
-    }
-
-    public void set_ResponsiboleWriterId(int ResponsiboleWriterId) {
-        this.ResponsiboleWriterId = ResponsiboleWriterId;
-    }
-
-    public String get_TDescription() {
-        return TDescription;
-    }
-
-    public void set_TDescription(String TDescription) {
-        this.TDescription = TDescription;
-    }
-
-    public Date get_DateStart() {
-        return DateStart;
-    }
-
+    public Date get_DateStart(){return DateStart;}
     public void set_DateStart(Date DateStart) {
         this.DateStart = DateStart;
+    }
+
+
+
+    public String get_Description() {
+        return Description;
+    }
+
+    public void set_Description(String Description) {
+        this.Description = Description;
     }
 
     public Date get_DateToEnd() {
@@ -116,15 +104,4 @@ public class MileSton {
         this.DateToEnd = DateToEnd;
     }
 
-    public Date get_DateDone() {
-        return DateDone;
-    }
-
-    public void set_DateDone(Date DateDone) {
-        this.DateToEnd = DateDone;
-    }
-
-    public Date get_DatePlan() {
-        return DatePlan;
-    }
 }

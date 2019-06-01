@@ -6,31 +6,20 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 public class Create_Project {
     //    private static int NumOfMile = 1;
     private int ID;
-    private int ProjectManagmentID ;
-    private int ResponsiboleWriterId;
-    private String TDescription;
-    private int NumsOfMiles;
-    private Date DateStart;
-    private Date DateDone;
-    private String Company_Repository;
+    private String name ;
+    private int ProjectManager;
+    private String Costumer;
 
-
-    public Create_Project(int ProjectManagmentID,int ProjectID,int ResponsiboleWriterId , String TDescription,int NumsOfMiles,Date start,Date done, String Company_Repository) {
+    public Create_Project(String name,int ProjectManager,String Costumer) {
         super();
-        this.ID=ProjectID;
-        this.ProjectManagmentID=ProjectManagmentID;
-        this.ResponsiboleWriterId = ResponsiboleWriterId;
-        this.TDescription=TDescription;
-        this.NumsOfMiles=NumsOfMiles;
-        this.DateStart=start;
-        this.DateDone=done;  //not sure that need in the beggining!!!-- if need that implement on the milestonDBHandlling on function copy!!
-        this.Company_Repository=Company_Repository;
-
+//        this.ID=ProjectID;
+        this.name=name;
+        this.ProjectManager = ProjectManager;
+        this.Costumer=Costumer;
     }
     public Create_Project() {
         super();
@@ -52,48 +41,25 @@ public class Create_Project {
 
         return (Create_Project) rs;
     }
-
-    public int getProjectManagmentID(){
-        return ProjectManagmentID;
-    }
-    public int getProjectID() {
+    public void set_ProjectID(int id){this.ID=id;}
+    public int get_ID(){
         return ID;
     }
-    public  int getResponsiboleWriterId(){return ResponsiboleWriterId;}
-    public  String  getTDescription(){return TDescription;}
-    public  Date getDateStart(){return  DateStart;}
-    public Date getDateDone(){return  DateDone;}
-    public String getCompany_Repository(){return this.Company_Repository;}
-    public int getNumsOfMiles(){return  this.NumsOfMiles;}
-    public  void setNumsOfMiles(int NumsOfMiles){this.NumsOfMiles= NumsOfMiles;}
-    public void setProjectManagmentID(int projectManagmentID) {
-        ProjectManagmentID = projectManagmentID;
+    public String get_name() {
+        return name;
+    }
+    public  int get_ProjectManager(){return ProjectManager;}
+    public  String  get_Costumer(){return Costumer;}
+
+    public void set_name(String name) {
+        this.name = name;
+    }
+    public  void set_ProjectManager(int ProjectManager){this.ProjectManager= ProjectManager;}
+
+    public void set_Costumer(String Costumer) {
+        Costumer = Costumer;
     }
 
-    public void setProjectID(int projectID) {
-        ID = projectID;
-    }
-
-    public void setResponsiboleWriterId(int responsiboleWriterId) {
-        ResponsiboleWriterId = responsiboleWriterId;
-    }
-
-    public void setTDescription(String TDescription) {
-        this.TDescription = TDescription;
-    }
-
-    public void setDateStart(Date dateStart) {
-        DateStart = dateStart;
-    }
-
-    public void setDateDone(Date dateDone) {
-        DateDone = dateDone;
-    }
-
-    public void setCompany_Repository(String company_Repository) {
-        Company_Repository = company_Repository;
-
-    }
 
     public  static  Create_Project getProject(Connection con,int pro_num) throws ProjectExeption{
         Create_Project project =new Create_Project();
@@ -102,15 +68,10 @@ public class Create_Project {
             Statement stmt =con.createStatement();
             ResultSet rs =stmt.executeQuery(sql);
             while (rs.next()) {
-                project.setProjectID(rs.getInt("ID"));
-                project.setProjectManagmentID(rs.getInt("ProjectManagmentID"));
-                project.setResponsiboleWriterId(rs.getInt("ResponsiboleWriterId"));
-                project.setTDescription(rs.getString("TDescription"));
-                project.setNumsOfMiles((rs.getInt("NumsOfMiles")));
-                project.setDateStart(rs.getDate("DateStart"));
-                project.setDateDone(rs.getDate("DateDone"));
-                project.setCompany_Repository(rs.getString("Company_Repository"));
-                }
+                project.set_ProjectID(rs.getInt("ID"));
+                project.set_name(rs.getString("name"));
+                project.set_ProjectManager(rs.getInt("ProjectManager"));
+                project.set_Costumer(rs.getString("Costumer"));}
         }catch (SQLException e){
             throw new ProjectExeption("failed to get project",e);
         }
@@ -118,7 +79,7 @@ public class Create_Project {
     }
     public static ResultSet get_project_flow(Connection con, int projectID) throws ProjectExeption, SQLException {
         Create_Project project=Create_Project.getProject(con,projectID);
-        int num= project.getNumsOfMiles();
+//        int num= project.getNumsOfMiles();
 
         String sql ="SELECT * FROM dbo.MileStons WHERE dbo.MileStons.ProjectId="+projectID;
         ResultSet rs;
@@ -131,6 +92,4 @@ public class Create_Project {
         }
     return (ResultSet) rs;
     }
-
-
 }
