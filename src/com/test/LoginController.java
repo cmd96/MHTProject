@@ -28,7 +28,6 @@ public class LoginController extends HttpServlet {
             System.out.println("hello");
             response.sendRedirect("hello.jsp");
         }
-
         else {
             System.out.println("faild");
             response.sendRedirect("loginFaild.jsp");

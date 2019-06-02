@@ -3,8 +3,7 @@ package com.test;
 import java.sql.*;
 
 public class User {
-    private  static Connection connection_;
-    private static ResultSet rs_;
+
     public User(){
         int i = 0;
     }

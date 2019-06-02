@@ -2,6 +2,8 @@
 <%@ page import="rifo.*,java.util.*"%>
 <%@ page import="Utilerias.*"%>
 <%@ page import="com.test.LoginController" %>
+<%@page import="Creat_Projects.Create_Project" %>
+<%@page import="Project.db.handling.ProjectDBHandling" %>
 <%--<%@ page import="Project.db.handling.ProjectDBHandling" %>--%>
 <%@ page import="com.test.AddProject" %>
 <%@ page import="javax.swing.text.Document" %>
@@ -13,6 +15,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
+<%--<jsp:useBean id="project" class="Creat_Projects.Create_Project" scope="request" />--%>
+<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="hellostyle.css">
@@ -49,7 +53,7 @@
                 </li>
                 <li>
                     <a class="s-sidebar__nav-link" href="#0">
-                        <i class="fa fa-camera"></i><em>History</em>
+                        <i class="fa fa-camera" ></i><em>History</em>
                     </a>
                 </li>
             </ul>
@@ -68,6 +72,11 @@
         <div class="AddBtn">
             <a class="button" href="#popup3">הוסף אבן דרך</a>
         </div>
+
+        <div class="AddBtn">
+            <a class="button" href="#popup4">הצג פרויקטים</a>
+        </div>
+
 
         <form id="popup1" class="overlay" action="User" >
             <div class="popup">
@@ -121,6 +130,20 @@
 
             </div>
         </form>
+            <form id="popup4" class="overlay"  >
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <h2> פרויקט</h2>
+
+                    <div class="content">
+                        <label for="projName"><b>שם פרויקט</b></label>
+                        <input type="text" placeholder="שם פרויקט" name="projName" required>
+                        <input type="text" value="<%= project.getProjectsNames() %>">
+                        <%--<%= request.getParameter("getProjectsNames") %>--%>
+                    </div>
+                    <button type="submit" value="Login" >אישור</button>
+                </div>
+            </form>
 
     </main>
 </div>

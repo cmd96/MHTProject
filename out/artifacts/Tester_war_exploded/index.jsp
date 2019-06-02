@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<%--<%=SQLConnection.getConnetion()%>--%>
+
 <form class="modal-content animate" action="LoginController" method="post">
   <div class="imgcontainer">
     <img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">
@@ -33,8 +33,9 @@
     <input type="password" placeholder="הכנס סיסמה" name="password" required>
 
     <button type="submit" value="Login">היכנס</button>
+
   </div>
 </form>
-
 </body>
+
 </html>
