@@ -11,41 +11,40 @@ import java.util.Date;
 
 public class MileSton {
 
-    private int ProjectID;
-    private int MileStonID;
-    private int ProjectManagmentID ;
-    private int ResponsiboleWriterId;
-    private String TDescription;
+    private int ID;
+    private String name;
+    private int poductID;
+    private int projectID ;
+    private int ResponsibleWriter;
     private Date DateStart;
     private Date DateToEnd;
-    private Date DateDone;
-    private Date DatePlan;
+    private String Description;
 
 
-    public MileSton(int ProjectID,int MileStonID,int ProManID ,int ResWrID, String Descript,Date start,Date end,Date done,Date plan) {
+
+    public MileSton(String name, int poductID,int projectID ,int ResponsibleWriter, Date DateStart,Date DateToEnd,String Description) {
         super();
-        this.ProjectID=ProjectID;
-        this.MileStonID=MileStonID;
-        this.ProjectManagmentID = ProManID;
-        this.ResponsiboleWriterId=ResWrID;
-        this.TDescription=Descript;
-        this.DateStart=start;
-        this.DateToEnd=end;
-        this.DateDone=done;
-        this.DatePlan=plan;
-    }
+//        this.ID=ID;
+        this.name=name;
+        this.poductID=poductID;
+        this.projectID = projectID;
+        this.ResponsibleWriter=ResponsibleWriter;
+        this.DateStart=DateStart;
+        this.DateToEnd=DateToEnd;
+        this.Description=Description;
+        }
 
     public MileSton() {
        // super();
     }
-    public MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
+    public static MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
 //        qwery thart retun the reqwest mileson
-        java.lang.String found_mile= "Select * from MileStons WHERE MileStonID = "+mile_num;
+        java.lang.String sql= "Select * from MileStons WHERE ID = "+mile_num;
         ResultSet rs;
         try {
 
             Statement stmt = con.createStatement();
-            rs = stmt.executeQuery(found_mile);
+            rs = stmt.executeQuery(sql);
 //            System.out.println(rs);
         } catch (SQLException e) {
             throw new ProjectExeption("Get the MileSton  faild!!", e);
@@ -53,54 +52,47 @@ public class MileSton {
 
         return (MileSton) rs;
     }
+    public int get_ID(){return this.ID;}
 
-
-
-    public int get_ProjectID() {
-        return ProjectID;
+    public String get_name() {
+        return name;
     }
     //Don't let todo set to Project ID
-    public void set_ProjectID(int ProjectID) {
-        this.ProjectID = ProjectID;
+    public void set_name(String name){this.name=name;}
+    public int get_poductID(){return this.poductID; }
+    public void set_poductID(int poductID) {
+        this.poductID = poductID;
     }
 
-    public int get_MileStonID() {
-        return MileStonID;
+    public int get_projectID() {
+        return projectID;
     }
 //     Don't let todo set to Mileston ID
 //    public void set_MileStonID(int MileStonID) {
 //        this.MileStonID = MileStonID;
 //    }
-    public int get_ProjectManagmentID() {
-        return ProjectManagmentID;
+    public void set_projectID(int projectID){this.projectID=projectID;}
+    public int get_ResponsibleWriter() {
+        return ResponsibleWriter;
     }
 
-    public void set_ProjectManagmentID(int ProjectManagmentID) {
-        this.ProjectManagmentID = ProjectManagmentID;
+    public void set_ResponsibleWriter(int ResponsibleWriter) {
+        this.ResponsibleWriter = ResponsibleWriter;
     }
 
-    public int get_ResponsiboleWriterId() {
-        return ResponsiboleWriterId;
-    }
-
-    public void set_ResponsiboleWriterId(int ResponsiboleWriterId) {
-        this.ResponsiboleWriterId = ResponsiboleWriterId;
-    }
-
-    public String get_TDescription() {
-        return TDescription;
-    }
-
-    public void set_TDescription(String TDescription) {
-        this.TDescription = TDescription;
-    }
-
-    public Date get_DateStart() {
-        return DateStart;
-    }
-
+    public Date get_DateStart(){return DateStart;}
     public void set_DateStart(Date DateStart) {
         this.DateStart = DateStart;
+    }
+
+
+
+    public String get_Description() {
+        return Description;
+    }
+
+    public void set_Description(String Description) {
+        this.Description = Description;
     }
 
     public Date get_DateToEnd() {
@@ -112,15 +104,4 @@ public class MileSton {
         this.DateToEnd = DateToEnd;
     }
 
-    public Date get_DateDone() {
-        return DateDone;
-    }
-
-    public void set_DateDone(Date DateDone) {
-        this.DateToEnd = DateDone;
-    }
-
-    public Date get_DatePlan() {
-        return DatePlan;
-    }
 }

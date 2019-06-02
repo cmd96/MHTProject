@@ -195,12 +195,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#76#77#0" expanded="true" />
+                <element signature="e#101#102#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,7 +260,6 @@
       <find>update</find>
       <find>get_mil</find>
       <find>getNumsOfMiles</find>
-      <find>NumsOfMiles</find>
       <find>Project</find>
       <find>MHT</find>
       <find>rs_</find>
@@ -294,7 +294,6 @@
         <option value="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" />
         <option value="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" />
         <option value="$PROJECT_DIR$/src/MileSton/MileSton.java" />
-        <option value="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" />
         <option value="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" />
         <option value="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -750,9 +749,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -760,7 +756,7 @@
           <url>file://$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java</url>
           <line>20</line>
           <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java</url>
@@ -988,9 +984,6 @@
           <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#insert#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#Update_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
-            <element signature="method#Copy_Project#0;class#MileStonManager#0;class#ProjectManager#0" />
           </folding>
         </state>
       </provider>
@@ -1040,7 +1033,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
+    <entry file="file://$PROJECT_DIR$/src/History/History.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
