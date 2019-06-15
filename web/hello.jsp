@@ -7,7 +7,9 @@
 <%--<%@ page import="Project.db.handling.ProjectDBHandling" %>--%>
 <%@ page import="com.test.AddProject" %>
 <%@ page import="javax.swing.text.Document" %>
-<%@ page import="com.test.User" %><%--
+<%@ page import="com.test.User" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: mhtuser
   Date: 04/02/2019
@@ -16,68 +18,82 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
 <%--<jsp:useBean id="project" class="Creat_Projects.Create_Project" scope="request" />--%>
-<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />
+<%--<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />--%>
+<jsp:useBean id="project" class="com.test.Hello" scope="request" />
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="hellostyle.css">
+    <script src="hello.js"></script>
+    <%--<script src="jquery-3.4.1.js"></script>--%>
+    <link rel="stylesheet" type="text/css" href="hello.css">
     <meta charset="ISO-8859-1">
     <title>Hello</title>
-<%--suppress CssInvalidPropertyValue --%>
+    <%--suppress CssInvalidPropertyValue --%>
     <style>
 
-</style>
+    </style>
 </head>
 
 <body>
-<div class="s-layout">
-    <!-- Sidebar -->
-    <div class="s-layout__sidebar">
-        <a class="s-sidebar__trigger" href="#0">
-            <i class="fa fa-bars"></i>
-        </a>
-
-        <nav class="s-sidebar__nav">
-            <ul>
-                <li style="background-color: #fefefe">
-                    <img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">
-                </li>
-                <li>
-                    <a class="s-sidebar__nav-link" href="#0">
-                        <i class="fa fa-home"></i><em>Home</em>
-                    </a>
-                </li>
-                <li>
-                    <a class="s-sidebar__nav-link" href="#0">
-                        <i class="fa fa-user"></i><em>My Profile</em>
-                    </a>
-                </li>
-                <li>
-                    <a class="s-sidebar__nav-link" href="#0">
-                        <i class="fa fa-camera" ></i><em>History</em>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+<div id="aside">
+    <div id="user">
+        <img id="userImg" src="">
+        <span id="userName">שם משתמש</span>
     </div>
+    <div id="history">
+        <span id="header">היסטוריה</span>
+        <div id="content">
+            <div id="historyItem"></div>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div id="top">
+        <div id="project">
+            <label id="header">בחר פרויקט</label>
+            <select id="selectProject" name="selectProject">
+                <option id="projectItem" selected></option>
+            </select>
+        </div>
+    </div>
+    <div id="projects">
+        <div id="projectItem">
+            <div id="products">
+                <div id="productItem">
+                    <span id="productName">שם תוצר</span>
+                    <span id="productResponsibleWriter">שם כתב אחראי</span>
+                    <div id="milestons">
+                        <div id="milestonItem">
+                            <span id="milestonName"></span>
+                            <span id="milestonToDoDate"></span>
+                            <div id="milestonButtons">
+                                <button id="confirmMilestonBtn"></button>
+                                <button id="editMilestonBtn"></button>
+                                <button id="detailsMilestonBtn"></button>
+                            </div>
+                        </div>
+                        <a href="#popup3">
+                        <button id="addMilestonBtn"></button>
+                        </a>
+                    </div>
+                    <div id="prodectButtons">
+                        <button id="confirmProductBtn"></button>
+                        <button id="editProductBtn"></button>
+                        <button id="detailsProductBtn"></button>
+                    </div>
+                </div>
+                <a href="#popup2" >
+                    <button id="addProductBtn" ></button>
+                </a>
+            </div>
+        </div>
+        <a  href="#popup1">
+            <button id="addProjectBtn"></button>
+        </a>
+    </div>
+</div>
 
-    <!-- Content -->
+<div class="s-layout">
     <main class="s-layout__content">
-
-        <div class="AddBtn">
-            <a class="button" href="#popup1">הוסף פרויקט</a>
-        </div>
-        <div class="AddBtn">
-            <a class="button" href="#popup2">הוסף תוצר</a>
-        </div>
-        <div class="AddBtn">
-            <a class="button" href="#popup3">הוסף אבן דרך</a>
-        </div>
-
-        <div class="AddBtn">
-            <a class="button" href="#popup4">הצג פרויקטים</a>
-        </div>
-
-
         <form id="popup1" class="overlay" action="User" >
             <div class="popup">
                 <a class="close" href="#">&times;</a>
@@ -130,22 +146,80 @@
 
             </div>
         </form>
-            <form id="popup4" class="overlay"  >
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <h2> פרויקט</h2>
+        <form id="popup4" class="overlay"  >
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h2> פרויקט</h2>
 
-                    <div class="content">
-                        <label for="projName"><b>שם פרויקט</b></label>
-                        <input type="text" placeholder="שם פרויקט" name="projName" required>
-                        <input type="text" value="<%= project.getProjectsNames() %>">
-                        <%--<%= request.getParameter("getProjectsNames") %>--%>
-                    </div>
-                    <button type="submit" value="Login" >אישור</button>
+                <div class="content">
+                    <label for="projName"><b>שם פרויקט</b></label>
+                    <input type="text" value="<%= project.getProjectsNames() %>">
+                    <%--<%= request.getParameter("getProjectsNames") %>--%>
                 </div>
-            </form>
-
+                <button type="submit" value="Login" >אישור</button>
+            </div>
+        </form>
     </main>
 </div>
+
+
+
+
+
+
+
+
+
+<%--<div class="s-layout">--%>
+<%--<!-- Sidebar -->--%>
+<%--<div class="s-layout__sidebar">--%>
+<%--<a class="s-sidebar__trigger" href="#0">--%>
+<%--<i class="fa fa-bars"></i>--%>
+<%--</a>--%>
+
+<%--<nav class="s-sidebar__nav">--%>
+<%--<ul>--%>
+<%--<li style="background-color: #fefefe">--%>
+<%--<img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="s-sidebar__nav-link" href="#0">--%>
+<%--<i class="fa fa-home"></i><em>Home</em>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="s-sidebar__nav-link" href="#0">--%>
+<%--<i class="fa fa-user"></i><em>My Profile</em>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="s-sidebar__nav-link" href="#0">--%>
+<%--<i class="fa fa-camera" ></i><em>History</em>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--</ul>--%>
+<%--</nav>--%>
+<%--</div>--%>
+
+<%--<!-- Content -->--%>
+<%--<main class="s-layout__content">--%>
+
+<%--<div class="AddBtn">--%>
+<%--<a class="button" href="#popup1">הוסף פרויקט</a>--%>
+<%--</div>--%>
+<%--<div class="AddBtn">--%>
+<%--<a class="button" href="#popup2">הוסף תוצר</a>--%>
+<%--</div>--%>
+<%--<div class="AddBtn">--%>
+<%--<a class="button" href="#popup3">הוסף אבן דרך</a>--%>
+<%--</div>--%>
+
+<%--<div class="AddBtn">--%>
+<%--<a class="button" href="#popup4">הצג פרויקטים</a>--%>
+<%--</div>--%>
+
+
+<%--</main>--%>
+<%--</div>--%>
 </body>
 </html>

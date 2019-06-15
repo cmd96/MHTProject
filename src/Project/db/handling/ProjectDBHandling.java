@@ -2,7 +2,6 @@ package Project.db.handling;
 import Creat_Projects.Create_Project;
 import Project.db.managers.ProjectManager;
 import Project.exception.ProjectExeption;
-import com.test.SQLConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,8 +10,7 @@ import java.sql.Statement;
 import java.text.ParseException;
 
 public class ProjectDBHandling implements ProjectManager{
-    private String projectsNames= getAllProjectsNames();
-    public  String  getProjectsNames(){return projectsNames;}
+
     public ProjectDBHandling() throws SQLException, ClassNotFoundException {
     }
 
@@ -69,19 +67,7 @@ public class ProjectDBHandling implements ProjectManager{
         }
 
     }
-    public static String getAllProjectsNames() throws SQLException, ClassNotFoundException {
-        String s="";
-        Connection con = SQLConnection.getCon();
-        Statement stmt = con.createStatement();
 
-        String SQL = "SELECT * FROM Projects";
-        ResultSet rs = stmt.executeQuery(SQL);
-        while (rs.next()) {
-            s+=rs.getString("Name");
-            }
-        System.out.println(s);
-           return s;
-        }
 
 
 
