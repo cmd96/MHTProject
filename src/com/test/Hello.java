@@ -22,7 +22,6 @@ public class Hello {
         while (rs.next()) {
             s+=rs.getString("Name")+" ";
         }
-        System.out.println(s);
         return s;
     }
 }

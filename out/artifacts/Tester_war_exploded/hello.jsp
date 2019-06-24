@@ -6,6 +6,7 @@
 <%@page import="Project.db.handling.ProjectDBHandling" %>
 <%--<%@ page import="Project.db.handling.ProjectDBHandling" %>--%>
 <%@ page import="com.test.AddProject" %>
+<%@ page import="com.test.AddButtons" %>
 <%@ page import="javax.swing.text.Document" %>
 <%@ page import="com.test.User" %>
 
@@ -19,6 +20,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
 <%--<jsp:useBean id="project" class="Creat_Projects.Create_Project" scope="request" />--%>
 <%--<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />--%>
+<%--<jsp:useBean id="addBtn" class="com.test.AddButtons" scope="request" />--%>
+<jsp:useBean id="user" class="com.test.User" scope="request" />
 <jsp:useBean id="project" class="com.test.Hello" scope="request" />
 <html>
 <head>
@@ -37,7 +40,9 @@
 <div id="aside">
     <div id="user">
         <img id="userImg" src="">
-        <span id="userName">שם משתמש</span>
+        <span id="userName">שלום</span>
+        <br/>
+        <span type="text"><%= user.getUserName() %></span>
     </div>
     <div id="history">
         <span id="header">היסטוריה</span>
@@ -57,23 +62,21 @@
     </div>
     <div id="projects">
         <div id="projectItem">
-            <div id="products">
+            <div id="products" >
                 <div id="productItem">
-                    <span id="productName">שם תוצר</span>
-                    <span id="productResponsibleWriter">שם כתב אחראי</span>
+                    <div id="productName"><span>שם תוצר</span></div>
+                    <div id="productResponsibleWriter"><span>שם כתב אחראי</span></div>
                     <div id="milestons">
                         <div id="milestonItem">
-                            <span id="milestonName"></span>
-                            <span id="milestonToDoDate"></span>
+                            <div id="milestonName"><span>שם אבן דרך</span></div>
+                            <div id="milestonToDoDate"><date>תאריך</date></div>
                             <div id="milestonButtons">
                                 <button id="confirmMilestonBtn"></button>
                                 <button id="editMilestonBtn"></button>
                                 <button id="detailsMilestonBtn"></button>
                             </div>
                         </div>
-                        <a href="#popup3">
-                        <button id="addMilestonBtn"></button>
-                        </a>
+                        <a id="addMilestonBtn" href="#popup3">+</a>
                     </div>
                     <div id="prodectButtons">
                         <button id="confirmProductBtn"></button>
@@ -81,20 +84,16 @@
                         <button id="detailsProductBtn"></button>
                     </div>
                 </div>
-                <a href="#popup2" >
-                    <button id="addProductBtn" ></button>
-                </a>
+                <a  id="addProductBtn" href="#popup2" >+</a>
             </div>
         </div>
-        <a  href="#popup1">
-            <button id="addProjectBtn"></button>
-        </a>
+        <a   id="addProjectBtn" href="#popup1">+</a>
     </div>
 </div>
 
 <div class="s-layout">
     <main class="s-layout__content">
-        <form id="popup1" class="overlay" action="User" >
+        <form id="popup1" class="overlay" action="addBtnServlet" method="post">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>הוסף פרויקט</h2>
@@ -102,47 +101,42 @@
                 <div class="content">
                     <label for="projName"><b>שם פרויקט</b></label>
                     <input type="text" placeholder="שם פרויקט" name="projName" required>
+                    <label for="projName"><b>שם לקוח</b></label>
+                    <input type="text" placeholder="שם לקוח" name="customerName" required>
                 </div>
-                <button type="submit" value="Login" >אישור</button>
+                <button type="submit" value="Login" name="addProjectButton" >אישור</button>
             </div>
         </form>
 
-        <form id="popup2" class="overlay">
+        <form id="popup2" class="overlay" action="addBtnServlet" method="post">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>הוסף תוצר</h2>
 
                 <div class="content">
-                    <label for="projName"><b>שם פרויקט</b></label>
-                    <input type="text" placeholder="שם פרויקט" name="projectName" required>
-
                     <label for="productName"><b>שם תוצר</b></label>
                     <input type="text" placeholder="שם תוצר" name="productName" required>
+                    <label for="productName"><b>שם כתב אחראי</b></label>
+                    <input type="text" placeholder="שם כתב אחראי" name="responsiblewriterName" required>
                 </div>
-                <button type="submit" value="Login">אישור</button>
+                <button type="submit" value="Login" name="addProductButton">אישור</button>
 
             </div>
         </form>
 
-        <form id="popup3" class="overlay">
+        <form id="popup3" class="overlay" action="addBtnServlet" method="post">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>הוסף אבן דרך</h2>
 
                 <div class="content">
-                    <label for="projName"><b>שם פרויקט</b></label>
-                    <input type="text" placeholder="שם פרויקט" name="projectName" required>
-
-                    <label for="productName"><b>שם תוצר</b></label>
-                    <input type="text" placeholder="שם תוצר" name="productName" required>
-
                     <label for="mailstonName"><b>שם אבן דרך</b></label>
                     <input type="text" placeholder="שם אבן דרך" name="mailstonName" required>
 
                     <label for="description"><b>תיאור</b></label>
                     <input type="text" placeholder="תיאור" name="description" required>
                 </div>
-                <button type="submit" value="Login">אישור</button>
+                <button type="submit" value="Login" name="addMilestonButton">אישור</button>
 
             </div>
         </form>

@@ -1,16 +1,37 @@
 package com.test;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-public class AddProject extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+import static java.lang.System.out;
 
-        String projName=request.getParameter("projName");
-        System.out.println("project "+projName+" is added");
-        request.getParameter("popup1");
+public class AddProject{
+    static String name;
+    static int pmID;
+    static String customer;
+    public AddProject(){
+
+    }
+
+    public AddProject(String n, int p, String c) {
+        name=n;
+        pmID=p;
+        customer=c;
+    }
+
+    public static void insertProject() throws SQLException, ClassNotFoundException {
+        Connection con = SQLConnection.getCon();
+        Statement stmt = con.createStatement();
+
+        int i=stmt.executeUpdate("insert into Projects values('"+name+"','"+pmID+"','"+customer+"')");
+        if(i>0)
+            out.println(name+" project Inserted Successfully");
+        else
+            out.println(name+" project Insert Unsuccessful");
+        con.close();
+//        while (rs.next()) {
+//        }
+
     }
 }

@@ -21,7 +21,7 @@
 
 <body>
 
-<form class="modal-content animate" action="LoginController" method="post">
+<form class="modal-content animate" action="loginServlet" method="post">
   <div class="imgcontainer">
     <img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">
   </div>
