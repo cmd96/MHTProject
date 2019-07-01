@@ -56,6 +56,7 @@
         <div id="project">
             <label id="header">בחר פרויקט</label>
             <select id="selectProject" name="selectProject">
+                <%--fillProjectsOptionList()--%>
                 <option id="projectItem" selected></option>
             </select>
         </div>

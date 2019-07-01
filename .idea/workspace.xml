@@ -7,26 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/test/AddButtons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/AddMileston.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/AddProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/AddProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/AddProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/Hello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/AddProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/AddProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/Hello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/AddProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/AddProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/Hello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hello.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/hello.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/hello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,8 +82,8 @@
           <entry key="css" value="415" />
           <entry key="iml" value="2" />
           <entry key="java" value="1780" />
-          <entry key="js" value="174" />
-          <entry key="jsp" value="1377" />
+          <entry key="js" value="264" />
+          <entry key="jsp" value="1402" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -107,8 +92,8 @@
           <entry key="CSS" value="415" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="1780" />
-          <entry key="JSP" value="1377" />
-          <entry key="JavaScript" value="174" />
+          <entry key="JSP" value="1402" />
+          <entry key="JavaScript" value="264" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -155,8 +140,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/hello.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="119" column="104" lean-forward="true" selection-start-line="119" selection-start-column="104" selection-end-line="119" selection-end-column="104" />
+            <state relative-caret-position="986">
+              <caret line="58" column="48" lean-forward="true" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -173,11 +158,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hello.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="119">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1560633934661" expanded="true" signature="3:251" ph="..." />
+                <marker date="1562013946699" expanded="true" signature="3:251" ph="..." />
+                <marker date="1562013946699" expanded="true" signature="255:772" ph="..." />
               </folding>
             </state>
           </provider>
@@ -186,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/Hello.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="223">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,8 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state relative-caret-position="121">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -232,8 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -305,8 +290,8 @@
       <find>s-layout__content</find>
       <find>a</find>
       <find>s-sidebar__nav-link</find>
-      <find>loginServlet</find>
       <find>validate</find>
+      <find>loginServlet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -342,7 +327,6 @@
         <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
         <option value="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/hello.js" />
-        <option value="$PROJECT_DIR$/web/hello.js" />
         <option value="$PROJECT_DIR$/web/hellostyle.css" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/com/test/Hello.java" />
@@ -354,6 +338,7 @@
         <option value="$PROJECT_DIR$/src/com/test/User.java" />
         <option value="$PROJECT_DIR$/src/com/test/AddButtons.java" />
         <option value="$PROJECT_DIR$/web/hello.jsp" />
+        <option value="$PROJECT_DIR$/web/hello.js" />
       </list>
     </option>
   </component>
@@ -457,7 +442,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561408663664" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562015565802" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -798,7 +783,7 @@
       <workItem from="1559207465553" duration="2881000" />
       <workItem from="1559210445248" duration="22092000" />
       <workItem from="1560461807512" duration="1293000" />
-      <workItem from="1560622391285" duration="45823000" />
+      <workItem from="1560622391285" duration="53142000" />
     </task>
     <servers />
   </component>
@@ -811,7 +796,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256485000" />
+    <option name="totallyTimeSpent" value="263804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,7 +808,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.1738255" />
@@ -1133,34 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/hello.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1560633934661" expanded="true" signature="3:251" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/hello.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/Hello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/AddProject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
@@ -1175,13 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1206,20 +1156,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hello.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/Hello.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <marker date="1562013946699" expanded="true" signature="3:251" ph="..." />
+            <marker date="1562013946699" expanded="true" signature="255:772" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="119" column="104" lean-forward="true" selection-start-line="119" selection-start-column="104" selection-end-line="119" selection-end-column="104" />
+        <state relative-caret-position="986">
+          <caret line="58" column="48" lean-forward="true" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
         </state>
       </provider>
     </entry>
