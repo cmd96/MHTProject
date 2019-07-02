@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/test/TesterMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/AddProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/AddProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/AddProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/AddProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/AddProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/AddProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/hello.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/db/handling/HistoryDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/HistoryDBHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,12 +141,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -169,36 +164,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/hello.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/test/Hello.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -214,7 +179,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,11 +187,51 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/TesterMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Project/db/handling/HistoryDBHandling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1974">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Update_MileSton#0;class#MileStonDBHandling#0" />
+                <element signature="method#delete#0;class#MileStonDBHandling#0" />
+                <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="method#delete#0;class#ProjectDBHandling#0" />
+                <element signature="method#Update_Project#0;class#ProjectDBHandling#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,7 +240,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/test/AddProject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,7 +252,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -347,14 +352,12 @@
         <option value="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" />
         <option value="$PROJECT_DIR$/src/Project/MileSton/MileSton.java" />
         <option value="$PROJECT_DIR$/src/MileSton/MileSton.java" />
-        <option value="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" />
         <option value="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/dataSources.local.xml" />
         <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
         <option value="$PROJECT_DIR$/Tester.iml" />
         <option value="$PROJECT_DIR$/src/com/test/SQLConnection.java" />
-        <option value="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/hello.js" />
         <option value="$PROJECT_DIR$/web/hellostyle.css" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
@@ -369,6 +372,9 @@
         <option value="$PROJECT_DIR$/web/hello.jsp" />
         <option value="$PROJECT_DIR$/src/com/test/AddProject.java" />
         <option value="$PROJECT_DIR$/src/com/test/TesterMain.java" />
+        <option value="$PROJECT_DIR$/src/Project/db/handling/HistoryDBHandling.java" />
+        <option value="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" />
+        <option value="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" />
       </list>
     </option>
   </component>
@@ -391,11 +397,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="546" />
-    <option name="y" value="176" />
-    <option name="width" value="980" />
-    <option name="height" value="1030" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -445,6 +450,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MHTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MHTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MHTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MHTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MHTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MHTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="handling" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -458,8 +484,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562090860628" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562091575143" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GitPullNew/MHTProject" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -800,7 +826,7 @@
       <workItem from="1559210445248" duration="22092000" />
       <workItem from="1560461807512" duration="1293000" />
       <workItem from="1560622391285" duration="53142000" />
-      <workItem from="1562089535370" duration="1344000" />
+      <workItem from="1562089535370" duration="2032000" />
     </task>
     <servers />
   </component>
@@ -813,7 +839,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265148000" />
+    <option name="totallyTimeSpent" value="265836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,7 +851,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.17583893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -880,7 +907,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java</url>
-          <line>68</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -904,7 +931,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Thread.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/net/DualStackPlainSocketImpl.java" />
     <entry file="file://$PROJECT_DIR$/web/loginFaild.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -939,18 +965,6 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Override.java" />
     <entry file="file://$PROJECT_DIR$/src/Project/MileSton/MileSton.java" />
-    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#history_DateToEnd#0;class#MileStonDBHandling#0" />
-            <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1062,6 +1076,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-96">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1395#1396#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,13 +1103,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jquery-3.4.1.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Product/Product.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1160,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1170,7 +1189,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/test/AddProject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1190,7 +1209,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/test/SQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1200,7 +1219,41 @@
     <entry file="file://$PROJECT_DIR$/src/com/test/TesterMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/HistoryDBHandling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1974">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Update_MileSton#0;class#MileStonDBHandling#0" />
+            <element signature="method#delete#0;class#MileStonDBHandling#0" />
+            <element signature="method#Copy_MileSton#0;class#MileStonDBHandling#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="method#delete#0;class#ProjectDBHandling#0" />
+            <element signature="method#Update_Project#0;class#ProjectDBHandling#0" />
+          </folding>
         </state>
       </provider>
     </entry>

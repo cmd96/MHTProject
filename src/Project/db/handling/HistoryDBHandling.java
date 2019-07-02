@@ -1,41 +1,42 @@
 package Project.db.handling;//package Project.db.handling;
+
+import Project.exception.ProjectExeption;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 //
 //import Project.db.managers.MileStonManager;
 //import Project.exception.ProjectExeption;
 //
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 public class HistoryDBHandling {
-    
+    int LavelChange;
+    int IdItem;
+    String RowChanged;
+    String ChagedFrom;
+    String ChangedTo;
+
+    public void insert(Connection con, int LavelChanged ,int IdItem, String RowChanged,String CF, String CT) throws ProjectExeption {
+        String sql = "INSERT INTO Project  values (";
+        sql += "'" +LavelChanged + "', ";
+        sql += "'" + IdItem + "', ";
+        sql += "'" + RowChanged + "', ";
+        sql += "'" + CF + "', ";
+        sql += "'" + CT + "')";
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+//            rs.insertRow();
+
+
+        } catch (SQLException e) {
+            throw new ProjectExeption("failed to inset Project to DB", e);
+        }
+    }
 
 }
 
-//    public void insert(Connection con, MileSton mileSton) throws ProjectExeption {
-//
-//        String sql;
-//
-//        sql = "INSERT INTO MileSton VALUES(";
-//        sql += mileSton.get_ProjectID() + ", ";
-//        sql += "'" + mileSton.get_MileStonID() + "', ";
-//        sql += "'" + mileSton.get_ProjectManagmentID() + "', ";
-//        sql += "'" + mileSton.get_ResponsiboleWriterId() + "', ";
-//        sql += "'" + mileSton.get_TDescription() + "', ";
-//        sql += "'" + mileSton.get_DateToEnd() + "', ";
-//        sql += "'" + mileSton.get_DatePlan() + "', ";
-//
-//        try {
-//
-//            Statement stmt = con.createStatement();
-//            stmt.executeUpdate(sql);
-//
-//        } catch (SQLException e) {
-//            throw new ProjectExeption("failed to inset mileSton", e);
-//        }
-//
-//    }
 //    public void Update_History(Connection con, MileSton mileston) throws ProjectExeption {
 //
 //        MileSton mile = mileston.get_MileSton(con, mileston.get_MileStonID());
