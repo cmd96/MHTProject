@@ -21,8 +21,8 @@
 <%--<jsp:useBean id="project" class="Creat_Projects.Create_Project" scope="request" />--%>
 <%--<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />--%>
 <%--<jsp:useBean id="addBtn" class="com.test.AddButtons" scope="request" />--%>
-<jsp:useBean id="user" class="com.test.User" scope="request" />
-<jsp:useBean id="project" class="com.test.Hello" scope="request" />
+<%--<jsp:useBean id="user" class="com.test.User" scope="request" />--%>
+<%--<jsp:useBean id="project" class="com.test.Hello" scope="request" />--%>
 <html>
 <head>
     <script src="hello.js"></script>
@@ -42,7 +42,7 @@
         <img id="userImg" src="">
         <span id="userName">שלום</span>
         <br/>
-        <span type="text"><%= user.getUserName() %></span>
+        <%--<span type="text"><%= user.getUserName() %></span>--%>
     </div>
     <div id="history">
         <span id="header">היסטוריה</span>
@@ -148,7 +148,7 @@
 
                 <div class="content">
                     <label for="projName"><b>שם פרויקט</b></label>
-                    <input type="text" value="<%= project.getProjectsNames() %>">
+                    <%--<input type="text" value="<%= project.getProjectsNames() %>">--%>
                     <%--<%= request.getParameter("getProjectsNames") %>--%>
                 </div>
                 <button type="submit" value="Login" >אישור</button>
