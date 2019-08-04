@@ -9,14 +9,15 @@ public class User {
     static private String firstName;
     static private String lastName;
 
-
     public User(){
 
     }
+
     public User(String un,String pw){
         username=un;
         password=pw;
     }
+
     public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";
         Connection con=SQLConnection.getCon();
@@ -29,6 +30,7 @@ public class User {
         }
         return fullName;
     }
+
     public static int getUserID() throws SQLException, ClassNotFoundException {
         int id = 0;
         Connection con=SQLConnection.getCon();
