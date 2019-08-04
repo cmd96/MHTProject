@@ -13,4 +13,16 @@ public class MILESTONE_NAME
     public static int COURSE = 9;
     public static int PRESENTATION_CHECKING = 10;
     public static int DELIVERY_DATE = 11;
+
+    public static String DRAFT_STRING   = "DRAFT_STRING";
+    public static String OUTLINE_STRING = "OUTLINE_STRING";
+    public static String DRAFT_1_STRING = "DRAFT_1_STRING";
+    public static String DRAFT_2_STRING = "DRAFT_2_STRING";
+    public static String CR_STRING = "CR_STRING";
+    public static String SYLLABUS_STRING = "SYLLABUS_STRING";
+    public static String PRESENTATION_STRING = "PRESENTATION_STRING";
+    public static String TEST_STRING = "TEST_STRING";
+    public static String COURSE_STRING = "COURSE_STRING";
+    public static String PRESENTATION_CHECKING_STRING = "PRESENTATION_CHECKING_STRING";
+    public static String DELIVERY_DATE_STRING = "DELIVERY_DATE_STRING";
 }

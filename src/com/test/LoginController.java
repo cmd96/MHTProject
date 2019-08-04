@@ -19,7 +19,7 @@ public class LoginController extends HttpServlet {
         String un=request.getParameter("username");
         String pw=request.getParameter("password");
 
-        User user=new User(un,pw);
+        User user = new User(un,pw);
         this.projectUser = user;
         boolean isUserExist = false;
         try {

@@ -1,6 +1,7 @@
 package com.test;
 
 import java.sql.*;
+import java.util.List;
 
 public class User {
 
@@ -8,15 +9,26 @@ public class User {
     static private String password;
     static private String firstName;
     static private String lastName;
+    static private List<userProject> userProjectList;
 
     public User(){
 
     }
 
-    public User(String un,String pw){
+    public User(String un,String pw)
+    {
         username=un;
         password=pw;
+        //TODO:get all project and initialize them - add to list
     }
+
+    //fill project
+    //{
+    //  for list projectList from SQLserver
+    //}
+    //fill product data
+
+    //fill milestone
 
     public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";
