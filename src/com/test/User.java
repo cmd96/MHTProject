@@ -3,8 +3,12 @@ package com.test;
 import java.sql.*;
 
 public class User {
-    static String username;
-    static String password;
+
+    static private String username;
+    static private String password;
+    static private String firstName;
+    static private String lastName;
+
 
     public User(){
 
@@ -12,7 +16,6 @@ public class User {
     public User(String un,String pw){
         username=un;
         password=pw;
-
     }
     public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";

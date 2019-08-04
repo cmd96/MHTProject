@@ -9,7 +9,7 @@ import java.lang.*;
     public User() {
         int id=0;
         String first_name=null;
-        String last_name=null;
+        String last_name=dnull;
         int password=0;
     }
     public  User(int id, String first_name, String last_name,int password){

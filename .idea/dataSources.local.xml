@@ -2,7 +2,11 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="SQL Server (Microsoft) - Project@localhost" uuid="833f9a84-306f-4d27-8af7-9b93dee0fd4e">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
+      <database-info product="Microsoft SQL Server" version="14.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.2 for SQL Server" driver-version="7.2.1.0" family="MSSQL" exact-version="14.0.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <domain-auth>true</domain-auth>
     </data-source>
     <data-source name="SQL Server (Microsoft) - Project@localhost [2]" uuid="f1e1bcf1-9fe6-45cc-a993-198dd58fa913">

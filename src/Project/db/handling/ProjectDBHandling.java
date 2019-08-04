@@ -1,4 +1,5 @@
 package Project.db.handling;
+
 import Creat_Projects.Create_Project;
 import Project.db.managers.ProjectManager;
 import Project.exception.ProjectExeption;
@@ -7,19 +8,30 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
 
 public class ProjectDBHandling implements ProjectManager{
+    public  static void  insert(Connection con, Create_Project project) throws ProjectExeption{
+//        String qes="SELECT * FROM User Where UserID= " +project.get_ProjectManager()+" AND"+ User.getGetUserRoll()  ;
 
-    public ProjectDBHandling() throws SQLException, ClassNotFoundException {
+        String sql = "INSERT INTO Project  values (";
+        sql += "'" + project.get_name()+ "', ";
+        sql += "'" + project.get_ProjectManager()+ "', ";
+        sql += "'" + project.get_Costumer()+ "')";
+//        try{
+//            Statement stmt = con.createStatement();
+//            ResultSet rs= stmt.executeQuery(qes);
+//            if (rs.next()){
+//                stmt = con.createStatement();
+//                stmt.executeUpdate(sql);
+//            rs.insertRow();
+//            }
+
+//        } catch (SQLException e) {
+//            throw new ProjectExeption("failed to inset Project to DB", e);
+//        }
+
     }
 
-    //    void tester()
-//    {
-//        System.out.println("ojjmufhvuihvhviuh");
-//    }
-    public static void  insert(Connection con, Create_Project project) throws ParseException{
-    }
 
     public static void delete(Connection con, int Project_num) throws ProjectExeption {
         String SQL = "DELETE FROM MileStons WHERE ID = " + Project_num;
@@ -36,7 +48,7 @@ public class ProjectDBHandling implements ProjectManager{
             stmt.executeUpdate(sql);
         } catch (
                 SQLException e) {
-            throw new ProjectExeption("failed to delete proect", e);
+            throw new ProjectExeption("failed to delete project- but delete the all mileston that connect to this project", e);
         }
 
 
@@ -53,7 +65,7 @@ public class ProjectDBHandling implements ProjectManager{
 //        System.out.println(project.getProjectManagmentID());
 //        System.out.println("in update " +project.getProjectID());
         try{
-        String sql = "UPDATE Projects SET ";
+            String sql = "UPDATE Projects SET ";
 //            sql += "ID = '" + MileSton.create_Mile_Id() + "', ";
             sql += "name = '" + project.get_name() + "', ";
             sql += "ProjectManager = '" + project.get_ProjectManager() + "', ";
@@ -68,20 +80,20 @@ public class ProjectDBHandling implements ProjectManager{
 
     }
 
-
-
-
-    public static void Copy_Project(Connection con, int project_num) throws ProjectExeption, ParseException {
+    public static void Copy_Project(Connection con, int project_num) throws ProjectExeption {
         Create_Project projet_to_copy = Create_Project.getProject(con, project_num);
         Create_Project new_pro;
         new_pro = new Create_Project(projet_to_copy.get_name(), projet_to_copy.get_ProjectManager(), projet_to_copy.get_Costumer());
         insert(con, new_pro);
-        String sql = "insert into MileSton select (name,poductID,projectID,ResponsibleWriterDateStart,DateToEnd,Description)" +
-                " from MileSton where projectID=" + project_num;
+        new_pro.get_ID();
+        String sql = "INSERT into MileSton values (name,poductID,projectID,ResponsibleWriterDateStart,DateToEnd,Description)" +
+                "from MileSton where projectID=" + project_num;
         try {
 //            String sql= "SELECT ID FROM MileStons where ProjectId= " +project_num;
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
+
+            rs.getInt("projectID");
 //            MileStonDBHandling.Copy_MileSton(con, rs.getInt("ID"));
 //            MileStonDBHandling.Update_MileSton(con,rs.);
 //            rs.insertRow();
@@ -94,5 +106,4 @@ public class ProjectDBHandling implements ProjectManager{
 //
         //I checked it
 
-    }
-}
+    }}

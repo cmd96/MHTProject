@@ -4,6 +4,7 @@
 <%@ page import="com.test.LoginController" %>
 <%@page import="Creat_Projects.Create_Project" %>
 <%@page import="Project.db.handling.ProjectDBHandling" %>
+<%@ page import="com.test.SQLConnection" %>
 <%--<%@ page import="Project.db.handling.ProjectDBHandling" %>--%>
 <%@ page import="com.test.AddProject" %>
 <%@ page import="com.test.AddButtons" %>
@@ -26,6 +27,24 @@
 <html>
 <head>
     <script src="hello.js"></script>
+    <script>
+        function loadImage() {
+            alert("Image is loaded");
+
+    var con= new SQLConnection.getCon();
+            alert(con);
+    var stmt = con.createStatement();
+            alert(stmt);
+    var SQL = "SELECT * FROM Projects";
+    var rs = stmt.executeQuery(SQL);
+    while (rs.next()) {
+        alert(rs.getString("Name"));
+        //var option = document.createElement("option");
+        //option.text = rs.getString("Name");
+        //x.add(option);
+            }
+        }
+    </script>
     <%--<script src="jquery-3.4.1.js"></script>--%>
     <link rel="stylesheet" type="text/css" href="hello.css">
     <meta charset="ISO-8859-1">
@@ -36,7 +55,7 @@
     </style>
 </head>
 
-<body>
+<body onload="loadImage()">
 <div id="aside">
     <div id="user">
         <img id="userImg" src="">
@@ -148,7 +167,7 @@
 
                 <div class="content">
                     <label for="projName"><b>שם פרויקט</b></label>
-                    <input type="text" value="<%= project.getProjectsNames() %>">
+                    <%--<input type="text" value="<%= project.getProjectsNames() %>">--%>
                     <%--<%= request.getParameter("getProjectsNames") %>--%>
                 </div>
                 <button type="submit" value="Login" >אישור</button>
