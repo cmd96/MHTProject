@@ -1,6 +1,8 @@
 package com.test;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class User {
@@ -21,7 +23,26 @@ public class User {
         password=pw;
         //TODO:get all project and initialize them - add to list
     }
+    public void exampleDataSetUp()
+    {
+        ProductMilestone milstoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milstoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milstoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milstoneDeliveryDate = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        List<ProductMilestone> MilestoneList = new ArrayList<>();
 
+        MilestoneList.add(milstoneOutline);
+        MilestoneList.add(milstoneDraft);
+        MilestoneList.add(milstoneCR);
+        MilestoneList.add(milstoneDeliveryDate);
+
+        ProjectProduct product = new ProjectProduct(11,"wing",111, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
+        List<ProjectProduct> productList = new ArrayList<>();
+        productList.add(product);
+        userProject project = new userProject("wingToFly","Chemdi",12,11,productList);
+        List<userProject> projectList = new ArrayList<>();
+        this.userProjectList = projectList;
+    }
     //fill project
     //{
     //  for list projectList from SQLserver

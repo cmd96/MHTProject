@@ -8,9 +8,9 @@ public class ProjectProduct {
     private String productName;
     private int productID;
     private List<ProductMilestone> productMilestone;
-    private TEMPLATE_FLOW template_flow;
+    private int [] template_flow;
 
-    public ProjectProduct(int projectID, String productName, int productID, List<ProductMilestone> productMilestone, TEMPLATE_FLOW template_flow) {
+    public ProjectProduct(int projectID, String productName, int productID, List<ProductMilestone> productMilestone, int[] template_flow) {
         this.projectID = projectID;
         this.productName = productName;
         this.productID = productID;
@@ -49,11 +49,11 @@ public class ProjectProduct {
     public void setProductMilestone(List<ProductMilestone> productMilestone) {
         this.productMilestone = productMilestone;
     }
-    public TEMPLATE_FLOW getTemplate_flow() {
+    public int[] getTemplate_flow() {
         return template_flow;
     }
 
-    public void setTemplate_flow(TEMPLATE_FLOW template_flow) {
+    public void setTemplate_flow(int[] template_flow) {
         this.template_flow = template_flow;
     }
 }

@@ -5,14 +5,14 @@ import java.util.Date;
 public class ProductMilestone
 {
     private int productID;
-    private MILESTONE_NAME milestoneName;
+    private String milestoneName;
     private int ResponsibleWriterId;
     private Date startDate;
     private Date endDate;
     private String description;
-    MILESTONE_STATUS status;
+    int status;
 
-    public ProductMilestone(int productID, MILESTONE_NAME milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, MILESTONE_STATUS status) {
+    public ProductMilestone(int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
         this.productID = productID;
         this.milestoneName = milestoneName;
         ResponsibleWriterId = responsibleWriterId;
@@ -29,11 +29,11 @@ public class ProductMilestone
         this.productID = productID;
     }
 
-    public MILESTONE_NAME getMilestoneName() {
+    public String getMilestoneName() {
         return milestoneName;
     }
 
-    public void setMilestoneName(MILESTONE_NAME milestoneName) {
+    public void setMilestoneName(String milestoneName) {
         this.milestoneName = milestoneName;
     }
 
@@ -69,11 +69,11 @@ public class ProductMilestone
         this.description = description;
     }
 
-    public MILESTONE_STATUS getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(MILESTONE_STATUS status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }
