@@ -11,10 +11,14 @@ public class Product {
     int ID;
     String name;
     int projectID;
+    private List mileStons;
 
-    public Product(String name , int ProjectID){
+
+    public Product(int ID, String name, int ProjectID, List MileSton){
+        this.ID= ID;
         this.name=name;
         this.projectID=projectID;
+        this.mileStons = MileSton;
     }
     public Product get_Product(Connection con, int ID) throws ProjectExeption {
         String sql = "SELECT * FROM Product WHERE ID="+ID;
