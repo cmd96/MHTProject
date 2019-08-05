@@ -7,12 +7,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Create_Project {
-    //    private static int NumOfMile = 1;
-    private int ID;
+  private int ID;
     private String name ;
     private int ProjectManager;
     private String Costumer;
+    private java.util.List<Product> productL;
+
+    public Create_Project(int ID , String name, int ProjectManager, java.util.List<Product> product, String Costumer ) {
+        super();
+        this.ID=ID;
+        this.name=name;
+        this.ProjectManager = ProjectManager;
+        this.productL = product;
+        this.Costumer=Costumer;
+
+    }
 
     public Create_Project(String name,int ProjectManager,String Costumer) {
         super();
