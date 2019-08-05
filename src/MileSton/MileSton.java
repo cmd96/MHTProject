@@ -9,22 +9,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
-public class MileSton {
+  int ID;
+     java.lang.String name;
+     int poductID;
+     int projectID ;
+     int ResponsibleWriter;
+     Date DateStart;
+     Date DateToEnd;
+     String Description;
 
-    private int ID;
-    private String name;
-    private int poductID;
-    private int projectID ;
-    private int ResponsibleWriter;
-    private Date DateStart;
-    private Date DateToEnd;
-    private String Description;
-
-
-
-    public MileSton(String name, int poductID,int projectID ,int ResponsibleWriter, Date DateStart,Date DateToEnd,String Description) {
-        super();
-//        this.ID=ID;
+    public MileSton(int ID, java.lang.String name, int poductID, int projectID, int responsibleWriter, java.sql.Date dateStart, java.sql.Date dateToEnd, java.lang.String description) {
+        this.ID=ID;
         this.name=name;
         this.poductID=poductID;
         this.projectID = projectID;
@@ -32,11 +27,8 @@ public class MileSton {
         this.DateStart=DateStart;
         this.DateToEnd=DateToEnd;
         this.Description=Description;
-        }
-
-    public MileSton() {
-       // super();
     }
+
     public static MileSton get_MileSton(Connection con, int mile_num) throws ProjectExeption {
 //        qwery thart retun the reqwest mileson
         java.lang.String sql= "Select * from MileStons WHERE ID = "+mile_num;
