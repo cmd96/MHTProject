@@ -14,25 +14,31 @@
 
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="indexStyle.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <meta charset="ISO-8859-1">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+          crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+          crossorigin='anonymous'>
   <title>Login</title>
 </head>
 
 <body>
 
-<form class="modal-content animate" action="loginServlet" method="post">
-  <div class="imgcontainer">
-    <img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">
-  </div>
+<form class="mainForm" action="loginServlet" method="post">
+  <%--<div class="imgcontainer">--%>
+    <%--<img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">--%>
+  <%--</div>--%>
   <div class="container">
-    <label><b>שם משתמש</b></label>
+      <label class="title">היכנס</label>
     <input type="text" placeholder="הכנס שם משתמש" name="username" required>
+      <label>שם משתמש</label>
 
-    <label><b>סיסמה</b></label>
     <input type="password" placeholder="הכנס סיסמה" name="password" required>
-
-    <button type="submit" value="Login">היכנס</button>
+      <label>סיסמה</label>
+    <button type="submit" value="Login">></button>
 
   </div>
 </form>

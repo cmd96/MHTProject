@@ -22,7 +22,50 @@ public class User {
         username=un;
         password=pw;
         //TODO:get all project and initialize them - add to list
+        exampleDataSetUp();
     }
+    public static String getUsername() {
+        return username;
+    }
+
+    public static void setUsername(String username) {
+        User.username = username;
+    }
+
+    public static String getPassword() {
+        return password;
+    }
+
+    public static void setPassword(String password) {
+        User.password = password;
+    }
+
+    public static String getFirstName() {
+        return firstName;
+    }
+
+    public static void setFirstName(String firstName) {
+        User.firstName = firstName;
+    }
+
+    public static String getLastName() {
+        return lastName;
+    }
+
+    public static void setLastName(String lastName) {
+        User.lastName = lastName;
+    }
+
+    public static List<userProject> getUserProjectList() {
+        return userProjectList;
+    }
+
+    public static void setUserProjectList(List<userProject> userProjectList) {
+        User.userProjectList = userProjectList;
+    }
+
+
+
     public void exampleDataSetUp()
     {
         ProductMilestone milstoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
@@ -39,9 +82,50 @@ public class User {
         ProjectProduct product = new ProjectProduct(11,"wing",111, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
         List<ProjectProduct> productList = new ArrayList<>();
         productList.add(product);
-        userProject project = new userProject("wingToFly","Chemdi",12,11,productList);
+        userProject project = new userProject("wingToFly","Chemdi",1,11,productList);
         List<userProject> projectList = new ArrayList<>();
+        projectList.add(project);
         this.userProjectList = projectList;
+    }
+    public static String getUserMilestons(){
+        String userMilestons="";
+
+        return userMilestons;
+    }
+
+    public static String getUserProjects(){
+
+        List<ProjectProduct> productsNamesList;
+        List<ProductMilestone> milestonsNamesList;
+        List<String> dataList=new ArrayList<>();
+        String userNmae="";
+
+
+        for (int i=0;i<userProjectList.size();i++){
+            dataList.add(userProjectList.get(i).getProjectMame());
+            productsNamesList = userProjectList.get(i).getProductList();
+            for (int j=0;j<productsNamesList.size();j++){
+                dataList.add(productsNamesList.get(j).getProductName());
+                milestonsNamesList=productsNamesList.get(j).getProductMilestone();
+                for (int k=0;k<milestonsNamesList.size();k++){
+                    dataList.add(milestonsNamesList.get(k).getMilestoneName());
+                }
+            }
+        }
+        String data="";
+        for (int l=0;l<dataList.size();l++){
+            data= data+ dataList.get(l)+"  ";
+        }
+
+
+
+
+
+
+        //List<String> userProjects=new ArrayList<>();
+
+        //userProjects.add();
+        return data;
     }
     //fill project
     //{

@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.util.Date;
 
 public class Main {
 
@@ -19,14 +18,12 @@ public class Main {
         use2.print_user();
         use3.print_user();
 
-
-
         Project p=new Project();
         p.print_pro();
         p.set_pro_id(1);
         p.set_pro_name("Shira");
-        Date date=new Date("1/1/2001");
-        p.set_pro_create_date(date);
+        //Date date=new Date("1/1/2001");
+        //p.set_pro_create_date(date);
         p.set_pro_manag_id(11);
         p.get_project_DATABASE(p.id);
 //        p.print();
