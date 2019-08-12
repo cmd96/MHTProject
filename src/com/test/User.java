@@ -1,5 +1,7 @@
 package com.test;
 
+import Project.exception.ProjectExeption;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,6 +15,8 @@ public class User {
     static private String lastName;
     static private List<userProject> userProjectList;
 
+//    User u = new User("Shirad","123","Shira","David",userproject1);
+
     public User(){
 
     }
@@ -23,8 +27,10 @@ public class User {
         password=pw;
         //TODO:get all project and initialize them - add to list
     }
-    public void exampleDataSetUp()
-    {
+    public void exampleDataSetUp() throws SQLException, ProjectExeption {
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Project;integratedSecurity=true;";
+        Connection con = DriverManager.getConnection(url);
+
         ProductMilestone milstoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
         ProductMilestone milstoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
         ProductMilestone milstoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
@@ -42,104 +48,117 @@ public class User {
         userProject project = new userProject("wingToFly","Chemdi",12,11,productList);
         List<userProject> projectList = new ArrayList<>();
         this.userProjectList = projectList;
+        List<ProductMilestone> gm= get_MileStons(con , 1);
+        System.out.println(gm);
+
     }
     //fill project
-       public List get_Project(Connection con, int user_id) throws ProjectExeption {
+
+    //fill project
+    //{
+    //  for list projectList from SQLserver
+    public static List<userProject> get_Project(Connection con, int user_id) throws ProjectExeption {
 //        qwery that return the list of project
-        List<Create_Project> create_projects= new ArrayList<>();
-        String sql= "Select * from Projects WHERE ProjectManager = "+ user_id;
+        List<userProject> projectsList= new ArrayList<>();
+        String sql= "Select * from userProject WHERE projectManagerID = "+ user_id;
         try {
-
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next())
-        {
-            create_projects.add(new Create_Project(
-                    rs.getInt("ID"),
-                    rs.getString("name"),
-                    rs.getInt("ProjectManager"),
-                    rs.getString("Costumer"),
-                    get_Products(con, rs.getInt("ID"))));
-        }
-            } catch (SQLException e) {
-            throw new ProjectExeption("Get the MileSton  faild!!", e);
-        }
-
-
-        return (List) create_projects;
-    }
-
-    //}
-    //fill product data
-    public java.awt.List get_Products(Connection con, int project_num) throws ProjectExeption {
-        List<ProjectProduct> productList = new ArrayList<>();
-        List<Product> p = new ArrayList<>();
-        String sql = "SELECT * FROM Product WHERE ID="+ project_num;
-        try {
-
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next())
             {
-//                productList.add(new ProjectProduct(rs.getInt("projectID"),
-//                                rs.getString("productName"),
-//                                rs.getInt("productID"),
-//                        (java.awt.List)get_MileStons(con,rs.getInt("projectID"),rs.getInt("ID")),
-//                                rs.getInt("template_flow")));
-
-//using in my class  ->     Product BUT---
-// I think that need to use with ProjectProduct
-
-                p.add(new Product(rs.getInt("ID"),
-                        rs.getString("name"),
+                projectsList.add(new userProject(
+                        rs.getString("projectMame"),
+                        rs.getString("projectCustomer"),
+                        rs.getInt("projectManagerID"),
                         rs.getInt("projectID"),
-                        get_MileStons(con, rs.getInt("projectID"), rs.getInt("ID"))));
+                        (List<ProjectProduct>)get_Products(con, rs.getInt("projectID"))));
+                        System.out.println(rs.getString("projectMame"));
+            }
+        } catch (SQLException e) {
+            throw new ProjectExeption("Get the MileSton  faild!!", e);
+        }
+        return (List<userProject>) projectsList;
+    }
+//    }
+
+//    fill product data
+    public static List<ProjectProduct> get_Products(Connection con, int project_num) throws ProjectExeption {
+        List<ProjectProduct> productList = new ArrayList<>();
+        String sql = "SELECT * FROM ProjectProduct WHERE projectID="+ project_num;
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next())
+            {
+                      productList.add(new ProjectProduct(
+   							    rs.getInt("projectID"),
+                                rs.getString("productName"),
+                                rs.getInt("productID"),
+                                (List<ProductMilestone>)get_MileStons(con,rs.getInt("productID")),
+                                  null));
+
+                System.out.println(rs.getInt("projectID")+" "+
+                        rs.getString("productName")+" "+
+                        rs.getInt("productID"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return (java.awt.List) productList;
-
-
+        return (List<ProjectProduct>) productList;
     }
+
     //fill milestone
-    public static java.awt.List get_MileStons(Connection con, int project_num,  int product_num) throws ProjectExeption {
-        java.lang.String sql = "Select * from MileSton WHERE projectID = " + project_num +
-                "AND poductID " + "= " + product_num;
+    public static List<ProductMilestone> get_MileStons(Connection con, int product_num) throws ProjectExeption {
+        List <ProductMilestone> mileStonList = new ArrayList<>();
+        String sql = "SELECT * FROM ProductMilestone WHERE productID="+ product_num;
 
-        List<ProductMilestone> mileStonList = new ArrayList<>();
-        List<MileSton> mile = new ArrayList<>();
         try {
-
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-//                mileStonList.add(new ProductMilestone
-//                        (rs.getInt("productID"),
-//                                rs.getString("milestoneName"),
-//                                rs.getInt("ResponsibleWriterId"),
-//                                rs.getInt("ResponsibleWriter"),
-//                                rs.getDate("startDate"),
-//                                rs.getDate("endDate"),
-//                                rs.getString("description"),
-//                                rs.getInt("status")));
-//            }
-//                {
-                mile.add(new MileSton(rs.getInt("ID"),
-                        rs.getString("name"),
-                        rs.getInt("poductID"),
-                        rs.getInt("projectID"),
-                        rs.getInt("ResponsibleWriter"),
-                        rs.getDate("DateStart"),
-                        rs.getDate("DateToEnd"),
-                        rs.getString("Description")));
+                mileStonList.add(new ProductMilestone
+	                            (rs.getInt("productID"),
+                                rs.getString("milestoneName"),
+                                rs.getInt("ResponsibleWriterId"),
+                                rs.getDate("startDate"),
+                                rs.getDate("endDate"),
+                                rs.getString("description"),
+                                rs.getInt("status")));
+
+                System.out.println(rs.getInt("productID" )+" "+
+                                        rs.getString("milestoneName")+" "+
+                        rs.getInt("ResponsibleWriterId")+" "+
+                        rs.getDate("startDate")+ " "+
+                        rs.getDate("endDate")+ " "+
+                        rs.getString("description")+" "+
+                        rs.getInt("status"));
+//                //                print(3,null,null,mileStonList);
             }
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
-        return (java.awt.List) mile;
+        return (List<ProductMilestone>) mileStonList;
 }
-
+//
+//public  void  print(int num, userProject up,  ProjectProduct PP,ProductMilestone PM)
+//{
+//    if (num ==1){
+//
+//    }
+//    if (num==2) {
+//
+//    }
+//    if (num ==3){
+//        System.out.println(
+//                PM.getProductID()+" "+
+//                PM.getMilestoneName()+" "+
+//                PM.getProductID()+" "+
+//                PM.getStartDate()+" "+
+//                PM.getEndDate()+" "+
+//                PM.getDescription()+" "+
+//                PM.getStatus());
+//    }
+//}
     public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";
         Connection con=SQLConnection.getCon();
