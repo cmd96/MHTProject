@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Rubik;
     background-color: white;
     direction: rtl;
     width:100vw;
@@ -11,17 +11,15 @@ html{
     height:100vh;
 }
 #userDetailsID{
-    width: 10vw;
+    width: 40vw;
     float: right;
     height: 100%;
 }
 #userDetID{
-
-    width: 10vw;
-    float: top;
     color: #2093B4;
     height: 10%;
     margin-right:10%;
+    margin-top: 29px;
 }
 #userimgID
 {
@@ -37,6 +35,7 @@ html{
 
 }
 .outlineBtn{
+    font-family: Rubik;
     width: 10vw;
     height: 100%;
     background-color: #E6E7E9;
@@ -48,7 +47,7 @@ html{
     font-size: 100%;
 }
 .outlineBtn:hover {
-    background-color: rgba(32, 148, 180, 0.486);
+    background-color:#2093B4;
     color: white;
 }
 #projectDataID{
@@ -64,22 +63,27 @@ html{
     margin-top: 3%;
 }
 .projecBtn{
-    width: 2vw;
-    height: 4vh;
-    background-color: #E6E7E9;
-    border: none;
+    width: 30px;
+    height: 30px;
     color: #2093B4;
+    border-width: 1px ;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+    background-color: white;
     float: right;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    font-size: 100%;
+    font-size: 150%;
     margin-right: 1%;
-    margin-top: 3%;
+    margin-top: 2.9%;
 }
 .projecBtn:hover {
-    background-color: rgba(32, 148, 180, 0.486);
+    /*background-color: rgba(32, 148, 180, 0.486);*/
+    background-color: #2093B4;
     color: white;
 }
+
 #addProductBtnID{
     width: 15px;
     height:15px;
@@ -123,7 +127,7 @@ html{
     margin-top: 3.1%;
 }
 .productBtn:hover {
-    background-color: rgba(32, 148, 180, 0.486);
+    background-color: #2093B4;
     color: white;
 }
 .product{
@@ -185,4 +189,38 @@ html{
     height: 55%;
     border-color: #2093B4;
     float: left;
+}
+#dynamicData{
+    margin-right: 3%;
+    margin-top: 3%;
+}
+.projectName{
+    width: fit-content;
+    display: inline-block;
+    cursor: pointer;
+}
+.projectName:hover{
+    color: #2093B4;
+    text-decoration: underline;
+}
+.project{
+    margin-bottom: 15px;
+}
+.editProject{
+    cursor: default;
+    width: 20px;
+    height: 20px;
+    background-color: #E6E7E9;
+    border: none;
+    color: #2093B4;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 100%;
+    margin-right: 10px;
+    font-family: 'Font Awesome 5 Free';
+}
+.editProject:hover{
+    background-color: #2093B4;
+    color: white;
 }

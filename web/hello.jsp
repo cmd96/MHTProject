@@ -45,7 +45,8 @@
             var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
             parent.insertAdjacentHTML('beforeend', newChild);
             childNumber++;}
-        AllData();
+        // AllData();
+        projectName();
     }
     function AddProducts() {
         var parent = document.getElementById('dynamicData');
@@ -80,12 +81,23 @@
         <%--for (i = 0; i < "<%=userProjectList.size()%>"; i++) {--%>
             <%--<%productsNamesList = userProjectList.get(i).getProductList();%>--%>
         <%--}--%>
-        var span = document.getElementById("GFG_Span");
-        span.innerText = "<%=data%>";
+        <%--var span = document.getElementById("GFG_Span");--%>
+        <%--span.innerText = "<%=data%>";--%>
+        <%--var span = document.getElementById("projName");--%>
+        <%--span.innerText = "<%=data%>";--%>
         <%----%>
 //        var parent = document.getElementById('dynamicData');
 //        var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
 //        parent.insertAdjacentHTML('beforeend', newChild);
+    }
+    function projectName() {
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("=");
+        for (var i = 0; i < queries.length; i++)
+        {
+            document.getElementById("projectNameID").innerText = queries[i];
+        }
     }
 </script>
 
@@ -103,9 +115,11 @@
     </div>
     <div id="projectDataID">
         <div id="projectOutlineID">
-            <span id="GFG_Span"></span>
+            <%--<span id="GFG_Span"></span>--%>
+            <span id="projName"></span>
             <%--<span><%=user.getUserProjects()%></span>--%>
-            <div id="projectNameID"><%=user.getUserProjectList().get(0).getProjectMame()%></div>
+            <div id="projectNameID"></div>
+            <%--<div id="projectNameID"><%=user.getUserProjectList().get(0).getProjectMame()%></div>--%>
             <button class="projecBtn"><i class='far' id="editProjectBtnID">&#xf044;</i></button>
             <button class="projecBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>
         </div>

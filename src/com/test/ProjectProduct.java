@@ -56,4 +56,18 @@ public class ProjectProduct {
     public void setTemplate_flow(int[] template_flow) {
         this.template_flow = template_flow;
     }
+
+    public String getHtmlCode()
+    {
+        String htmlCode = CONST_HTML_CODE.HTML_PRODUCT_UP_WRAPPER_START;
+        htmlCode+= CONST_HTML_CODE.HTML_PRODUCT_WRAPPER_START + CONST_HTML_CODE.HTML_PRODUCT_CODE ;
+        for (ProductMilestone milesotne: productMilestone) {
+
+            htmlCode+=milesotne.getHtmlCode();
+        }
+        htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_WRAPPER_END;
+        htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_BTN;
+        htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_UP_WRAPPER_END;
+        return htmlCode;
+    }
 }

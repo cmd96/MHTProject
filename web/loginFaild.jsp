@@ -8,13 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="loginFaild.css">
     <title>login faild</title>
 </head>
 <body>
-login faild :(
-</br>
-<div onclick="window.history.go(-1);" style="cursor:hand; color: blue">
-    try again - go back
+<div class="content">
+    <div class="emoji"></div>
+    <div class="text">הכניסה נכשלה</div>
+    <div class="goBack" onclick="window.history.go(-1);">
+        נסה שוב
+    </div>
 </div>
 </body>
 </html>

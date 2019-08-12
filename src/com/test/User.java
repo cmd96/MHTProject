@@ -23,6 +23,7 @@ public class User {
         password=pw;
         //TODO:get all project and initialize them - add to list
         exampleDataSetUp();
+        System.out.println(userProjectList.get(0).getProductList().get(0).getHtmlCode());
     }
     public static String getUsername() {
         return username;
@@ -64,8 +65,6 @@ public class User {
         User.userProjectList = userProjectList;
     }
 
-
-
     public void exampleDataSetUp()
     {
         ProductMilestone milstoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
@@ -82,9 +81,13 @@ public class User {
         ProjectProduct product = new ProjectProduct(11,"wing",111, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
         List<ProjectProduct> productList = new ArrayList<>();
         productList.add(product);
-        userProject project = new userProject("wingToFly","Chemdi",1,11,productList);
+        userProject project = new userProject("wingToFlyTry","Chemdi",1,11,productList);
+        userProject project1 = new userProject("wingToFlyTry2","Chemdi",1,12,productList);
+        userProject project2 = new userProject("wingToFly","Chemdi",1,13,productList);
         List<userProject> projectList = new ArrayList<>();
         projectList.add(project);
+        projectList.add(project1);
+        projectList.add(project2);
         this.userProjectList = projectList;
     }
     public static String getUserMilestons(){
@@ -127,14 +130,6 @@ public class User {
         //userProjects.add();
         return data;
     }
-    //fill project
-    //{
-    //  for list projectList from SQLserver
-    //}
-    //fill product data
-
-    //fill milestone
-
     public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";
         Connection con=SQLConnection.getCon();
@@ -147,7 +142,6 @@ public class User {
         }
         return fullName;
     }
-
     public static int getUserID() throws SQLException, ClassNotFoundException {
         int id = 0;
         Connection con=SQLConnection.getCon();

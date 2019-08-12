@@ -10,7 +10,7 @@ public class ProductMilestone
     private Date startDate;
     private Date endDate;
     private String description;
-    int status;
+    private int status;
 
     public ProductMilestone(int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
         this.productID = productID;
@@ -75,5 +75,15 @@ public class ProductMilestone
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public  String getHtmlCode()
+    {
+        String htmlString = CONST_HTML_CODE.HTML_MILESTONE_DIV;
+        htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_DATE_CODE, getEndDate().toString());
+        htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_COMMENT_CODE, getDescription());
+        htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_CODE, (status != MILESTONE_STATUS.DONE) ? CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_IN_PROGRESS_CODE : CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_DONE_CODE);
+        htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_CLASS, (!description.equals(MILESTONE_NAME.DELIVERY_DATE_STRING)) ? CONST_HTML_CODE.MILESTONE_END_CLASS : CONST_HTML_CODE.PLACEHOLDER_MILESTONE_CLASS);
+        return htmlString;
     }
 }
