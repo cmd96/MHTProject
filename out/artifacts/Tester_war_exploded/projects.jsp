@@ -19,7 +19,8 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="Projects.css">
-    <title></title>
+    <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
+    <title>Projects</title>
 </head>
 <script>
     function AddProjects() {
@@ -47,7 +48,7 @@
         var parent = document.getElementById('dynamicData');
         var i;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            var newChild='<div class="project"><div onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject" style="font-family: \'Font Awesome 5 Free\';"></div></div>'
+            var newChild='<div class="project"><div onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
             parent.insertAdjacentHTML('beforeend', newChild);
         }
     }

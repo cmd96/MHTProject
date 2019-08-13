@@ -1,5 +1,6 @@
 package com.test;
 
+import java.text.DateFormat;
 import java.util.Date;
 
 public class ProductMilestone
@@ -79,9 +80,9 @@ public class ProductMilestone
 
     public  String getHtmlCode()
     {
-
         String htmlString = CONST_HTML_CODE.HTML_MILESTONE_DIV;
-        htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_DATE_CODE, getEndDate().toString());
+        String dateShort = DateFormat.getDateInstance(DateFormat.SHORT).format(getEndDate());
+        htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_DATE_CODE, dateShort);
         htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_COMMENT_CODE, getMilestoneName());
         htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_CODE, (status != MILESTONE_STATUS.DONE) ? CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_IN_PROGRESS_CODE : CONST_HTML_CODE.PLACEHOLDER_MILESTONE_STATUS_DONE_CODE);
         htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_CLASS, (milestoneName.equals(MILESTONE_NAME.DELIVERY_DATE_STRING)) ? CONST_HTML_CODE.MILESTONE_END_CLASS : CONST_HTML_CODE.MILESTONE_CLASS);

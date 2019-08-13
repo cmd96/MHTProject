@@ -98,7 +98,7 @@ html{
     margin-right: 1%;
     width: 94%;
     height: 100%;
-    border-color: #2093B4;
+    border-color: black;
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
@@ -141,7 +141,7 @@ html{
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
-    color: #2093B4;
+    color: black;
 }
 .productComment{
     text-align: center;
@@ -154,13 +154,14 @@ html{
     margin-right: 0.5%;
     width: 10%;
     height: 55%;
-    border-color: #2093B4;
+    border-color: black;
     float: right;
 }
 .milestoneDateDiv{
     text-align: center;
     font-size: 100%;
-    color: #2093B4;
+    color: black;
+    border-color: #2093B4;
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
@@ -183,7 +184,7 @@ html{
     margin-left: 0.5%;
     width: 10%;
     height: 55%;
-    border-color: #2093B4;
+    border-color: black;
     float: left;
 }
 

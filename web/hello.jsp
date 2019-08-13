@@ -50,6 +50,7 @@
         %>
         var userProjectListJS='<%=htmlDynamicCode%>';
         parent.insertAdjacentHTML('beforeend', userProjectListJS);
+        projectName();
     }
 
     function AddProducts() {
@@ -57,7 +58,7 @@
         var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
         parent.insertAdjacentHTML('beforeend', newChild);
     }
-    
+
     function projectName() {
 
         var queryString = decodeURIComponent(window.location.search);
@@ -74,7 +75,7 @@
 <div>
     <div id="outlineID">
         <div id="userDetailsID">
-            <img id="userimgID" src="Picture1.gif">
+            <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
         <button id="projectBtnID" class="outlineBtn">פרויקטים</button>
