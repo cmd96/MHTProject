@@ -210,7 +210,7 @@ html{
     cursor: default;
     width: 20px;
     height: 20px;
-    background-color: #E6E7E9;
+    background-color: white;
     border: none;
     color: #2093B4;
     display: inline-block;
@@ -221,6 +221,5 @@ html{
     font-family: 'Font Awesome 5 Free';
 }
 .editProject:hover{
-    background-color: #2093B4;
-    color: white;
+    color: black ;
 }
