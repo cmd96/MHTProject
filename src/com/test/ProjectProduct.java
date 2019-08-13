@@ -68,6 +68,7 @@ public class ProjectProduct {
         htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_WRAPPER_END;
         htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_BTN;
         htmlCode+=CONST_HTML_CODE.HTML_PRODUCT_UP_WRAPPER_END;
+        htmlCode = htmlCode.replaceAll(CONST_HTML_CODE.PLACEHOLDER_PRODUCT_NAME, getProductName());
         return htmlCode;
     }
 }

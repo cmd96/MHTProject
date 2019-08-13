@@ -13,7 +13,8 @@ public class User {
     static private String lastName;
     static private List<userProject> userProjectList;
 
-    public User(){
+    public User()
+    {
 
     }
 
@@ -23,8 +24,9 @@ public class User {
         password=pw;
         //TODO:get all project and initialize them - add to list
         exampleDataSetUp();
-        System.out.println(userProjectList.get(0).getProductList().get(0).getHtmlCode());
+//        System.out.println(userProjectList.get(0).getProductList().get(0).getHtmlCode());
     }
+
     public static String getUsername() {
         return username;
     }
@@ -67,18 +69,18 @@ public class User {
 
     public void exampleDataSetUp()
     {
-        ProductMilestone milstoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milstoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milstoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milstoneDeliveryDate = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milestoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milestoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milestoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+        ProductMilestone milestoneDeliveryDate = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
         List<ProductMilestone> MilestoneList = new ArrayList<>();
 
-        MilestoneList.add(milstoneOutline);
-        MilestoneList.add(milstoneDraft);
-        MilestoneList.add(milstoneCR);
-        MilestoneList.add(milstoneDeliveryDate);
+        MilestoneList.add(milestoneOutline);
+        MilestoneList.add(milestoneDraft);
+        MilestoneList.add(milestoneCR);
+        MilestoneList.add(milestoneDeliveryDate);
 
-        ProjectProduct product = new ProjectProduct(11,"wing",111, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
+        ProjectProduct product = new ProjectProduct(11,"wing",1, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
         List<ProjectProduct> productList = new ArrayList<>();
         productList.add(product);
         userProject project = new userProject("wingToFlyTry","Chemdi",1,11,productList);
@@ -103,7 +105,6 @@ public class User {
         List<String> dataList=new ArrayList<>();
         String userNmae="";
 
-
         for (int i=0;i<userProjectList.size();i++){
             dataList.add(userProjectList.get(i).getProjectMame());
             productsNamesList = userProjectList.get(i).getProductList();
@@ -119,11 +120,6 @@ public class User {
         for (int l=0;l<dataList.size();l++){
             data= data+ dataList.get(l)+"  ";
         }
-
-
-
-
-
 
         //List<String> userProjects=new ArrayList<>();
 
