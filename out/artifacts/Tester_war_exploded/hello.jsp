@@ -35,20 +35,36 @@
     <title>Hello</title>
 </head>
 <script>
-    function setUpProducts() {
+    function setUpProducts()
+    {
         var childNumber = 1;
         var parent = document.getElementById('dynamicData');
         <%
         List<userProject> userProjectList = user.getUserProjectList();
-        System.out.println(userProjectList);
-        %>
-        for(var i =0; i<3; i++)
-        {
-            //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
-            alert(userProjectList);
-            // parent.insertAdjacentHTML('beforeend', newChild);
-            childNumber++;
+        List<ProjectProduct> ProductList = userProjectList.get(0).getProductList();
+        String htmlDynamicCode = "";
+        for (ProjectProduct user_project : ProductList ) {
+            htmlDynamicCode += user_project.getHtmlCode();
         }
+        System.out.println(htmlDynamicCode);
+//        String  s = "blabla";
+        %>
+        <% String str="Hello World"; %>
+        var s="<%=str%>";
+        alert(s);
+        <%--alert("<%=s%>")--%>
+        var userProjectListJS="<%=htmlDynamicCode%>";
+        // var userProjectListJS = "";
+        // alert(userProjectListJS);
+
+        // for(var i =0; i<1; i++)
+        // {
+            //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
+            // alert(userProjectListJS);
+            // alert(userProjectListJS.constructor.name);
+            parent.insertAdjace/ntHTML('beforeend', userProjectListJS);
+            // childNumber++;
+        // }
         // AllData();
         // projectName();
     }

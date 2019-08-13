@@ -35,20 +35,37 @@
     <title>Hello</title>
 </head>
 <script>
-    function setUpProducts() {
+    function setUpProducts()
+    {
         var childNumber = 1;
         var parent = document.getElementById('dynamicData');
         <%
         List<userProject> userProjectList = user.getUserProjectList();
-        System.out.println(userProjectList);
-        %>
-        for(var i =0; i<3; i++)
-        {
-            //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
-            alert(userProjectList);
-            // parent.insertAdjacentHTML('beforeend', newChild);
-            childNumber++;
+        List<ProjectProduct> ProductList = userProjectList.get(0).getProductList();
+        String htmlDynamicCode = "";
+        for (ProjectProduct user_project : ProductList ) {
+            htmlDynamicCode += user_project.getHtmlCode();
         }
+        System.out.println(htmlDynamicCode);
+//        String s = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">wing</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">OUTLINE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">DRAFT_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">CR_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">DELIVERY_DATE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div><button class="productBtn" id="##BTN_ID##"><i class="far" id="editproductBtnID">&#xf044;</i></button></div>';
+//        String  s = "blabla";
+        %>
+        <% String str="Hello World"; %>
+        var s="<%=str%>";
+        alert(s);
+        <%--alert("<%=s%>")--%>
+        var userProjectListJS="<%=htmlDynamicCode%>";
+        // var userProjectListJS = "";
+        // alert(userProjectListJS);
+
+        // for(var i =0; i<1; i++)
+        // {
+            //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
+            // alert(userProjectListJS);
+            // alert(userProjectListJS.constructor.name);
+            parent.insertAdjace/ntHTML('beforeend', userProjectListJS);
+            // childNumber++;
+        // }
         // AllData();
         // projectName();
     }
