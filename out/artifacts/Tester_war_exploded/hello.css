@@ -157,14 +157,14 @@ html{
     border-color: #2093B4;
     float: right;
 }
-.milestoneDateDiv{
-    text-align: center;
-    font-size: 150%;
-    color: #2093B4;
-    border-style: solid;
-    border-radius: 3px;
-    border-width:1px;
-}
+/*.milestoneDateDiv{*/
+    /*text-align: center;*/
+    /*font-size: 100%;*/
+    /*color: #2093B4;*/
+    /*border-style: solid;*/
+    /*border-radius: 3px;*/
+    /*border-width:1px;*/
+/*}*/
 .milestoneComment{
     text-align: center;
     font-size: 100%;

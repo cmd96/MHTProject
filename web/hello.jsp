@@ -52,18 +52,18 @@
         %>
         <% String str="Hello World"; %>
         var s="<%=str%>";
-        alert(s);
+        // alert(s);
         <%--alert("<%=s%>")--%>
-        var userProjectListJS="<%=htmlDynamicCode%>";
+        var userProjectListJS='<%=htmlDynamicCode%>';
         // var userProjectListJS = "";
         // alert(userProjectListJS);
-
+        // var userProjectListJS2='<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">wing</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">OUTLINE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">DRAFT_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">CR_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">DELIVERY_DATE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div><button class="productBtn" id="##BTN_ID##"><i class="far" id="editproductBtnID">&#xf044;</i></button></div>';
         // for(var i =0; i<1; i++)
         // {
             //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
             // alert(userProjectListJS);
             // alert(userProjectListJS.constructor.name);
-            parent.insertAdjace/ntHTML('beforeend', userProjectListJS);
+            parent.insertAdjacentHTML('beforeend', userProjectListJS);
             // childNumber++;
         // }
         // AllData();

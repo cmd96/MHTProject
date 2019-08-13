@@ -36,7 +36,7 @@ public class CONST_HTML_CODE
     public static final String HTML_PRODUCT_WRAPPER_START = "<div class=\"productsDataID\">";
     public static final String HTML_PRODUCT_WRAPPER_END = "</div>";
     public static final String PLACEHOLDER_BTN_ID = "##BTN_ID##";
-    public static final String HTML_PRODUCT_BTN="<button class=\"productBtn\" id=\""+PLACEHOLDER_BTN_ID+"\"><i class='far' id=\"editproductBtnID\">&#xf044;</i></button>";
+    public static final String HTML_PRODUCT_BTN="<button class=\"productBtn\" id=\""+PLACEHOLDER_BTN_ID+"\"><i class=\"far\" id=\"editproductBtnID\">&#xf044;</i></button>";
     public static final String HTML_PRODUCT_UP_WRAPPER_START = "<div class=\"productsID\">";
     public static final String HTML_PRODUCT_UP_WRAPPER_END= "</div>";
 
