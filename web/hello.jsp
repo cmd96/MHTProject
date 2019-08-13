@@ -41,76 +41,23 @@
         var parent = document.getElementById('dynamicData');
         <%
         List<userProject> userProjectList = user.getUserProjectList();
+        //get(0) prefera to specific project ...
         List<ProjectProduct> ProductList = userProjectList.get(0).getProductList();
         String htmlDynamicCode = "";
         for (ProjectProduct user_project : ProductList ) {
             htmlDynamicCode += user_project.getHtmlCode();
         }
-        System.out.println(htmlDynamicCode);
-//        String s = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">wing</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">OUTLINE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">DRAFT_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">CR_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">Tue Aug 13 11:59:05 IDT 2019</div><div class="milestoneComment">DELIVERY_DATE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div><button class="productBtn" id="##BTN_ID##"><i class="far" id="editproductBtnID">&#xf044;</i></button></div>';
-//        String  s = "blabla";
         %>
-        <% String str="Hello World"; %>
-        var s="<%=str%>";
-        // alert(s);
-        <%--alert("<%=s%>")--%>
         var userProjectListJS='<%=htmlDynamicCode%>';
-        // var userProjectListJS = "";
-        // alert(userProjectListJS);
-        // var userProjectListJS2='<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">wing</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">OUTLINE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">DRAFT_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestone"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">CR_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">Tue Aug 13 12:24:23 IDT 2019</div><div class="milestoneComment">DELIVERY_DATE_STRING</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div><button class="productBtn" id="##BTN_ID##"><i class="far" id="editproductBtnID">&#xf044;</i></button></div>';
-        // for(var i =0; i<1; i++)
-        // {
-            //var newChild = userProjectList.get(i).getProductList().get(0).getHtmlCode();
-            // alert(userProjectListJS);
-            // alert(userProjectListJS.constructor.name);
-            parent.insertAdjacentHTML('beforeend', userProjectListJS);
-            // childNumber++;
-        // }
-        // AllData();
-        // projectName();
+        parent.insertAdjacentHTML('beforeend', userProjectListJS);
     }
+
     function AddProducts() {
         var parent = document.getElementById('dynamicData');
         var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
         parent.insertAdjacentHTML('beforeend', newChild);
     }
-    <%--function AllData() {--%>
-        <%--<%--%>
-        <%--List<userProject> userProjectList = user.getUserProjectList();--%>
-        <%--List<ProjectProduct> productsNamesList;--%>
-        <%--List<ProductMilestone> milestonsNamesList;--%>
-        <%--List<String> dataList=new ArrayList<>();--%>
-        <%--String userNmae="";--%>
-
-        <%--for (int i=0;i<userProjectList.size();i++){--%>
-            <%--dataList.add(userProjectList.get(i).getProjectMame());--%>
-            <%--productsNamesList = userProjectList.get(i).getProductList();--%>
-            <%--for (int j=0;j<productsNamesList.size();j++){--%>
-                <%--dataList.add(productsNamesList.get(j).getProductName());--%>
-                <%--milestonsNamesList=productsNamesList.get(j).getProductMilestone();--%>
-                <%--for (int k=0;k<milestonsNamesList.size();k++){--%>
-                    <%--dataList.add(milestonsNamesList.get(k).getMilestoneName());--%>
-                <%--}--%>
-            <%--}--%>
-        <%--}--%>
-        <%--String data="";--%>
-        <%--for (int l=0;l<dataList.size();l++){--%>
-            <%--data= data+ dataList.get(l)+"  ";--%>
-        <%--}--%>
-        <%--%>--%>
-        <%--&lt;%&ndash;var i;&ndash;%&gt;--%>
-        <%--&lt;%&ndash;for (i = 0; i < "<%=userProjectList.size()%>"; i++) {&ndash;%&gt;--%>
-            <%--&lt;%&ndash;<%productsNamesList = userProjectList.get(i).getProductList();%>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;}&ndash;%&gt;--%>
-        <%--&lt;%&ndash;var span = document.getElementById("GFG_Span");&ndash;%&gt;--%>
-        <%--&lt;%&ndash;span.innerText = "<%=data%>";&ndash;%&gt;--%>
-        <%--&lt;%&ndash;var span = document.getElementById("projName");&ndash;%&gt;--%>
-        <%--&lt;%&ndash;span.innerText = "<%=data%>";&ndash;%&gt;--%>
-        <%--&lt;%&ndash;&ndash;%&gt;--%>
-<%--//        var parent = document.getElementById('dynamicData');--%>
-<%--//        var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';--%>
-<%--//        parent.insertAdjacentHTML('beforeend', newChild);--%>
-    <%--}--%>
+    
     function projectName() {
 
         var queryString = decodeURIComponent(window.location.search);
