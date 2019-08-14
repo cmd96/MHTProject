@@ -72,7 +72,6 @@ public class User {
                         rs.getInt("projectManagerID"),
                         rs.getInt("projectID"),
                         (List<ProjectProduct>)get_Products(con, rs.getInt("projectID"))));
-                        System.out.println(rs.getString("projectMame"));
             }
         } catch (SQLException e) {
             throw new ProjectExeption("Get the MileSton  faild!!", e);
@@ -96,10 +95,6 @@ public class User {
                                 rs.getInt("productID"),
                                 (List<ProductMilestone>)get_MileStons(con,rs.getInt("productID")),
                                   null));
-
-                System.out.println(rs.getInt("projectID")+" "+
-                        rs.getString("productName")+" "+
-                        rs.getInt("productID"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -124,42 +119,16 @@ public class User {
                                 rs.getDate("endDate"),
                                 rs.getString("description"),
                                 rs.getInt("status")));
-
-                System.out.println(rs.getInt("productID" )+" "+
-                                        rs.getString("milestoneName")+" "+
-                        rs.getInt("ResponsibleWriterId")+" "+
-                        rs.getDate("startDate")+ " "+
-                        rs.getDate("endDate")+ " "+
-                        rs.getString("description")+" "+
-                        rs.getInt("status"));
-//                //                print(3,null,null,mileStonList);
             }
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
         return (List<ProductMilestone>) mileStonList;
 }
-//
-//public  void  print(int num, userProject up,  ProjectProduct PP,ProductMilestone PM)
-//{
-//    if (num ==1){
-//
-//    }
-//    if (num==2) {
-//
-//    }
-//    if (num ==3){
-//        System.out.println(
-//                PM.getProductID()+" "+
-//                PM.getMilestoneName()+" "+
-//                PM.getProductID()+" "+
-//                PM.getStartDate()+" "+
-//                PM.getEndDate()+" "+
-//                PM.getDescription()+" "+
-//                PM.getStatus());
-//    }
-//}
-    public static String getUserName() throws SQLException, ClassNotFoundException {
+
+
+
+public static String getUserName() throws SQLException, ClassNotFoundException {
         String fullName="";
         Connection con=SQLConnection.getCon();
         Statement stmt = con.createStatement();
