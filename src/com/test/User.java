@@ -172,15 +172,15 @@ public class User {
         Connection con=SQLConnection.getCon();
         Statement stmt = con.createStatement();
 
-            String SQL = "SELECT * FROM Users";
-            ResultSet rs= stmt.executeQuery(SQL);
+        String SQL = "SELECT * FROM Users";
+        ResultSet rs= stmt.executeQuery(SQL);
 
-            while (rs.next()) {
-                if(rs.getString("UserName").equals(username) && rs.getString("Password").equals(password)){
-                    returnValue=true;
-                    break;
-                }
+        while (rs.next()) {
+            if(rs.getString("UserName").equals(username) && rs.getString("Password").equals(password)){
+                returnValue=true;
+                break;
             }
+        }
 
         return returnValue;
     }
