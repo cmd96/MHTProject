@@ -18,7 +18,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Projects.css">
+    <link rel="stylesheet" type="text/css" href="Project.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>
 </head>
@@ -77,12 +77,34 @@
             <span id="GFG_Span"></span>
             <%--<span><%=user.getUserProjects()%></span>--%>
             <div id="projectNameID">פרויקטים</div>
-            <button class="projecBtn" onclick="AddProjects()">+</button>
+            <button class="projecBtn" onclick="AddProjects()"><a id="addProjectBtn" href="#popup1">+</a></button>
         </div>
         <div id="dynamicData">
             <%--<div onclick= "goToProject(document.getElementById('project'+i).innerHTML)" id="project1" class="projectName">split[i]</div>--%>
         </div>
     </div>
 </div>
+
+
+<div class="s-layout">
+<main class="s-layout__content">
+<form id="popup1" class="overlay" action="addBtnServlet" method="post">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <h2>הוסף פרויקט</h2>
+
+        <div class="content">
+            <label ><b>שם פרויקט</b></label>
+            <input type="text" placeholder="שם פרויקט" name="projName" required>
+            <label ><b>שם לקוח</b></label>
+            <input type="text" placeholder="שם לקוח" name="customerName" required>
+        </div>
+        <button type="submit" value="Login" name="addProjectButton" >אישור</button>
+    </div>
+</form>
+</main>
+</div>
+
+
 </body>
 </html>

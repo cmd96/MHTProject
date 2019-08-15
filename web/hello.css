@@ -351,11 +351,11 @@ html{
 /*!*}*!*/
 
 /*!*!* Layout *!*!*/
-/*!*.s-layout {*!*/
-    /*!*display: flex;*!*/
-    /*!*width: 100%;*!*/
-    /*!*min-height: 100vh;*!*/
-/*!*}*!*/
+/*.s-layout {*/
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*min-height: 100vh;*/
+/*}*/
 
 /*.s-layout__content {*/
     /*display: flex;*/
