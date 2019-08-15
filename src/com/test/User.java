@@ -1,6 +1,11 @@
 package com.test;
 
-import java.sql.*;
+import exception.ProjectExeption;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -140,18 +145,7 @@ public class User {
         //userProjects.add();
         return data;
     }
-    public static String getUserName() throws SQLException, ClassNotFoundException {
-        String fullName="";
-        Connection con=SQLConnection.getCon();
-        Statement stmt = con.createStatement();
 
-        String SQL = "SELECT * FROM Users WHERE UserName like '"+username+"' and Password like '"+password+"'";
-        ResultSet rs= stmt.executeQuery(SQL);
-        while (rs.next()) {
-            fullName=rs.getString("LastName").toString()+" "+rs.getString("FirstName").toString();
-        }
-        return fullName;
-    }
     public static int getUserID() throws SQLException, ClassNotFoundException {
         int id = 0;
         Connection con=SQLConnection.getCon();
@@ -184,4 +178,89 @@ public class User {
 
         return returnValue;
     }
+
+    public static List<userProject> get_Project(Connection con, int user_id) throws ProjectExeption {
+//        qwery that return the list of project
+        List<userProject> projectsList= new ArrayList<>();
+        String sql= "Select * from userProject WHERE projectManagerID = "+ user_id;
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next())
+            {
+                projectsList.add(new userProject(
+                        rs.getString("projectMame"),
+                        rs.getString("projectCustomer"),
+                        rs.getInt("projectManagerID"),
+                        rs.getInt("projectID"),
+                        (List<ProjectProduct>)get_Products(con, rs.getInt("projectID"))));
+            }
+        } catch (SQLException e) {
+            throw new ProjectExeption("Get the MileSton  faild!!", e);
+        }
+        return (List<userProject>) projectsList;
+    }
+//    }
+
+    //    fill product data
+    public static List<ProjectProduct> get_Products(Connection con, int project_num)  {
+        List<ProjectProduct> productList = new ArrayList<>();
+        String sql = "SELECT * FROM ProjectProduct WHERE projectID="+ project_num;
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next())
+            {
+                productList.add(new ProjectProduct(
+                        rs.getInt("projectID"),
+                        rs.getString("productName"),
+                        rs.getInt("productID"),
+                        (List<ProductMilestone>)get_MileStons(con,rs.getInt("productID")),
+                        null));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return (List<ProjectProduct>) productList;
+    }
+
+    //fill milestone
+    public static List<ProductMilestone> get_MileStons(Connection con, int product_num)  {
+        List <ProductMilestone> mileStonList = new ArrayList<>();
+        String sql = "SELECT * FROM ProductMilestone WHERE productID="+ product_num;
+
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                mileStonList.add(new ProductMilestone
+                        (rs.getInt("productID"),
+                                rs.getString("milestoneName"),
+                                rs.getInt("ResponsibleWriterId"),
+                                rs.getDate("startDate"),
+                                rs.getDate("endDate"),
+                                rs.getString("description"),
+                                rs.getInt("status")));
+            }
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+        return (List<ProductMilestone>) mileStonList;
+    }
+
+
+
+    public static String getUserName() throws SQLException, ClassNotFoundException {
+        String fullName="";
+        Connection con=SQLConnection.getCon();
+        Statement stmt = con.createStatement();
+
+        String SQL = "SELECT * FROM Users WHERE UserName like '"+username+"' and Password like '"+password+"'";
+        ResultSet rs= stmt.executeQuery(SQL);
+        while (rs.next()) {
+            fullName=rs.getString("LastName").toString()+" "+rs.getString("FirstName").toString();
+        }
+        return fullName;
+    }
+
 }

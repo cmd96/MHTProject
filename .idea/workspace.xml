@@ -7,15 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/Project/db/managers/ProjectManager$MileStonManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/Project/db/managers/ProjectManager$MileStonManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creat_Projects/Create_Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MileSton/MileSton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MileSton/MileSton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/MileStonDBHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/handling/ProjectDBHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/managers/MileStonManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/db/managers/ProjectManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/test/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -81,7 +72,7 @@
         <counts>
           <entry key="css" value="995" />
           <entry key="iml" value="2" />
-          <entry key="java" value="5449" />
+          <entry key="java" value="5453" />
           <entry key="js" value="284" />
           <entry key="jsp" value="3797" />
           <entry key="xml" value="1" />
@@ -91,7 +82,7 @@
         <counts>
           <entry key="CSS" value="995" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="5449" />
+          <entry key="JAVA" value="5453" />
           <entry key="JSP" value="3797" />
           <entry key="JavaScript" value="284" />
           <entry key="XML" value="1" />
@@ -235,8 +226,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="3400">
+              <caret line="200" column="48" lean-forward="true" selection-start-line="200" selection-start-column="48" selection-end-line="200" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#682#683#0" expanded="true" />
@@ -361,13 +352,13 @@
         <option value="$PROJECT_DIR$/src/com/test/CONST_HTML_CODE.java" />
         <option value="$PROJECT_DIR$/src/com/test/MILESTONE_NAME.java" />
         <option value="$PROJECT_DIR$/src/com/test/ProductMilestone.java" />
-        <option value="$PROJECT_DIR$/src/com/test/User.java" />
         <option value="$PROJECT_DIR$/web/Project.css" />
         <option value="$PROJECT_DIR$/web/hello.jsp" />
         <option value="$PROJECT_DIR$/web/hello.css" />
         <option value="$PROJECT_DIR$/web/homeProject.css" />
         <option value="$PROJECT_DIR$/web/Projects.css" />
         <option value="$PROJECT_DIR$/web/projects.jsp" />
+        <option value="$PROJECT_DIR$/src/com/test/User.java" />
       </list>
     </option>
   </component>
@@ -830,7 +821,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423143000" />
+    <option name="totallyTimeSpent" value="423810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,8 +1177,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="3400">
+          <caret line="200" column="48" lean-forward="true" selection-start-line="200" selection-start-column="48" selection-end-line="200" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#682#683#0" expanded="true" />
