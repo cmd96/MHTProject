@@ -110,8 +110,8 @@ public class User {
         projectList.add(project1);
         projectList.add(project2);
         this.userProjectList = projectList;
-        List<ProductMilestone> gm= get_MileStons(con , 1);
-        System.out.println(gm);
+//        List<ProductMilestone> gm= get_MileStons(con , 1);
+//        System.out.println(gm);
 
     }
     public static String getUserMilestons(){
