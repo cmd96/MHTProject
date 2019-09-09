@@ -29,6 +29,10 @@
         // var newChild = ''
         // parent.insertAdjacentHTML('beforeend', newChild);
     }
+
+    function insterdDataJS() {
+        loadProjects();
+    }
     function loadProjects() {
         <%
         int j=0;
@@ -67,7 +71,7 @@
             <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
-        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">פרויקטים</button>
+        <button id="projectBtnID" class="outlineBtn"  onclick="loadProjects()" style="font-family: Rubik">פרויקטים</button>
         <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
         <button id="projectBtnID" class="outlineBtn">הגדרות</button>
         <button id="projectBtnID" class="outlineBtn">דוחות</button>
@@ -77,7 +81,7 @@
             <span id="GFG_Span"></span>
             <%--<span><%=user.getUserProjects()%></span>--%>
             <div id="projectNameID">פרויקטים</div>
-            <button class="projecBtn" onclick="AddProjects()"><a id="addProjectBtn" href="#popup1">+</a></button>
+            <a id="addProjectBtn" href="#popup1"><button class="projecBtn" onclick="AddProjects()">+</button></a>
         </div>
         <div id="dynamicData">
             <%--<div onclick= "goToProject(document.getElementById('project'+i).innerHTML)" id="project1" class="projectName">split[i]</div>--%>
@@ -99,7 +103,7 @@
             <label ><b>שם לקוח</b></label>
             <input type="text" placeholder="שם לקוח" name="customerName" required>
         </div>
-        <button type="submit" value="Login" name="addProjectButton" >אישור</button>
+        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" >אישור</button>
     </div>
 </form>
 </main>

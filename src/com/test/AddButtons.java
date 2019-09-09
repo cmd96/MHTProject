@@ -13,6 +13,7 @@ public class AddButtons extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         if (request.getParameter("addProjectButton") != null){
+
             String name=request.getParameter("projName");
             String customer=request.getParameter("customerName");
             try {
@@ -23,7 +24,9 @@ public class AddButtons extends HttpServlet {
                 System.out.println("faild");
                 e.printStackTrace();
             }
-            response.sendRedirect("hello.jsp");
+            User.refreshDB();
+            response.sendRedirect("projects.jsp");
+
         }
         if (request.getParameter("addProductButton") != null){
             String name=request.getParameter("productName");

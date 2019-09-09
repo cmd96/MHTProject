@@ -28,7 +28,18 @@ public class User {
         username=un;
         password=pw;
         //TODO:get all project and initialize them - add to list
-        exampleDataSetUp();
+//        exampleDataSetUp();
+        try {
+//            List<userProject> projectList = get_Project(1);
+            userProjectList = get_Project(getUserID());
+            System.out.println("dddd");
+        } catch (ProjectExeption projectExeption) {
+            projectExeption.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 //        System.out.println(userProjectList.get(0).getProductList().get(0).getHtmlCode());
     }
 
@@ -64,7 +75,30 @@ public class User {
         User.lastName = lastName;
     }
 
+    public  static void refreshDB()
+    {
+//        userProject project = new userProject("testserProject","Chemdi",1,11, null);
+
+        try {
+            userProjectList = get_Project(getUserID());
+        } catch (ProjectExeption projectExeption) {
+            projectExeption.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
     public static List<userProject> getUserProjectList() {
+        try {
+            get_Project(1);
+        } catch (ProjectExeption projectExeption) {
+            projectExeption.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return userProjectList;
     }
 
@@ -182,29 +216,49 @@ public class User {
         return returnValue;
     }
 
-    public static List<userProject> get_Project(Connection con, int user_id) throws ProjectExeption {
+    public static List<userProject> get_Project(int user_id) throws ProjectExeption, SQLException, ClassNotFoundException {
 //        qwery that return the list of project
+        System.out.println("11");
+        Connection con = SQLConnection.getCon();
+        Statement stmt = con.createStatement();
         List<userProject> projectsList= new ArrayList<>();
-        String sql= "Select * from userProject WHERE projectManagerID = "+ user_id;
-        try {
-            Statement stmt = con.createStatement();
+        String sql= "Select * from UserProjects WHERE projectManagerID = "+ user_id;
+
             ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
             while (rs.next())
             {
+                System.out.println(rs.getString("ProjectName"));
+                System.out.println(rs.getString("ProjectCustomer"));
+                System.out.println(rs.getString("ProjectManagerID"));
+                System.out.println(rs.getString("ProjectID"));
+
                 projectsList.add(new userProject(
-                        rs.getString("projectMame"),
-                        rs.getString("projectCustomer"),
-                        rs.getInt("projectManagerID"),
-                        rs.getInt("projectID"),
-                        (List<ProjectProduct>)get_Products(con, rs.getInt("projectID"))));
+                        rs.getString("ProjectName"),
+                        rs.getString("ProjectCustomer"),
+                        rs.getInt("ProjectManagerID"),
+                        rs.getInt("ProjectID"),
+                        null));
             }
-        } catch (SQLException e) {
-            throw new ProjectExeption("Get the MileSton  faild!!", e);
-        }
+
         return (List<userProject>) projectsList;
     }
-//    }
+//*******************************************shira code
+//    PMS= Project MileSton
+public static void insert_product(Connection con, String P_name, int project_id, String PMS, int tamplate ) throws exception.ProjectExeption {
 
+    String sql = "INSERT INTO [dbo].[ProjectProduct] (productName ,projectID, productMilestone ,template_flow) VALUES ( '"+P_name +"','" +project_id+"','" +PMS+"','"+ tamplate+"')";
+
+    try {
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(sql);
+
+    }catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+}
+//**************************************shira code
     //    fill product data
     public static List<ProjectProduct> get_Products(Connection con, int project_num)  {
         List<ProjectProduct> productList = new ArrayList<>();

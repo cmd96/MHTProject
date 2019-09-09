@@ -17,10 +17,10 @@ public class Hello {
         Connection con = SQLConnection.getCon();
         Statement stmt = con.createStatement();
 
-        String SQL = "SELECT * FROM Projects";
+        String SQL = "SELECT * FROM UserProjects";
         ResultSet rs = stmt.executeQuery(SQL);
         while (rs.next()) {
-            s+=rs.getString("Name")+" ";
+            s+=rs.getString("ProjectName")+" ";
         }
         return s;
     }
