@@ -244,20 +244,57 @@ public class User {
         return (List<userProject>) projectsList;
     }
 //*******************************************shira code
-//    PMS= Project MileSton
-public static void insert_product(Connection con, String P_name, int project_id, String PMS, int tamplate ) throws exception.ProjectExeption {
 
-    String sql = "INSERT INTO [dbo].[ProjectProduct] (productName ,projectID, productMilestone ,template_flow) VALUES ( '"+P_name +"','" +project_id+"','" +PMS+"','"+ tamplate+"')";
+    //PMI = projectManagerID
+    public static void insert_project(Connection con, String P_name, String P_Customer, int PMI,int P_ID ,String productList ) throws exception.ProjectExeption {
 
-    try {
-        Statement stmt = con.createStatement();
-        stmt.executeUpdate(sql);
+        String sql = "INSERT INTO [dbo].[userProject]" +
+                " (projectName ,projectCustomer , projectManagerID ,projectID,productList) " +
+                "VALUES ( '"+P_name +"','" +P_Customer+"','" +PMI+"','"+P_ID+"','"+ productList+"')";
 
-    }catch (SQLException e) {
-        e.printStackTrace();
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
-}
+
+    //    PMS= Project MileSton
+    public static void insert_product(Connection con, String P_name, int project_id, String PMS, int tamplate ) throws exception.ProjectExeption {
+
+        String sql = "INSERT INTO [dbo].[ProjectProduct] (productName ,projectID, productMilestone ,template_flow) VALUES ( '"+P_name +"','" +project_id+"','" +PMS+"','"+ tamplate+"')";
+
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public static void insert_MileSton(Connection con, String m_name, int ResponsibleWriterId, String startDate, String endDate ,
+                                       String description, int status ) throws exception.ProjectExeption {
+
+        String sql = "INSERT INTO [dbo].[ProductMilestone]" +
+                " (milestoneName ,ResponsibleWriterId , startDate ,endDate,description, status) " +
+                "VALUES ( '"+m_name +"','" +ResponsibleWriterId+"','" +startDate+"','"+endDate+"','"+ description+"','"+status+"')";
+
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 //**************************************shira code
     //    fill product data
     public static List<ProjectProduct> get_Products(Connection con, int project_num)  {
