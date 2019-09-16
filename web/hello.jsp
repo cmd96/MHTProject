@@ -53,7 +53,7 @@
         writeTextFile(f, "Spoon");
         // var projectName = getProjectName();
         <%!String projectName="";%> = getProjectName();
-        <%tools.findPage("pyWorkPage").getProperty("name").setValue("test");%>
+        <%--<%tools.findPage("pyWorkPage").getProperty("name").setValue("test");%>--%>
         var parent = document.getElementById('dynamicData');
         <%
 
@@ -126,8 +126,10 @@
             <button class="projecBtn"><i class='far' id="editProjectBtnID">&#xf044;</i></button>
             <button class="projecBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>
         </div>
-        <div id="dynamicData">
-        </div>
+            <div id="dynamicData">
+            </div>
+
+
     </div>
 </div>
 </body>

@@ -6,6 +6,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
 <%@ page import="com.test.*" %>
 <%@ page import="com.test.User" %>
+<%@ page import="com.test.ProjectListController" %>
+
 <jsp:useBean id="user" class="com.test.User" scope="request" />
 <jsp:useBean id="project" class="com.test.Hello" scope="request" />
 <%--
@@ -52,7 +54,7 @@
         var parent = document.getElementById('dynamicData');
         var i;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            var newChild='<div class="project"><div onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
+            var newChild='<div class="project"><div  onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
             parent.insertAdjacentHTML('beforeend', newChild);
         }
     }
@@ -83,9 +85,13 @@
             <div id="projectNameID">פרויקטים</div>
             <a id="addProjectBtn" href="#popup1"><button class="projecBtn" onclick="AddProjects()">+</button></a>
         </div>
-        <div id="dynamicData">
-            <%--<div onclick= "goToProject(document.getElementById('project'+i).innerHTML)" id="project1" class="projectName">split[i]</div>--%>
-        </div>
+        <form action="projectListServlet" method="post">
+            <%--<div id="dynamicData">--%>
+            <%--<div onclick= "goToProject(document.getElementById('project').innerHTML)" type="submit" id="project1" class="projectName" name="projectName">testeeeeeeeeeeeeeeer</div>--%>
+            <%--</div>--%>
+
+            <div type="submit" name="TEST_NAME" value="testNAME"><input type="text"  name="BLABLA" value="TESTSSSSSSSSSSSSSSSSSSSSS" disabled></div>
+        </form>
     </div>
 </div>
 
