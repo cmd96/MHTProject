@@ -5,7 +5,6 @@
 <%@page import="Project.db.handling.ProjectDBHandling" %>
 <%--<%@ page import="Project.db.handling.ProjectDBHandling" %>--%>
 <%@ page import="javax.swing.text.Document" %>
-
 <%--
   Created by IntelliJ IDEA.
   User: mhtuser
@@ -16,6 +15,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
 <%@ page import="com.test.*" %>
 <%@ page import="com.test.User" %>
+
 <%--<jsp:useBean id="project" class="Creat_Projects.Create_Project" scope="request" />--%>
 <%--<jsp:useBean id="project" class="Project.db.handling.ProjectDBHandling" scope="request" />--%>
 <%--<jsp:useBean id="addBtn" class="com.test.AddButtons" scope="request" />--%>
@@ -35,17 +35,49 @@
     <title>Hello</title>
 </head>
 <script>
+    function getProjectName() {
+
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("=");
+        for (var i = 0; i < queries.length; i++)
+        {
+            return queries[i];
+        }
+    }
     function setUpProducts()
     {
         var childNumber = 1;
+        var f = "sometextfile.txt";
+
+        writeTextFile(f, "Spoon");
+        // var projectName = getProjectName();
+        <%!String projectName="";%> = getProjectName();
+        <%tools.findPage("pyWorkPage").getProperty("name").setValue("test");%>
         var parent = document.getElementById('dynamicData');
         <%
+
+
+//        String ss = Window.Location.getHref();
+
+        System.out.println("ss ==========");
         List<userProject> userProjectList = user.getUserProjectList();
         //get(0) prefera to specific project ...
+        System.out.println("############################################### "+projectName+"@@@@@@@@@@@@@@@@@@@@@@@@@");
+        for (userProject currentProject : userProjectList) {
+            if(currentProject.getProjectMame().equals(projectName))
+                {
+                }
+
+
+        }
         List<ProjectProduct> ProductList = userProjectList.get(0).getProductList();
         String htmlDynamicCode = "";
-        for (ProjectProduct user_project : ProductList ) {
-            htmlDynamicCode += user_project.getHtmlCode();
+        if(ProductList!= null)
+        {
+            for (ProjectProduct user_project : ProductList ) {
+                htmlDynamicCode += user_project.getHtmlCode();
+            }
         }
         %>
         var userProjectListJS='<%=htmlDynamicCode%>';
@@ -69,6 +101,7 @@
             document.getElementById("projectNameID").innerText = queries[i];
         }
     }
+
 </script>
 
 <body onload="setUpProducts()">
