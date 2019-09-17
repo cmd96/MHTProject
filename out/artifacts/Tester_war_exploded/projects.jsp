@@ -60,10 +60,27 @@
     }
     function goToProject(name) {
         var queryString = "?para1=" + name;
-        window.location.href = "hello.jsp" + queryString;
+        //window.location.href = "hello.jsp" + queryString;
         // window.location= "hello.jsp";
-
+        document.getElementById("frm1").submit();
     }
+    // $("#myDiv").click(function() {
+    //     $("#myForm").submit();
+    // });
+</script>
+<script>
+    function myFunction() {
+        var r = confirm("Are you sure about that ?");
+        if (r == true) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+    // document.getElementById('onay').value = myFunction();
+    function submit_projectName() {
+        document.getElementById("formWrapper").submit();
+    };
 </script>
 <body onload="loadProjects()">
 <div>
@@ -85,12 +102,16 @@
             <div id="projectNameID">פרויקטים</div>
             <a id="addProjectBtn" href="#popup1"><button class="projecBtn" onclick="AddProjects()">+</button></a>
         </div>
-        <form action="projectListServlet" method="post">
+        <%--<form name="frm1" id="frm1" action="projectListServlet">--%>
+        <%--<input type="hidden" id="onay" name="onay" />--%>
+        <%--<input type="submit"/>--%>
+        <%--</form>--%>
+        <form action="projectListServlet"  id="formWrapper" method="post">
             <%--<div id="dynamicData">--%>
             <%--<div onclick= "goToProject(document.getElementById('project').innerHTML)" type="submit" id="project1" class="projectName" name="projectName">testeeeeeeeeeeeeeeer</div>--%>
             <%--</div>--%>
-
-            <div type="submit" name="TEST_NAME" value="testNAME"><input type="text"  name="BLABLA" value="TESTSSSSSSSSSSSSSSSSSSSSS" disabled></div>
+            <div id="projectNameID" name="inputProjectName" onclick="submit_projectName()">FLY UP</div>
+            <%--<button type="submit" name="TEST_NAME" value="testNAME"><input type="text"  name="BLABLA" value="TESTSSSSSSSSSSSSSSSSSSSSS" disabled></button>--%>
         </form>
     </div>
 </div>

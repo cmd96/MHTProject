@@ -10,9 +10,11 @@ import java.io.IOException;
 @WebServlet("/projectListServlet")
 public class ProjectListController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pn=request.getParameter("BLABLA");
-            System.out.println(pn);
-
+        System.out.println("***************************");
+//        String pn=request.getParameter("BLABLA");
+//        request.getParameter("onay");
+//            System.out.println(pn);
+//        System.out.println(request.getParameter("inputProjectName").toString());
         return;
     }
 }
