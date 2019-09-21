@@ -341,3 +341,30 @@ a{
     text-decoration: none;
     color: #3d99c1;
 }
+
+#projectList{
+    clear: both;
+    cursor: pointer;
+    border: none ;
+    width: fit-content;
+    background-color: white;
+    display: inline-block;
+    text-align: right;
+    color: black;
+    font-size: 100%;
+    float: right;
+    /*margin-right: 3%;*/
+    /*margin-top: 3%;*/
+
+}
+input:focus{
+    outline: none;
+}
+#projectList:hover{
+    color: #2093B4;
+    text-decoration: underline;
+}
+
+button:focus{
+    outline: none;
+}

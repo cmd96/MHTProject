@@ -25,6 +25,9 @@ input[type=text], input[type=password] {
     /*box-sizing: border-box;*/
     text-align: right;
 }
+input:focus{
+    outline: none;
+}
 .mainForm{
     margin-right: 40%;
     width: 20%;
@@ -51,6 +54,9 @@ button{
 button:hover {
     background-color: #2093B4;
     color: white;
+}
+button:focus{
+    outline: none;
 }
 /* Set a style for all buttons */
 /*button {*/

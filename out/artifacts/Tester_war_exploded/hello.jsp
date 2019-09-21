@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
           crossorigin='anonymous'>
-    <title>Hello</title>
+    <title><%=Hello.getCurrentProjectName()%> project</title>
 </head>
 <script>
     function getProjectName() {
@@ -47,12 +47,12 @@
     }
     function setUpProducts()
     {
-        var childNumber = 1;
-        var f = "sometextfile.txt";
-
-        writeTextFile(f, "Spoon");
+        // var childNumber = 1;
+        // var f = "sometextfile.txt";
+        //
+        // writeTextFile(f, "Spoon");
         // var projectName = getProjectName();
-        <%!String projectName="";%> = getProjectName();
+        <%--<%!String projectName="";%> = getProjectName();--%>
         <%--<%tools.findPage("pyWorkPage").getProperty("name").setValue("test");%>--%>
         var parent = document.getElementById('dynamicData');
         <%
@@ -63,19 +63,24 @@
         System.out.println("ss ==========");
         List<userProject> userProjectList = user.getUserProjectList();
         //get(0) prefera to specific project ...
-        System.out.println("############################################### "+projectName+"@@@@@@@@@@@@@@@@@@@@@@@@@");
+        int i =0;
+        System.out.println("############################################### "+Hello.getCurrentProjectName()+"@@@@@@@@@@@@@@@@@@@@@@@@@");
+
         for (userProject currentProject : userProjectList) {
-            if(currentProject.getProjectMame().equals(projectName))
+            if(currentProject.getProjectMame().equals(Hello.getCurrentProjectName()))
                 {
+                    System.out.println(i);
+                    break;
                 }
-
-
+                i++;
         }
-        List<ProjectProduct> ProductList = userProjectList.get(0).getProductList();
+
+        List<ProjectProduct> ProductList = userProjectList.get(i).getProductList();
         String htmlDynamicCode = "";
         if(ProductList!= null)
         {
             for (ProjectProduct user_project : ProductList ) {
+                System.out.println(user_project.getHtmlCode());
                 htmlDynamicCode += user_project.getHtmlCode();
             }
         }
@@ -119,7 +124,7 @@
     <div id="projectDataID">
         <div id="projectOutlineID">
             <%--<span id="GFG_Span"></span>--%>
-            <span id="projName"></span>
+            <span id="projName"><%=Hello.getCurrentProjectName()%></span>
             <%--<span><%=user.getUserProjects()%></span>--%>
             <div id="projectNameID"></div>
             <%--<div id="projectNameID"><%=user.getUserProjectList().get(0).getProjectMame()%></div>--%>

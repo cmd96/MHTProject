@@ -6,8 +6,8 @@ public class ProjectProduct {
 
     private int projectID;
     private String productName;
-    private int productID;
-    private List<ProductMilestone> productMilestone;
+     private int productID;
+     private List<ProductMilestone> productMilestone;
     private int [] template_flow;
 
     public ProjectProduct(int projectID, String productName, int productID, List<ProductMilestone> productMilestone, int[] template_flow) {
@@ -30,8 +30,8 @@ public class ProjectProduct {
         return productName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String product_Name) {
+        productName = product_Name;
     }
 
     public int getProductID() {

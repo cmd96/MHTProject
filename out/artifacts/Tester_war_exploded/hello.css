@@ -188,7 +188,13 @@ html{
     float: left;
 }
 
-
+#projName{
+    color: #2093B4;
+    font-size: 120%;
+    float: right;
+    margin-right: 3%;
+    margin-top: 3%;
+}
 
 
 /*body {*/

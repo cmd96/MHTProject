@@ -20,7 +20,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Project.css">
+    <link rel="stylesheet" type="text/css" href="Projects.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>
 </head>
@@ -54,7 +54,9 @@
         var parent = document.getElementById('dynamicData');
         var i;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            var newChild='<div class="project"><div  onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
+            // var newChild='<div class="project"><div  onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
+            var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
+
             parent.insertAdjacentHTML('beforeend', newChild);
         }
     }
@@ -107,10 +109,12 @@
         <%--<input type="submit"/>--%>
         <%--</form>--%>
         <form action="projectListServlet"  id="formWrapper" method="post">
-            <%--<div id="dynamicData">--%>
+            <div id="dynamicData">
             <%--<div onclick= "goToProject(document.getElementById('project').innerHTML)" type="submit" id="project1" class="projectName" name="projectName">testeeeeeeeeeeeeeeer</div>--%>
             <%--</div>--%>
-            <div id="projectNameID" name="inputProjectName" onclick="submit_projectName()">FLY UP</div>
+            <%--<div id="projectNameID"  >--%>
+                <%--<input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="Fly Tester" onclick="submit_projectName()">--%>
+            <%--</div>--%>
             <%--<button type="submit" name="TEST_NAME" value="testNAME"><input type="text"  name="BLABLA" value="TESTSSSSSSSSSSSSSSSSSSSSS" disabled></button>--%>
         </form>
     </div>

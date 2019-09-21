@@ -238,10 +238,12 @@ public class User {
                         rs.getString("ProjectCustomer"),
                         rs.getInt("ProjectManagerID"),
                         rs.getInt("ProjectID"),
-                        null));
+                        get_Products(con,rs.getInt("ProjectID"))));
             }
 
+//        con.close();
         return (List<userProject>) projectsList;
+
     }
 //*******************************************shira code
 
@@ -299,42 +301,42 @@ public class User {
     //    fill product data
     public static List<ProjectProduct> get_Products(Connection con, int project_num)  {
         List<ProjectProduct> productList = new ArrayList<>();
-        String sql = "SELECT * FROM ProjectProduct WHERE projectID="+ project_num;
+        String sql = "SELECT * FROM ProjectProduct WHERE ProjectID="+ project_num;
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next())
             {
                 productList.add(new ProjectProduct(
-                        rs.getInt("projectID"),
-                        rs.getString("productName"),
-                        rs.getInt("productID"),
-                        (List<ProductMilestone>)get_MileStons(con,rs.getInt("productID")),
+                        rs.getInt("ProjectID"),
+                        rs.getString("ProductName"),
+                        rs.getInt("ProductID"),
+                        (List<ProductMilestone>)get_MileStons(con,rs.getInt("ProductID")),
                         null));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return (List<ProjectProduct>) productList;
+        return productList;
     }
 
     //fill milestone
     public static List<ProductMilestone> get_MileStons(Connection con, int product_num)  {
         List <ProductMilestone> mileStonList = new ArrayList<>();
-        String sql = "SELECT * FROM ProductMilestone WHERE productID="+ product_num;
+        String sql = "SELECT * FROM ProductMilestons WHERE productID="+ product_num;
 
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 mileStonList.add(new ProductMilestone
-                        (rs.getInt("productID"),
-                                rs.getString("milestoneName"),
-                                rs.getInt("ResponsibleWriterId"),
-                                rs.getDate("startDate"),
-                                rs.getDate("endDate"),
-                                rs.getString("description"),
-                                rs.getInt("status")));
+                        (rs.getInt("ProductID"),
+                                rs.getString("MilestoneName"),
+                                rs.getInt("ResponsibleWriterID"),
+                                rs.getDate("StartDate"),
+                                rs.getDate("EndDate"),
+                                rs.getString("Description"),
+                                rs.getInt("Status")));
             }
         } catch (SQLException e1) {
             e1.printStackTrace();

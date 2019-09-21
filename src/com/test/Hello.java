@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class Hello {
     private String projectsNames= getAllProjectsNames();
-
+    static private String currentProjectName;
     public Hello() throws SQLException, ClassNotFoundException {
     }
 
@@ -23,5 +23,11 @@ public class Hello {
             s+=rs.getString("ProjectName")+" ";
         }
         return s;
+    }
+    public static void setCurrentProjectName(String inputProjectName) {
+        currentProjectName = inputProjectName;
+    }
+    public static String getCurrentProjectName() {
+        return currentProjectName;
     }
 }
