@@ -89,4 +89,10 @@ public class ProductMilestone
         return htmlString;
 
     }
+
+    //TODO: insert new milestone to current project
+    public void InsertNewMilestone(ProjectProduct product)
+    {
+
+    }
 }

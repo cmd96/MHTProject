@@ -27,12 +27,8 @@ public class User {
     {
         username=un;
         password=pw;
-        //TODO:get all project and initialize them - add to list
-//        exampleDataSetUp();
         try {
-//            List<userProject> projectList = get_Project(1);
             userProjectList = get_Project(getUserID());
-            System.out.println("dddd");
         } catch (ProjectExeption projectExeption) {
             projectExeption.printStackTrace();
         } catch (SQLException e) {
@@ -40,7 +36,6 @@ public class User {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-//        System.out.println(userProjectList.get(0).getProductList().get(0).getHtmlCode());
     }
 
     public static String getUsername() {
@@ -77,8 +72,6 @@ public class User {
 
     public  static void refreshDB()
     {
-//        userProject project = new userProject("testserProject","Chemdi",1,11, null);
-
         try {
             userProjectList = get_Project(getUserID());
         } catch (ProjectExeption projectExeption) {
@@ -241,7 +234,7 @@ public class User {
                         get_Products(con,rs.getInt("ProjectID"))));
             }
 
-//        con.close();
+        con.close();
         return (List<userProject>) projectsList;
 
     }
@@ -307,12 +300,24 @@ public class User {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next())
             {
+                int flow = rs.getInt("FlowType");
+                int  flowArr [] = null;
+                switch (flow){
+                    case TEMPLATE_FLOW.BASIC_FLOW_INT : flowArr = TEMPLATE_FLOW.BASIC_FLOW;
+                        break;
+                    case TEMPLATE_FLOW.FULL_FLOW_INT : flowArr = TEMPLATE_FLOW.FULL_FLOW;
+                        break;
+                    case TEMPLATE_FLOW.COURSE_FLOW_INT : flowArr = TEMPLATE_FLOW.COURSE_FLOW;
+                        break;
+                }
+
+
                 productList.add(new ProjectProduct(
                         rs.getInt("ProjectID"),
                         rs.getString("ProductName"),
                         rs.getInt("ProductID"),
                         (List<ProductMilestone>)get_MileStons(con,rs.getInt("ProductID")),
-                        null));
+                        flowArr));
             }
         } catch (SQLException e) {
             e.printStackTrace();

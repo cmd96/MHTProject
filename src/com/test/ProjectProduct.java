@@ -71,4 +71,10 @@ public class ProjectProduct {
         htmlCode = htmlCode.replaceAll(CONST_HTML_CODE.PLACEHOLDER_PRODUCT_NAME, getProductName());
         return htmlCode;
     }
+
+    //TODO: insert new product to current project
+    public void InsertNewProduct(ProjectProduct product)
+    {
+
+    }
 }
