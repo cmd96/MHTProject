@@ -1,5 +1,11 @@
 package com.test;
 
+import exception.ProjectExeption;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class ProjectProduct {
@@ -73,8 +79,48 @@ public class ProjectProduct {
     }
 
     //TODO: insert new product to current project
-    public void InsertNewProduct(ProjectProduct product)
-    {
+    public static void InsertNewProduct(Connection con, ProjectProduct insert) throws ProjectExeption {
+
+        String Name = insert.getProductName();
+        int ProjID = insert.getProjectID();
+        int rw = 100;
+        List<ProductMilestone> productMilestone = insert.getProductMilestone();
+
+        int [] template_flow = insert.getTemplate_flow();
+        insert_product_db(con, Name, ProjID, rw);
+        if (productMilestone != null)
+        {
+            int product_id = ( int ) get_product_id(con, Name, ProjID);
+            ProductMilestone.insert_MileSton_list(con, productMilestone, product_id);
+//            System.out.println("the new product id is :" + product_id);
+        }
+    }
+    public static void insert_product_db(Connection con, String Name, int ProjID, int rw){
+        String sql = "INSERT INTO [dbo].[Products] (Name ,ProjID, ResponsibleWriterID) VALUES ( '"+Name +"','"+ProjID+"','"+rw+"')";
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
+
+    public static int get_product_id(Connection con, String Name, int ProjID){
+        String sql = "Select ID from Products where Name like '"+Name+"' and ProjID like '"+ProjID+"'";
+        int id = -1;
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                id = rs.getInt("ID");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
 }

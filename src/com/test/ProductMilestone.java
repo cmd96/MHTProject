@@ -1,10 +1,16 @@
 package com.test;
 
-import java.text.DateFormat;
-import java.util.Date;
+import exception.ProjectExeption;
 
-public class ProductMilestone
-{
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+public class ProductMilestone {
     private int productID;
     private String milestoneName;
     private int ResponsibleWriterId;
@@ -22,6 +28,7 @@ public class ProductMilestone
         this.description = description;
         this.status = status;
     }
+
     public int getProductID() {
         return productID;
     }
@@ -78,8 +85,7 @@ public class ProductMilestone
         this.status = status;
     }
 
-    public  String getHtmlCode()
-    {
+    public String getHtmlCode() {
         String htmlString = CONST_HTML_CODE.HTML_MILESTONE_DIV;
         String dateShort = DateFormat.getDateInstance(DateFormat.SHORT).format(getEndDate());
         htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_DATE_CODE, dateShort);
@@ -91,8 +97,39 @@ public class ProductMilestone
     }
 
     //TODO: insert new milestone to current project
-    public void InsertNewMilestone(ProjectProduct product)
-    {
+    public static void InsertNewMilestone(Connection con, ProductMilestone insert_mile) throws ProjectExeption {
 
+        Date Date_Start = insert_mile.getStartDate();
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/YYYY");
+        String strDateStart = formatter.format(Date_Start);
+
+//        System.out.println("jjjjjjjjjjjjjjjjjj "+ strDateStart);
+
+        Date Date_End = insert_mile.getEndDate();
+        String strDateEnd = formatter.format(Date_End);
+//        System.out.println("kkkkkkkkkkkkkkk "+ strDateEnd);
+
+        String sql = "INSERT INTO [dbo].[Milestons]" +
+                "(Name  ,ProductID, ResponsibleWriter, DateStart, DateToEnd, Description) " +
+                "VALUES ('" + insert_mile.getMilestoneName() + "','" + insert_mile.getProductID() +
+                "','" + insert_mile.getResponsibleWriterId() + "','" + strDateStart +
+                "','" + strDateEnd + "','" + insert_mile.getDescription() + "')";
+
+        try {
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insert_MileSton_list(Connection con, List<ProductMilestone> milestone_list, int id) throws ProjectExeption {
+
+        for (int i = 0; i < milestone_list.size(); i++) {
+            ProductMilestone insert_mile = milestone_list.get(i);
+            insert_mile.setProductID(id);
+            InsertNewMilestone(con, insert_mile);
+        }
     }
 }
