@@ -35,6 +35,44 @@
     <title><%=Products.getCurrentProjectName()%> project</title>
 </head>
 <script>
+
+    function selectOnChnageFunction()
+    {
+        var basic_flow_html ="<div>\n" +
+            "                        <label>מתווה</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>טיוטה</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>CR</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                    </div>";
+        var full_flow_html="<div>\n" +
+            "                        <label>מתווה</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>טיוטה 1</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>טיוטה 2</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>CR</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                    </div>\n";
+        var course_flow_html=" <div>\n" +
+            "                        <label>סילבוס</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>הצגה</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>מבחן</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>קורס</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                        <label>תיקון מצגת</label>\n" +
+            "                        <input type=\"date\">\n" +
+            "                    </div>";
+        var e = document.getElementById("selectFlowID");
+        var strUser = e.options[e.selectedIndex].value;
+
+        alert(strUser);
+    }
     function getProjectName() {
 
         var queryString = decodeURIComponent(window.location.search);
@@ -132,11 +170,14 @@
                     <input type="text" placeholder="שם תוצר" name="productName" required>
                     <label ><b>שם כתב אחראי</b></label>
                     <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
-                    <select name="select">
+                    <select name="select" onchange="selectOnChnageFunction()" id="selectFlowID">
                         <option>Short Folw</option>
                         <option>Full Flow</option>
                         <option>Course</option>
                     </select>
+                    <div id="productMilstonesDataID">
+
+                    </div>
                     <div>
                         <label>מתווה</label>
                         <input type="date">
@@ -153,6 +194,19 @@
                         <label>טיוטה 2</label>
                         <input type="date">
                         <label>CR</label>
+                        <input type="date">
+                    </div>
+
+                    <div>
+                        <label>סילבוס</label>
+                        <input type="date">
+                        <label>הצגה</label>
+                        <input type="date">
+                        <label>מבחן</label>
+                        <input type="date">
+                        <label>קורס</label>
+                        <input type="date">
+                        <label>תיקון מצגת</label>
                         <input type="date">
                     </div>
 
