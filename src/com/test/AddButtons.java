@@ -30,8 +30,11 @@ public class AddButtons extends HttpServlet {
         }
         if (request.getParameter("addProductButton") != null){
             String name=request.getParameter("productName");
+            System.out.println("product name is : "+name+"!!!!!!!!!!!!!!!!!!!!!!!!");
+            String s=request.getParameter("select");
+            System.out.println("product name is : "+name+" and Selected is : "+s);
             int responsibleWriter=1;
-            int projectID=111;
+            int projectID=1;
             AddProduct a=new AddProduct(name,projectID,responsibleWriter);
             try {
                 a.insertProduct();
@@ -39,7 +42,7 @@ public class AddButtons extends HttpServlet {
                 System.out.println("faild");
                 e.printStackTrace();
             }
-            response.sendRedirect("hello.jsp");
+            response.sendRedirect("products.jsp");
         }
         if (request.getParameter("addMilestonButton") != null){
             String name=request.getParameter("mailstonName");
@@ -54,7 +57,7 @@ public class AddButtons extends HttpServlet {
                 System.out.println("faild");
                 e.printStackTrace();
             }
-            response.sendRedirect("hello.jsp");
+            response.sendRedirect("products.jsp");
         }
 
 

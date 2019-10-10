@@ -9,7 +9,7 @@
 <%@ page import="com.test.ProjectListController" %>
 
 <jsp:useBean id="user" class="com.test.User" scope="request" />
-<jsp:useBean id="project" class="com.test.Hello" scope="request" />
+<jsp:useBean id="project" class="com.test.Products" scope="request" />
 <%--
   Created by IntelliJ IDEA.
   User: 1
@@ -20,17 +20,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Projects.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>
 </head>
 <script>
-    function AddProjects() {
-        // var parent = document.getElementById('dynamicData');
-        // // var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
-        // var newChild = ''
-        // parent.insertAdjacentHTML('beforeend', newChild);
-    }
 
     function insterdDataJS() {
         loadProjects();
@@ -54,7 +48,6 @@
         var parent = document.getElementById('dynamicData');
         var i;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            // var newChild='<div class="project"><div  onclick= "goToProject(document.getElementById(\'project'+i+'\').innerHTML)" id="project'+i+'" class="projectName">'+projectNamesArray[i]+'</div><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
             var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
 
             parent.insertAdjacentHTML('beforeend', newChild);
@@ -62,13 +55,9 @@
     }
     function goToProject(name) {
         var queryString = "?para1=" + name;
-        //window.location.href = "hello.jsp" + queryString;
-        // window.location= "hello.jsp";
         document.getElementById("frm1").submit();
     }
-    // $("#myDiv").click(function() {
-    //     $("#myForm").submit();
-    // });
+
 </script>
 <script>
     function myFunction() {
@@ -79,7 +68,6 @@
             return 2;
         }
     }
-    // document.getElementById('onay').value = myFunction();
     function submit_projectName() {
         document.getElementById("formWrapper").submit();
     };
@@ -88,7 +76,6 @@
 <div>
     <div id="outlineID">
         <div id="userDetailsID">
-            <%--<img id="userimgID" src="Picture1.gif">--%>
             <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
@@ -100,22 +87,11 @@
     <div id="projectDataID">
         <div id="projectOutlineID">
             <span id="GFG_Span"></span>
-            <%--<span><%=user.getUserProjects()%></span>--%>
             <div id="projectNameID">פרויקטים</div>
-            <a id="addProjectBtn" href="#popup1"><button class="projecBtn" onclick="AddProjects()">+</button></a>
+            <a id="addProjectBtn" href="#popup1"><button class="projectBtn" onclick="AddProjects()">+</button></a>
         </div>
-        <%--<form name="frm1" id="frm1" action="projectListServlet">--%>
-        <%--<input type="hidden" id="onay" name="onay" />--%>
-        <%--<input type="submit"/>--%>
-        <%--</form>--%>
         <form action="projectListServlet"  id="formWrapper" method="post">
-            <div id="dynamicData">
-            <%--<div onclick= "goToProject(document.getElementById('project').innerHTML)" type="submit" id="project1" class="projectName" name="projectName">testeeeeeeeeeeeeeeer</div>--%>
-            <%--</div>--%>
-            <%--<div id="projectNameID"  >--%>
-                <%--<input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="Fly Tester" onclick="submit_projectName()">--%>
-            <%--</div>--%>
-            <%--<button type="submit" name="TEST_NAME" value="testNAME"><input type="text"  name="BLABLA" value="TESTSSSSSSSSSSSSSSSSSSSSS" disabled></button>--%>
+            <div id="dynamicData"></div>
         </form>
     </div>
 </div>

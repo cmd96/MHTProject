@@ -1,5 +1,5 @@
 body {
-    font-family: Rubik;
+    font-family: sans-serif;
     background-color: white;
     direction: rtl;
     width:100vw;
@@ -7,7 +7,7 @@ body {
 }
 
 html{
-    width:100vw;
+	width:100vw;
     height:100vh;
 }
 #userDetailsID{
@@ -16,10 +16,12 @@ html{
     height: 100%;
 }
 #userDetID{
+
     color: #2093B4;
     height: 10%;
     margin-right:10%;
     margin-top: 29px;
+
 }
 #userimgID
 {
@@ -35,26 +37,25 @@ html{
 
 }
 .outlineBtn{
-    font-family: Rubik;
     width: 10vw;
     height: 100%;
     background-color: #E6E7E9;
     border: none;
     color: #2093B4;
     float: left;
-    -webkit-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     font-size: 100%;
 }
 .outlineBtn:hover {
-    background-color:#2093B4;
+    background-color:  #2093B4;
     color: white;
-}
+  }
 #projectDataID{
     width: 100vw;
     height: 90vh;
 }
-#projectNameID
+#projectID
 {
     color: #2093B4;
     font-size: 120%;
@@ -62,29 +63,17 @@ html{
     margin-right: 3%;
     margin-top: 3%;
 }
-.projecBtn{
-    width: 30px;
-    height: 30px;
+#projectName{
     color: #2093B4;
-    border-width: 1px ;
-    border-radius: 5px;
-    border-color: #2093B4;
-    border-style: solid;
-    background-color: white;
+    font-size: 120%;
     float: right;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    font-size: 150%;
-    margin-right: 1%;
-    margin-top: 2.9%;
-}
-.projecBtn:hover {
-    /*background-color: rgba(32, 148, 180, 0.486);*/
-    background-color: #2093B4;
-    color: white;
-    cursor: pointer;
+    margin-right: 3%;
+    margin-top: 3%;
 }
 
+.productEditBtn:focus{
+    outline: none;
+}
 #addProductBtnID{
     width: 15px;
     height:15px;
@@ -93,6 +82,7 @@ html{
     width: 15px;
     height:15px;
 }
+
 .productsID
 {
     width: 100%;
@@ -102,8 +92,8 @@ html{
     margin-top: 1%;
     margin-right: 1%;
     width: 94%;
-    height: 100%;
-    border-color: #2093B4;
+    height: 80%;
+    border-color: black;
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
@@ -114,22 +104,22 @@ html{
     height: 10%;
 }
 
-.productBtn{
-    width: 2vw;
-    height: 4vh;
-    background-color: #E6E7E9;
+.productEditBtn{
+    clear: both;
+    width: 30px;
+    height: 30px;
     border: none;
     color: #2093B4;
+    background-color: white;
     float: right;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     font-size: 100%;
     margin-right: 1%;
-    margin-top: 3.1%;
+    margin-top: 3%;
 }
-.productBtn:hover {
-    background-color: #2093B4;
-    color: white;
+.productEditBtn:hover {
+    color: black;
 }
 .product{
     margin-top: 0.5%;
@@ -141,12 +131,15 @@ html{
 }
 .productName{
     margin-top:0.2%;
+    height: 50%;
+    padding: 2.5%;
     text-align: center;
-    font-size: 150%;
+    font-size: 100%;
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
-    color: #2093B4;
+    border-color: #2093B4;
+    color: black;
 }
 .productComment{
     text-align: center;
@@ -163,9 +156,12 @@ html{
     float: right;
 }
 .milestoneDateDiv{
+    height: 50%;
+    padding: 2.5%;
     text-align: center;
-    font-size: 150%;
-    color: #2093B4;
+    font-size: 100%;
+    border-color: #2093B4;
+    color: black;
     border-style: solid;
     border-radius: 3px;
     border-width:1px;
@@ -191,43 +187,33 @@ html{
     border-color: #2093B4;
     float: left;
 }
-#dynamicData{
-    margin-right: 3%;
-    margin-top: 3%;
+
+#addProductBtn{
+    clear: both;
+    width: 30px;
+    height: 30px;
+    color: #2093B4;
+    border-width: 1px ;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+    background-color: white;
+    float: right;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size: 150%;
+    margin-right: 1%;
+    margin-top: 2.9%;
 }
-.projectName{
-    width: fit-content;
-    display: inline-block;
+#addProductBtn:hover {
+    /*background-color: rgba(32, 148, 180, 0.486);*/
+    background-color: #2093B4;
+    color: white;
     cursor: pointer;
 }
-.projectName:hover{
-    color: #2093B4;
-    text-decoration: underline;
+#addProductBtn:focus{
+    outline: none;
 }
-.project{
-    margin-bottom: 15px;
-}
-.editProject{
-    cursor: default;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: none;
-    color: #2093B4;
-    display: inline-block;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    font-size: 100%;
-    margin-right: 10px;
-    font-family: 'Font Awesome 5 Free';
-}
-.editProject:hover{
-    color: black ;
-}
-
-
-
-
 
 /* Layout */
 .s-layout {
@@ -327,9 +313,57 @@ input[type=text]{
     /*box-sizing: border-box;*/
     text-align: right;
 }
+input[type=text]:focus{
+    border: none;
+}
+select {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+    padding: inherit;
+    padding-right: 15px;
+}
 
-
-
+select{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    padding:inherit;
+    padding-right:15px ;
+    margin-top: 10px;
+    display: inline-block;
+    border-width: 1px ;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+    /*box-sizing: border-box;*/
+    text-align: right;
+}
+input:focus{
+    outline: none;
+}
+input[type=date]{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-width: 1px ;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+    /*box-sizing: border-box;*/
+    text-align: right;
+}
+input[type=date]:focus{
+    border: none;
+}
+select:focus{
+    outline: none;
+}
 .box {
     width: 10%;
     margin: 0 auto;
@@ -341,30 +375,7 @@ a{
     text-decoration: none;
     color: #3d99c1;
 }
-
-#projectList{
-    clear: both;
-    cursor: pointer;
-    border: none ;
-    width: fit-content;
-    background-color: white;
-    display: inline-block;
-    text-align: right;
-    color: black;
-    font-size: 100%;
-    float: right;
-    /*margin-right: 3%;*/
-    /*margin-top: 3%;*/
-
-}
-input:focus{
-    outline: none;
-}
-#projectList:hover{
-    color: #2093B4;
-    text-decoration: underline;
-}
-
 button:focus{
     outline: none;
 }
+

@@ -23,16 +23,16 @@
 
 
 <jsp:useBean id="user" class="com.test.User" scope="request" />
-<jsp:useBean id="project" class="com.test.Hello" scope="request" />
+<jsp:useBean id="project" class="com.test.Products" scope="request" />
 <head>
-    <link rel="stylesheet" type="text/css" href="homeProject.css">
+    <link rel="stylesheet" type="text/css" href="products.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
           crossorigin='anonymous'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
           crossorigin='anonymous'>
-    <title><%=Hello.getCurrentProjectName()%> project</title>
+    <title><%=Products.getCurrentProjectName()%> project</title>
 </head>
 <script>
     function getProjectName() {
@@ -47,34 +47,19 @@
     }
     function setUpProducts()
     {
-        // var childNumber = 1;
-        // var f = "sometextfile.txt";
-        //
-        // writeTextFile(f, "Spoon");
-        // var projectName = getProjectName();
-        <%--<%!String projectName="";%> = getProjectName();--%>
-        <%--<%tools.findPage("pyWorkPage").getProperty("name").setValue("test");%>--%>
         var parent = document.getElementById('dynamicData');
         <%
-
-
-//        String ss = Window.Location.getHref();
-
-        System.out.println("ss ==========");
         List<userProject> userProjectList = user.getUserProjectList();
         //get(0) prefera to specific project ...
         int i =0;
-        System.out.println("############################################### "+Hello.getCurrentProjectName()+"@@@@@@@@@@@@@@@@@@@@@@@@@");
-
         for (userProject currentProject : userProjectList) {
-            if(currentProject.getProjectMame().equals(Hello.getCurrentProjectName()))
+            if(currentProject.getProjectMame().equals(Products.getCurrentProjectName()))
                 {
                     System.out.println(i);
                     break;
                 }
                 i++;
         }
-
         List<ProjectProduct> ProductList = userProjectList.get(i).getProductList();
         String htmlDynamicCode = "";
         if(ProductList!= null)
@@ -92,7 +77,7 @@
 
     function AddProducts() {
         var parent = document.getElementById('dynamicData');
-        var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
+        var newChild = '<div class="productsID"><div class="productsDataID"><div class="product"><div class="productName">כנף</div><div class="productComment">שם תוצר</div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">מתווה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">טיוטה</div><div class="milestonestatus"><i class="far fa-check-circle"></i></div></div><div class="milestone"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">CR</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div><div class="milestoneEnd"><div class="milestoneDateDiv">6/8/19</div><div class="milestoneComment">ת.ה. סופי</div><div class="milestonestatus"><i class="fas fa-sync-alt"></i></div></div></div ><button class="productEditBtn"><i class="far" id="editproductBtnID">&#xf044;</i></button></div > ';
         parent.insertAdjacentHTML('beforeend', newChild);
     }
 
@@ -103,7 +88,7 @@
         var queries = queryString.split("=");
         for (var i = 0; i < queries.length; i++)
         {
-            document.getElementById("projectNameID").innerText = queries[i];
+            document.getElementById("projectID").innerText = queries[i];
         }
     }
 
@@ -113,6 +98,7 @@
 <div>
     <div id="outlineID">
         <div id="userDetailsID">
+            <%--<img src="student.png" style="float: right; margin: 25px">--%>
             <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
@@ -123,19 +109,59 @@
     </div>
     <div id="projectDataID">
         <div id="projectOutlineID">
-            <%--<span id="GFG_Span"></span>--%>
-            <span id="projName"><%=Hello.getCurrentProjectName()%></span>
-            <%--<span><%=user.getUserProjects()%></span>--%>
-            <div id="projectNameID"></div>
-            <%--<div id="projectNameID"><%=user.getUserProjectList().get(0).getProjectMame()%></div>--%>
-            <button class="projecBtn"><i class='far' id="editProjectBtnID">&#xf044;</i></button>
-            <button class="projecBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>
+            <span id="projectName" ><%=Products.getCurrentProjectName()%></span>
+            <div id="projectID"></div>
+            <a id="addProductBtn" href="#addProduct"><button onclick="AddProjects()">+</button></a>
+            <%--<button class="productBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>--%>
         </div>
             <div id="dynamicData">
             </div>
-
-
     </div>
+
+</div>
+
+<div class="s-layout">
+    <main class="s-layout__content">
+        <form id="addProduct" class="overlay" action="addBtnServlet" method="post">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h2>הוסף תוצר</h2>
+
+                <div class="content">
+                    <label ><b>שם תוצר</b></label>
+                    <input type="text" placeholder="שם תוצר" name="productName" required>
+                    <label ><b>שם כתב אחראי</b></label>
+                    <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
+                    <select name="select">
+                        <option>Short Folw</option>
+                        <option>Full Flow</option>
+                        <option>Course</option>
+                    </select>
+                    <div>
+                        <label>מתווה</label>
+                        <input type="date">
+                        <label>טיוטה</label>
+                        <input type="date">
+                        <label>CR</label>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <label>מתווה</label>
+                        <input type="date">
+                        <label>טיוטה 1</label>
+                        <input type="date">
+                        <label>טיוטה 2</label>
+                        <input type="date">
+                        <label>CR</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+                <button type="submit" value="Login" name="addProductButton" >אישור</button>
+            </div>
+        </form>
+
+    </main>
 </div>
 </body>
 </html>
@@ -181,9 +207,9 @@
     <%--</script>--%>
 
     <%--&lt;%&ndash;<script src="jquery-3.4.1.js"></script>&ndash;%&gt;--%>
-    <%--<link rel="stylesheet" type="text/css" href="hello.css">--%>
+    <%--<link rel="stylesheet" type="text/css" href="products.css">--%>
     <%--<meta charset="ISO-8859-1">--%>
-    <%--<title>Hello</title>--%>
+    <%--<title>Products</title>--%>
     <%--&lt;%&ndash;suppress CssInvalidPropertyValue &ndash;%&gt;--%>
     <%--<style>--%>
 
