@@ -70,9 +70,25 @@
             "                    </div>";
         var e = document.getElementById("selectFlowID");
         var strUser = e.options[e.selectedIndex].value;
-
-        alert(strUser);
+        var dynamicCodeParent = document.getElementById('productMilstonesDataID');
+        var dynamicCode="";
+        //basic flow is a defoult
+        if(strUser == "Course")
+        {
+            dynamicCode=course_flow_html;
+        }
+        else
+            if(strUser == "Full Flow")
+            {
+                dynamicCode=full_flow_html;
+            }
+            else
+            {
+                dynamicCode=basic_flow_html;
+            }
+        dynamicCodeParent.innerHTML = dynamicCode;
     }
+
     function getProjectName() {
 
         var queryString = decodeURIComponent(window.location.search);
@@ -176,38 +192,15 @@
                         <option>Course</option>
                     </select>
                     <div id="productMilstonesDataID">
+                        <div>
+                            <label>מתווה</label>
+                            <input type="date">
+                            <label>טיוטה</label>
+                            <input type="date">
+                            <label>CR</label>
+                            <input type="date">
+                        </div>
 
-                    </div>
-                    <div>
-                        <label>מתווה</label>
-                        <input type="date">
-                        <label>טיוטה</label>
-                        <input type="date">
-                        <label>CR</label>
-                        <input type="date">
-                    </div>
-                    <div>
-                        <label>מתווה</label>
-                        <input type="date">
-                        <label>טיוטה 1</label>
-                        <input type="date">
-                        <label>טיוטה 2</label>
-                        <input type="date">
-                        <label>CR</label>
-                        <input type="date">
-                    </div>
-
-                    <div>
-                        <label>סילבוס</label>
-                        <input type="date">
-                        <label>הצגה</label>
-                        <input type="date">
-                        <label>מבחן</label>
-                        <input type="date">
-                        <label>קורס</label>
-                        <input type="date">
-                        <label>תיקון מצגת</label>
-                        <input type="date">
                     </div>
 
                 </div>
