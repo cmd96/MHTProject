@@ -38,35 +38,35 @@
 
     function selectOnChnageFunction()
     {
-        var basic_flow_html ="<div>\n" +
-            "                        <label>מתווה</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                        <label>טיוטה</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                        <label>CR</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                    </div>";
-        var full_flow_html="<div>\n" +
-            "                        <label>מתווה</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                        <label>טיוטה 1</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                        <label>טיוטה 2</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                        <label>CR</label>\n" +
-            "                        <input type=\"date\">\n" +
-            "                    </div>\n";
+        var basic_flow_html =" <div>\n" +
+            "                            <label>מתווה</label>\n" +
+            "                            <input type=\"date\" name=\"outlineMilestone\">\n" +
+            "                            <label>טיוטה</label>\n" +
+            "                            <input type=\"date\" name=\"draftMilestone\">\n" +
+            "                            <label>CR</label>\n" +
+            "                            <input type=\"date\" name=\"CRMilestone\">\n" +
+            "                        </div>";
+        var full_flow_html=" <div>\n" +
+            "                            <label>מתווה</label>\n" +
+            "                            <input type=\"date\" name=\"outlineMilestone\">\n" +
+            "                            <label>טיוטה 1</label>\n" +
+            "                            <input type=\"date\" name=\"draft_1_Milestone\">\n" +
+            "                            <label>טיוטה 2</label>\n" +
+            "                            <input type=\"date\" name=\"draft_2_Milestone\">\n" +
+            "                            <label>CR</label>\n" +
+            "                            <input type=\"date\" name=\"CRMilestone\">\n" +
+            "                        </div>";
         var course_flow_html=" <div>\n" +
             "                        <label>סילבוס</label>\n" +
-            "                        <input type=\"date\">\n" +
+            "                        <input type=\"date\" name=\"sylabusName\">\n" +
             "                        <label>הצגה</label>\n" +
-            "                        <input type=\"date\">\n" +
+            "                        <input type=\"date\" name=\"presentationName\">\n" +
             "                        <label>מבחן</label>\n" +
-            "                        <input type=\"date\">\n" +
+            "                        <input type=\"date\" name=\"testName\">\n" +
             "                        <label>קורס</label>\n" +
-            "                        <input type=\"date\">\n" +
+            "                        <input type=\"date\" name=\"courseName\">\n" +
             "                        <label>תיקון מצגת</label>\n" +
-            "                        <input type=\"date\">\n" +
+            "                        <input type=\"date\" name=\"fixPresentationName\">\n" +
             "                    </div>";
         var e = document.getElementById("selectFlowID");
         var strUser = e.options[e.selectedIndex].value;
@@ -194,13 +194,12 @@
                     <div id="productMilstonesDataID">
                         <div>
                             <label>מתווה</label>
-                            <input type="date">
+                            <input type="date" name="outlineMilestone">
                             <label>טיוטה</label>
-                            <input type="date">
+                            <input type="date" name="draftMilestone">
                             <label>CR</label>
-                            <input type="date">
+                            <input type="date" name="CRMilestone">
                         </div>
-
                     </div>
 
                 </div>

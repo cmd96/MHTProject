@@ -1,5 +1,4 @@
 package com.test;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @WebServlet("/addBtnServlet")
 public class AddButtons extends HttpServlet {
@@ -29,7 +31,10 @@ public class AddButtons extends HttpServlet {
 
         }
         if (request.getParameter("addProductButton") != null){
-
+            //TODO:get projectId by project name
+            int projectID = 0;
+            int [] templateFlow = null;
+            List<ProductMilestone> productMilsetones =  new ArrayList<>();
             String productName = request.getParameter("productName");
             System.out.println("product name is : "+productName+"!!!!!!!!!!!!!!!!!!!!!!!!");
 
@@ -37,17 +42,49 @@ public class AddButtons extends HttpServlet {
             System.out.println("product name is : "+responsibleWriterName+"!!!!!!!!!!!!!!!!!!!!!!!!");
 
             String selectFlow = request.getParameter("select");
+            ProductMilestone tmpMilstone;
+            if(selectFlow.equals("Short Folw"))
+            {
+                String outlineMilestone = request.getParameter("outlineMilestone");
+                System.out.println(outlineMilestone);
+                //TODO: try to understand id need date by date object or just a string - and if need start and end dates...
+                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.OUTLINE_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
 
+                String draftMilestone = request.getParameter("draftMilestone");
+                System.out.println(draftMilestone);
+                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.DRAFT_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                String CRMilestone = request.getParameter("CRMilestone");
+                System.out.println(CRMilestone);
+                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.CR_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                templateFlow = TEMPLATE_FLOW.BASIC_FLOW;
+            }
+            else if(selectFlow.equals("Full Flow"))
+            {
+
+                String outlineMilestone = request.getParameter("outlineMilestone");
+                String draft_1_Milestone = request.getParameter("draft_1_Milestone");
+                String draft_2_Milestone = request.getParameter("draft_2_Milestone");
+                String CRMilestone = request.getParameter("CRMilestone");
+                templateFlow = TEMPLATE_FLOW.FULL_FLOW;
+            }
+                else if(selectFlow.equals("Course"))
+                {
+                    String sylabusName = request.getParameter("sylabusName");
+                    String presentationName = request.getParameter("presentationName");
+                    String testName = request.getParameter("testName");
+                    String courseName = request.getParameter("courseName");
+                    String fixPresentationName = request.getParameter("fixPresentationName");
+                    templateFlow = TEMPLATE_FLOW.COURSE_FLOW;
+                }
             System.out.println("product name is : "+productName+" and Selected is : "+selectFlow);
-            int responsibleWriter=1;
-            int projectID=1;
-//            AddProduct a=new AddProduct(name,projectID,responsibleWriter);
-//            try {
-//                a.insertProduct();
-//            } catch (SQLException | ClassNotFoundException e) {
-//                System.out.println("faild");
-//                e.printStackTrace();
-//            }
+
+            ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, productMilsetones, templateFlow);
+
             response.sendRedirect("products.jsp");
         }
         if (request.getParameter("addMilestonButton") != null){
