@@ -30,8 +30,11 @@ public class AddButtons extends HttpServlet {
             response.sendRedirect("projects.jsp");
 
         }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (request.getParameter("addProductButton") != null){
+
             //TODO:get projectId by project name
+            int responsibleWriter = 1;
             int projectID = 0;
             int [] templateFlow = null;
             List<ProductMilestone> productMilsetones =  new ArrayList<>();
@@ -45,20 +48,24 @@ public class AddButtons extends HttpServlet {
             ProductMilestone tmpMilstone;
             if(selectFlow.equals("Short Folw"))
             {
-                String outlineMilestone = request.getParameter("outlineMilestone");
-                System.out.println(outlineMilestone);
-                //TODO: try to understand id need date by date object or just a string - and if need start and end dates...
-                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.OUTLINE_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                String outlineMilestoneStartDate = request.getParameter("outlineMilestone");
+                System.out.println(outlineMilestoneStartDate);
+                Date startDate = stringToDate(outlineMilestoneStartDate);
+                //TODO: for end date
+                Date endDate = stringToDate(outlineMilestoneStartDate);
+//                String description = request.getParameter("outlineMilestone");
+                String description = "description";
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, responsibleWriter, startDate, endDate, description, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 String draftMilestone = request.getParameter("draftMilestone");
                 System.out.println(draftMilestone);
-                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.DRAFT_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.DRAFT_STRING, responsibleWriter, new Date(), new Date(), description, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 String CRMilestone = request.getParameter("CRMilestone");
                 System.out.println(CRMilestone);
-                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.CR_STRING,1,new Date(), new Date(), "description", MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.CR_STRING, responsibleWriter ,new Date(), new Date(), description, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.BASIC_FLOW;
@@ -104,5 +111,9 @@ public class AddButtons extends HttpServlet {
         }
 
 
+    }
+
+    private Date stringToDate(String outlineMilestoneStartDate) {
+        return null;
     }
 }

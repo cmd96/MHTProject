@@ -193,12 +193,24 @@
                     </select>
                     <div id="productMilstonesDataID">
                         <div>
+                            <hr>
                             <label>מתווה</label>
-                            <input type="date" name="outlineMilestone">
+                            <label>מתווה- תאריך התחלה</label>
+                            <input type="date" name="outlineMilestoneStartDate">
+                            <label>מתווה- תאריך סיום</label>
+                            <input type="date" name="outlineMilestoneDueDate">
+                            <hr>
                             <label>טיוטה</label>
-                            <input type="date" name="draftMilestone">
+                            <label>טיוטה- תאריך התחלה</label>
+                            <input type="date" name="draftMilestoneStartDate">
+                            <label>טיוטה- תאריך סיום</label>
+                            <input type="date" name="draftMilestoneDueDate">
+                            <hr>
                             <label>CR</label>
-                            <input type="date" name="CRMilestone">
+                            <label>CR- תאריך התחלה</label>
+                            <input type="date" name="CRMilestoneStartDate">
+                            <label>CR - תאריך סיום</label>
+                            <input type="date" name="CRMilestoneDueDate">
                         </div>
                     </div>
 
@@ -211,236 +223,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--<html>--%>
-<%--<head>--%>
-    <%--<script>--%>
-        <%--function loadImage() {--%>
-            <%--alert("ss "+data);--%>
-    <%--//--%>
-    <%--// var con= new SQLConnection.getCon();--%>
-    <%--//         alert(con);--%>
-    <%--// var stmt = con.createStatement();--%>
-    <%--//         alert(stmt);--%>
-    <%--// var SQL = "SELECT * FROM Projects";--%>
-    <%--// var rs = stmt.executeQuery(SQL);--%>
-    <%--// while (rs.next()) {--%>
-    <%--//     alert(rs.getString("Name"));--%>
-        <%--//var option = document.createElement("option");--%>
-        <%--//option.text = rs.getString("Name");--%>
-        <%--//x.add(option);--%>
-            <%--//}--%>
-        <%--}--%>
-    <%--</script>--%>
-
-    <%--&lt;%&ndash;<script src="jquery-3.4.1.js"></script>&ndash;%&gt;--%>
-    <%--<link rel="stylesheet" type="text/css" href="products.css">--%>
-    <%--<meta charset="ISO-8859-1">--%>
-    <%--<title>Products</title>--%>
-    <%--&lt;%&ndash;suppress CssInvalidPropertyValue &ndash;%&gt;--%>
-    <%--<style>--%>
-
-    <%--</style>--%>
-<%--</head>--%>
-
-<%--<body onload="loadImage()">--%>
-<%--<div id="aside">--%>
-    <%--<div id="user">--%>
-        <%--<img id="userImg" src="">--%>
-        <%--<span id="userName">שלום</span>--%>
-        <%--<br/>--%>
-        <%--<span type="text"><%= userNmae %></span>--%>
-    <%--</div>--%>
-    <%--<div id="history">--%>
-        <%--<span id="header">היסטוריה</span>--%>
-        <%--<div id="content">--%>
-            <%--<div id="historyItem"></div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
-<%--<div id="main">--%>
-    <%--<div id="top">--%>
-        <%--<div id="project">--%>
-            <%--<label id="header">בחר פרויקט</label>--%>
-            <%--<select id="selectProject" name="selectProject">--%>
-                <%--&lt;%&ndash;fillProjectsOptionList()&ndash;%&gt;--%>
-                <%--<option id="projectItem" selected></option>--%>
-            <%--</select>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-    <%--<div id="projects">--%>
-        <%--<div id="projectItem">--%>
-            <%--<div id="products" >--%>
-                <%--<div id="productItem">--%>
-                    <%--<div id="productName"><span>שם תוצר</span></div>--%>
-                    <%--<div id="productResponsibleWriter"><span>שם כתב אחראי</span></div>--%>
-                    <%--<div id="milestons">--%>
-                        <%--<div id="milestonItem">--%>
-                            <%--<div id="milestonName"><span>שם אבן דרך</span></div>--%>
-                            <%--<div id="milestonToDoDate"><date>תאריך</date></div>--%>
-                            <%--<div id="milestonButtons">--%>
-                                <%--<button id="confirmMilestonBtn"></button>--%>
-                                <%--<button id="editMilestonBtn"></button>--%>
-                                <%--<button id="detailsMilestonBtn"></button>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<a id="addMilestonBtn" href="#popup3">+</a>--%>
-                    <%--</div>--%>
-                    <%--<div id="prodectButtons">--%>
-                        <%--<button id="confirmProductBtn"></button>--%>
-                        <%--<button id="editProductBtn"></button>--%>
-                        <%--<button id="detailsProductBtn"></button>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-                <%--<a  id="addProductBtn" href="#popup2" >+</a>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-        <%--<a   id="addProjectBtn" href="#popup1">+</a>--%>
-    <%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="s-layout">--%>
-    <%--<main class="s-layout__content">--%>
-        <%--<form id="popup1" class="overlay" action="addBtnServlet" method="post">--%>
-            <%--<div class="popup">--%>
-                <%--<a class="close" href="#">&times;</a>--%>
-                <%--<h2>הוסף פרויקט</h2>--%>
-
-                <%--<div class="content">--%>
-                    <%--<label for="projName"><b>שם פרויקט</b></label>--%>
-                    <%--<input type="text" placeholder="שם פרויקט" name="projName" required>--%>
-                    <%--<label for="projName"><b>שם לקוח</b></label>--%>
-                    <%--<input type="text" placeholder="שם לקוח" name="customerName" required>--%>
-                <%--</div>--%>
-                <%--<button type="submit" value="Login" name="addProjectButton" >אישור</button>--%>
-            <%--</div>--%>
-        <%--</form>--%>
-
-        <%--<form id="popup2" class="overlay" action="addBtnServlet" method="post">--%>
-            <%--<div class="popup">--%>
-                <%--<a class="close" href="#">&times;</a>--%>
-                <%--<h2>הוסף תוצר</h2>--%>
-
-                <%--<div class="content">--%>
-                    <%--<label for="productName"><b>שם תוצר</b></label>--%>
-                    <%--<input type="text" placeholder="שם תוצר" name="productName" required>--%>
-                    <%--<label for="productName"><b>שם כתב אחראי</b></label>--%>
-                    <%--<input type="text" placeholder="שם כתב אחראי" name="responsiblewriterName" required>--%>
-                <%--</div>--%>
-                <%--<button type="submit" value="Login" name="addProductButton">אישור</button>--%>
-
-            <%--</div>--%>
-        <%--</form>--%>
-
-        <%--<form id="popup3" class="overlay" action="addBtnServlet" method="post">--%>
-            <%--<div class="popup">--%>
-                <%--<a class="close" href="#">&times;</a>--%>
-                <%--<h2>הוסף אבן דרך</h2>--%>
-
-                <%--<div class="content">--%>
-                    <%--<label for="mailstonName"><b>שם אבן דרך</b></label>--%>
-                    <%--<input type="text" placeholder="שם אבן דרך" name="mailstonName" required>--%>
-
-                    <%--<label for="description"><b>תיאור</b></label>--%>
-                    <%--<input type="text" placeholder="תיאור" name="description" required>--%>
-                <%--</div>--%>
-                <%--<button type="submit" value="Login" name="addMilestonButton">אישור</button>--%>
-
-            <%--</div>--%>
-        <%--</form>--%>
-        <%--<form id="popup4" class="overlay"  >--%>
-            <%--<div class="popup">--%>
-                <%--<a class="close" href="#">&times;</a>--%>
-                <%--<h2> פרויקט</h2>--%>
-
-                <%--<div class="content">--%>
-                    <%--<label for="projName"><b>שם פרויקט</b></label>--%>
-                    <%--&lt;%&ndash;<input type="text" value="<%= project.getProjectsNames() %>">&ndash;%&gt;--%>
-                    <%--&lt;%&ndash;<%= request.getParameter("getProjectsNames") %>&ndash;%&gt;--%>
-                <%--</div>--%>
-                <%--<button type="submit" value="Login" >אישור</button>--%>
-            <%--</div>--%>
-        <%--</form>--%>
-    <%--</main>--%>
-<%--</div>--%>
-
-
-
-
-
-
-
-
-
-<%--&lt;%&ndash;<div class="s-layout">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<!-- Sidebar -->&ndash;%&gt;--%>
-<%--&lt;%&ndash;<div class="s-layout__sidebar">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="s-sidebar__trigger" href="#0">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<i class="fa fa-bars"></i>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<nav class="s-sidebar__nav">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<ul>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<li style="background-color: #fefefe">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<img src="https://image.flaticon.com/icons/svg/1000/1000946.svg" alt="Avatar" class="avatar">&ndash;%&gt;--%>
-<%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="s-sidebar__nav-link" href="#0">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<i class="fa fa-home"></i><em>Home</em>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="s-sidebar__nav-link" href="#0">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<i class="fa fa-user"></i><em>My Profile</em>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="s-sidebar__nav-link" href="#0">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<i class="fa fa-camera" ></i><em>History</em>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</nav>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<!-- Content -->&ndash;%&gt;--%>
-<%--&lt;%&ndash;<main class="s-layout__content">&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<div class="AddBtn">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="button" href="#popup1">הוסף פרויקט</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<div class="AddBtn">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="button" href="#popup2">הוסף תוצר</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<div class="AddBtn">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="button" href="#popup3">הוסף אבן דרך</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<div class="AddBtn">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<a class="button" href="#popup4">הצג פרויקטים</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-
-<%--&lt;%&ndash;</main>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-<%--</body>--%>
-<%--</html>--%>
