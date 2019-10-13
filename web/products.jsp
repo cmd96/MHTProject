@@ -38,36 +38,120 @@
 
     function selectOnChnageFunction()
     {
-        var basic_flow_html =" <div>\n" +
-            "                            <label>מתווה</label>\n" +
-            "                            <input type=\"date\" name=\"outlineMilestone\">\n" +
-            "                            <label>טיוטה</label>\n" +
-            "                            <input type=\"date\" name=\"draftMilestone\">\n" +
-            "                            <label>CR</label>\n" +
-            "                            <input type=\"date\" name=\"CRMilestone\">\n" +
-            "                        </div>";
-        var full_flow_html=" <div>\n" +
-            "                            <label>מתווה</label>\n" +
-            "                            <input type=\"date\" name=\"outlineMilestone\">\n" +
-            "                            <label>טיוטה 1</label>\n" +
-            "                            <input type=\"date\" name=\"draft_1_Milestone\">\n" +
-            "                            <label>טיוטה 2</label>\n" +
-            "                            <input type=\"date\" name=\"draft_2_Milestone\">\n" +
-            "                            <label>CR</label>\n" +
-            "                            <input type=\"date\" name=\"CRMilestone\">\n" +
-            "                        </div>";
-        var course_flow_html=" <div>\n" +
-            "                        <label>סילבוס</label>\n" +
-            "                        <input type=\"date\" name=\"sylabusName\">\n" +
-            "                        <label>הצגה</label>\n" +
-            "                        <input type=\"date\" name=\"presentationName\">\n" +
-            "                        <label>מבחן</label>\n" +
-            "                        <input type=\"date\" name=\"testName\">\n" +
-            "                        <label>קורס</label>\n" +
-            "                        <input type=\"date\" name=\"courseName\">\n" +
-            "                        <label>תיקון מצגת</label>\n" +
-            "                        <input type=\"date\" name=\"fixPresentationName\">\n" +
-            "                    </div>";
+        var outlineHtmlCode ="<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">מתווה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"outlineMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"outlineMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"outlineMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"outlineMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var draftHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draftMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draftMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draftMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draftMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var CRHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">CR</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"CRMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"CRMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"CRMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"CRMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var draft_1HtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה 1</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draft_1_MilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draft_1_MilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draft_1_MilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draft_1_MilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var draft_2HtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה 2</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draft_2_MilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draft_2_MilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draft_2_MilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draft_2_MilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var sylabusHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">סילבוס</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"sylabusMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"sylabusMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"sylabusMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"sylabusMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var presentationHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">הצגה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"presentationMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"presentationMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"presentationMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"presentationMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var testHtmlCode = " <fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">מבחן</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"testMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"testMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"testMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"testMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var courseHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">קורס</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"courseMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"courseMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"courseMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"courseMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var fixPresentationHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">תיקון מצגת</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"fixPresentationMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"fixPresentationMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"fixPresentationMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"fixPresentationMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var basic_flow_html = outlineHtmlCode+draftHtmlCode+CRHtmlCode;
+        var full_flow_html = outlineHtmlCode + draft_1HtmlCode+draft_2HtmlCode+CRHtmlCode;
+        var course_flow_html = sylabusHtmlCode+presentationHtmlCode+ testHtmlCode+courseHtmlCode+fixPresentationHtmlCode;
+
         var e = document.getElementById("selectFlowID");
         var strUser = e.options[e.selectedIndex].value;
         var dynamicCodeParent = document.getElementById('productMilstonesDataID');
@@ -192,28 +276,45 @@
                         <option>Course</option>
                     </select>
                     <div id="productMilstonesDataID">
-                        <div>
-                            <hr>
-                            <label>מתווה</label>
-                            <label>מתווה- תאריך התחלה</label>
-                            <input type="date" name="outlineMilestoneStartDate">
-                            <label>מתווה- תאריך סיום</label>
-                            <input type="date" name="outlineMilestoneDueDate">
-                            <hr>
-                            <label>טיוטה</label>
-                            <label>טיוטה- תאריך התחלה</label>
-                            <input type="date" name="draftMilestoneStartDate">
-                            <label>טיוטה- תאריך סיום</label>
-                            <input type="date" name="draftMilestoneDueDate">
-                            <hr>
-                            <label>CR</label>
-                            <label>CR- תאריך התחלה</label>
-                            <input type="date" name="CRMilestoneStartDate">
-                            <label>CR - תאריך סיום</label>
-                            <input type="date" name="CRMilestoneDueDate">
-                        </div>
-                    </div>
 
+                        <fieldset class="milestoneWrapper">
+                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">מתווה</legend>
+                            <label>תאריך התחלה</label>
+                            <input type="date" name="outlineMilestoneStartDate">
+                            <label>תאריך סיום</label>
+                            <input type="date" name="outlineMilestoneDueDate">
+                            <label>כותב אחראי</label>
+                            <input type="text" placeholder="שם כתב אחראי" name="outlineMilestoneResponsibleWriterName" required>
+                            <label>תאור</label>
+                            <input type="text" placeholder="תאור" name="outlineMilestoneDescriptionName" >
+                        </fieldset>
+
+                        <fieldset class="milestoneWrapper">
+                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">טיוטה</legend>
+                            <label>תאריך התחלה</label>
+                            <input type="date" name="draftMilestoneStartDate">
+                            <label>תאריך סיום</label>
+                            <input type="date" name="draftMilestoneDueDate">
+                            <label>כותב אחראי</label>
+                            <input type="text" placeholder="שם כתב אחראי" name="draftMilestoneResponsibleWriterName" required>
+                            <label>תאור</label>
+                            <input type="text" placeholder="תאור" name="draftMilestoneDescriptionName" >
+                        </fieldset>
+
+                        <fieldset class="milestoneWrapper">
+                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">CR</legend>
+                            <label>תאריך התחלה</label>
+                            <input type="date" name="CRMilestoneStartDate">
+                            <label>תאריך סיום</label>
+                            <input type="date" name="CRMilestoneDueDate">
+                            <label>כותב אחראי</label>
+                            <input type="text" placeholder="שם כתב אחראי" name="CRMilestoneResponsibleWriterName" required>
+                            <label>תאור</label>
+                            <input type="text" placeholder="תאור" name="CRMilestoneDescriptionName" >
+                        </fieldset>
+
+
+                    </div>
                 </div>
                 <button type="submit" value="Login" name="addProductButton" >אישור</button>
             </div>

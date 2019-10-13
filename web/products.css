@@ -344,6 +344,12 @@ select{
 input:focus{
     outline: none;
 }
+.milestoneWrapper{
+    border-width: 1px ;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+}
 input[type=date]{
     clear: both;
     width: 100%;
