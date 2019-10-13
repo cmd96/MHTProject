@@ -91,7 +91,7 @@ public class AddButtons extends HttpServlet {
             System.out.println("product name is : "+productName+" and Selected is : "+selectFlow);
 
             ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, productMilsetones, templateFlow);
-
+            //TODO:call shira function
             response.sendRedirect("products.jsp");
         }
         if (request.getParameter("addMilestonButton") != null){
