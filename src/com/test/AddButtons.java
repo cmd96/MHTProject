@@ -1,4 +1,6 @@
 package com.test;
+import exception.ProjectExeption;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,6 +42,7 @@ public class AddButtons extends HttpServlet {
             List<ProductMilestone> productMilsetones =  new ArrayList<>();
             String productName = request.getParameter("productName");
             String selectFlow = request.getParameter("select");
+            String productResponsibleWriterName = request.getParameter("responsibleWriterName");
             ProductMilestone tmpMilstone;
 
             String milestoneStartDate;
@@ -90,15 +93,15 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("draft_1_MilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("draft_1_MilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("draft_1_MilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_1_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
-                //draft1
+                //draft2
                 milestoneStartDate = request.getParameter("draft_2_MilestoneStartDate");
                 milestoneDueDate = request.getParameter("draft_2_MilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("draft_2_MilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("draft_2_MilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_2_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 //CRHtmlCode
@@ -118,7 +121,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("sylabusMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("sylabusMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("sylabusMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.SYLLABUS_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 //presentation
@@ -126,7 +129,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("presentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("presentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("presentationMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 //test
@@ -134,7 +137,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("testMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("testMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("testMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.TEST_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 //course
@@ -142,7 +145,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("courseMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("courseMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("courseMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.COURSE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 //fixPresentation
@@ -150,14 +153,24 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("fixPresentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("fixPresentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("fixPresentationMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_CHECKING_STRING ,getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.COURSE_FLOW;
             }
 
-            ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, productMilsetones, templateFlow);
+            ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, getIdbyName(productResponsibleWriterName), productMilsetones, templateFlow);
             //TODO:call shira function
+            try {
+                ProjectProduct.InsertNewProduct(newProduct);
+            } catch (ProjectExeption projectExeption) {
+                projectExeption.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            User.refreshDB();
             response.sendRedirect("products.jsp");
         }
         if (request.getParameter("addMilestonButton") != null){
@@ -181,11 +194,11 @@ public class AddButtons extends HttpServlet {
 
     private Date stringToDate(String outlineMilestoneStartDate)
     {
-        return null;
+        return new Date();
     }
 
     private int  getIdbyName(String name)
     {
-        return 0;
+        return 1;
     }
 }

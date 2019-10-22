@@ -316,7 +316,7 @@
 
                     </div>
                 </div>
-                <button type="submit" value="Login" name="addProductButton" >אישור</button>
+                <button type="submit" value="Login" name="addProductButton" id="submitID">אישור</button>
             </div>
         </form>
 

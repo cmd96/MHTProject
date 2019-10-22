@@ -388,13 +388,13 @@ button{
     -webkit-appearance: none;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: white;
+    color: red;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
     text-indent: 0px;
     text-shadow: none;
-    display: none;
+    /*display: none;*/
     text-align: center;
     align-items: flex-start;
     cursor: default;
@@ -406,4 +406,25 @@ button{
     border: none;
 
 }
+#submitID
+{
+    -webkit-appearance: none;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: #2093B4;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
 
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: white;
+    box-sizing: unset;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 0px;
+    border: solid;
+}

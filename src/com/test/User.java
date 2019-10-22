@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class User {
@@ -99,48 +98,48 @@ public class User {
         User.userProjectList = userProjectList;
     }
 
-    public void exampleDataSetUp()
-    {
-        ProductMilestone milestoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneDeliveryDate = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        List<ProductMilestone> MilestoneList = new ArrayList<>();
-
-        ProductMilestone milestoneDraft1 = new ProductMilestone(1, MILESTONE_NAME.DRAFT_1_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneOutline1 = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneDraft2 = new ProductMilestone(1, MILESTONE_NAME.DRAFT_2_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneCR1 = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        ProductMilestone milestoneDeliveryDate1 = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
-        List<ProductMilestone> MilestoneList1 = new ArrayList<>();
-        MilestoneList.add(milestoneOutline);
-        MilestoneList.add(milestoneDraft);
-        MilestoneList.add(milestoneCR);
-        MilestoneList.add(milestoneDeliveryDate);
-
-        MilestoneList1.add(milestoneOutline1);
-        MilestoneList1.add(milestoneDraft1);
-        MilestoneList1.add(milestoneDraft2);
-        MilestoneList1.add(milestoneCR1);
-        MilestoneList1.add(milestoneDeliveryDate1);
-
-        ProjectProduct product = new ProjectProduct(11,"wing",1, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
-        ProjectProduct product1 = new ProjectProduct(111,"fly",2, MilestoneList1, TEMPLATE_FLOW.FULL_FLOW);
-        List<ProjectProduct> productList = new ArrayList<>();
-        productList.add(product);
-        productList.add(product1);
-        userProject project = new userProject("wingToFlyTry","Chemdi",1,11,productList);
-        userProject project1 = new userProject("wingToFlyTry2","Chemdi",1,12,productList);
-        userProject project2 = new userProject("wingToFly","Chemdi",1,13,productList);
-        List<userProject> projectList = new ArrayList<>();
-        projectList.add(project);
-        projectList.add(project1);
-        projectList.add(project2);
-        this.userProjectList = projectList;
-//        List<ProductMilestone> gm= get_MileStons(con , 1);
-//        System.out.println(gm);
-
-    }
+//    public void exampleDataSetUp()
+//    {
+//        ProductMilestone milestoneDraft = new ProductMilestone(1, MILESTONE_NAME.DRAFT_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneOutline = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneCR = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneDeliveryDate = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        List<ProductMilestone> MilestoneList = new ArrayList<>();
+//
+//        ProductMilestone milestoneDraft1 = new ProductMilestone(1, MILESTONE_NAME.DRAFT_1_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneOutline1 = new ProductMilestone(1, MILESTONE_NAME.OUTLINE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneDraft2 = new ProductMilestone(1, MILESTONE_NAME.DRAFT_2_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneCR1 = new ProductMilestone(1, MILESTONE_NAME.CR_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        ProductMilestone milestoneDeliveryDate1 = new ProductMilestone(1, MILESTONE_NAME.DELIVERY_DATE_STRING, 2, new Date(),new Date(),"blabla", MILESTONE_STATUS.READY );
+//        List<ProductMilestone> MilestoneList1 = new ArrayList<>();
+//        MilestoneList.add(milestoneOutline);
+//        MilestoneList.add(milestoneDraft);
+//        MilestoneList.add(milestoneCR);
+//        MilestoneList.add(milestoneDeliveryDate);
+//
+//        MilestoneList1.add(milestoneOutline1);
+//        MilestoneList1.add(milestoneDraft1);
+//        MilestoneList1.add(milestoneDraft2);
+//        MilestoneList1.add(milestoneCR1);
+//        MilestoneList1.add(milestoneDeliveryDate1);
+//
+//        ProjectProduct product = new ProjectProduct(11,"wing",1, MilestoneList, TEMPLATE_FLOW.BASIC_FLOW);
+//        ProjectProduct product1 = new ProjectProduct(111,"fly",2, MilestoneList1, TEMPLATE_FLOW.FULL_FLOW);
+//        List<ProjectProduct> productList = new ArrayList<>();
+//        productList.add(product);
+//        productList.add(product1);
+//        userProject project = new userProject("wingToFlyTry","Chemdi",1,11,productList);
+//        userProject project1 = new userProject("wingToFlyTry2","Chemdi",1,12,productList);
+//        userProject project2 = new userProject("wingToFly","Chemdi",1,13,productList);
+//        List<userProject> projectList = new ArrayList<>();
+//        projectList.add(project);
+//        projectList.add(project1);
+//        projectList.add(project2);
+//        this.userProjectList = projectList;
+////        List<ProductMilestone> gm= get_MileStons(con , 1);
+////        System.out.println(gm);
+//
+//    }
     public static String getUserMilestons(){
         String userMilestons="";
 
@@ -316,6 +315,7 @@ public class User {
                         rs.getInt("ProjectID"),
                         rs.getString("ProductName"),
                         rs.getInt("ProductID"),
+                        rs.getInt("ResponsibleWriterID"),
                         (List<ProductMilestone>)get_MileStons(con,rs.getInt("ProductID")),
                         flowArr));
             }

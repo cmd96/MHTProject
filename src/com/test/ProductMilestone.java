@@ -109,9 +109,12 @@ public class ProductMilestone {
         String strDateEnd = formatter.format(Date_End);
 //        System.out.println("kkkkkkkkkkkkkkk "+ strDateEnd);
 
-        String sql = "INSERT INTO [dbo].[Milestons]" +
-                "(Name  ,ProductID, ResponsibleWriter, DateStart, DateToEnd, Description) " +
-                "VALUES ('" + insert_mile.getMilestoneName() + "','" + insert_mile.getProductID() +
+        String sql = "INSERT INTO ProductMilestons" +
+                "(MilestoneName ,ProjectID ,ProductID, ResponsibleWriterID, StartDate, EndDate, Description) " +
+                "VALUES ('" + insert_mile.getMilestoneName() +
+                //TODO:Get Project ID
+                "','" + 14 +
+                "','" + insert_mile.getProductID() +
                 "','" + insert_mile.getResponsibleWriterId() + "','" + strDateStart +
                 "','" + strDateEnd + "','" + insert_mile.getDescription() + "')";
 

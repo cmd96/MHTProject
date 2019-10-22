@@ -12,18 +12,27 @@ public class ProjectProduct {
 
     private int projectID;
     private String productName;
-     private int productID;
-     private List<ProductMilestone> productMilestone;
+    private int productID;
+    private int ResponsibleWriterId;
+    private List<ProductMilestone> productMilestone;
     private int [] template_flow;
 
-    public ProjectProduct(int projectID, String productName, int productID, List<ProductMilestone> productMilestone, int[] template_flow) {
+
+    public ProjectProduct(int projectID, String productName, int productID, int responsibleWriterId, List<ProductMilestone> productMilestone, int[] template_flow) {
         this.projectID = projectID;
         this.productName = productName;
         this.productID = productID;
+        ResponsibleWriterId = responsibleWriterId;
         this.productMilestone = productMilestone;
         this.template_flow = template_flow;
     }
+    public int getResponsibleWriterId() {
+        return ResponsibleWriterId;
+    }
 
+    public void setResponsibleWriterId(int responsibleWriterId) {
+        ResponsibleWriterId = responsibleWriterId;
+    }
     public int getProjectID() {
         return projectID;
     }
@@ -79,15 +88,15 @@ public class ProjectProduct {
     }
 
     //TODO: insert new product to current project
-    public static void InsertNewProduct(Connection con, ProjectProduct insert) throws ProjectExeption {
-
+    public static void InsertNewProduct(ProjectProduct insert) throws ProjectExeption, SQLException, ClassNotFoundException {
+        Connection con=SQLConnection.getCon();
         String Name = insert.getProductName();
         int ProjID = insert.getProjectID();
-        int rw = 100;
+        int rw = insert.getResponsibleWriterId();
         List<ProductMilestone> productMilestone = insert.getProductMilestone();
 
         int [] template_flow = insert.getTemplate_flow();
-        insert_product_db(con, Name, ProjID, rw);
+        insert_product_db(con, Name, 14, rw);
         if (productMilestone != null)
         {
             int product_id = ( int ) get_product_id(con, Name, ProjID);
@@ -96,7 +105,7 @@ public class ProjectProduct {
         }
     }
     public static void insert_product_db(Connection con, String Name, int ProjID, int rw){
-        String sql = "INSERT INTO [dbo].[Products] (Name ,ProjID, ResponsibleWriterID) VALUES ( '"+Name +"','"+ProjID+"','"+rw+"')";
+        String sql = "INSERT INTO ProjectProduct (ProductName ,ProjectID, ResponsibleWriterID) VALUES ( '"+Name +"','"+ProjID+"','"+rw+"')";
         try {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(sql);
@@ -108,13 +117,13 @@ public class ProjectProduct {
     }
 
     public static int get_product_id(Connection con, String Name, int ProjID){
-        String sql = "Select ID from Products where Name like '"+Name+"' and ProjID like '"+ProjID+"'";
+        String sql = "Select ProductID from ProjectProduct where ProductName like '"+Name+"' and ProjectID like '"+ProjID+"'";
         int id = -1;
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
-                id = rs.getInt("ID");
+                id = rs.getInt("ProductID");
             }
 
         }catch (SQLException e) {
