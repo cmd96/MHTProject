@@ -46,7 +46,7 @@ public class AddButtons extends HttpServlet {
 
             String selectFlow = request.getParameter("select");
             ProductMilestone tmpMilstone;
-            if(selectFlow.equals("Short Folw"))
+            if(selectFlow.equals("Short Flow"))
             {
                 String outlineMilestoneStartDate = request.getParameter("outlineMilestone");
                 System.out.println(outlineMilestoneStartDate);

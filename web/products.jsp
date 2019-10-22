@@ -271,7 +271,7 @@
                     <label ><b>שם כתב אחראי</b></label>
                     <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
                     <select name="select" onchange="selectOnChnageFunction()" id="selectFlowID">
-                        <option>Short Folw</option>
+                        <option>Short Flow</option>
                         <option>Full Flow</option>
                         <option>Course</option>
                     </select>
