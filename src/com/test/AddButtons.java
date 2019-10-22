@@ -39,56 +39,122 @@ public class AddButtons extends HttpServlet {
             int [] templateFlow = null;
             List<ProductMilestone> productMilsetones =  new ArrayList<>();
             String productName = request.getParameter("productName");
-            System.out.println("product name is : "+productName+"!!!!!!!!!!!!!!!!!!!!!!!!");
-
-            String responsibleWriterName = request.getParameter("responsibleWriterName");
-            System.out.println("product name is : "+responsibleWriterName+"!!!!!!!!!!!!!!!!!!!!!!!!");
-
             String selectFlow = request.getParameter("select");
             ProductMilestone tmpMilstone;
+
+            String milestoneStartDate;
+            String milestoneDueDate;
+            String milestoneResponsibleWriterName;
+            String milestoneDescriptionName;
+
             if(selectFlow.equals("Short Flow"))
             {
-                String outlineMilestoneStartDate = request.getParameter("outlineMilestone");
-                System.out.println(outlineMilestoneStartDate);
-                Date startDate = stringToDate(outlineMilestoneStartDate);
-                //TODO: for end date
-                Date endDate = stringToDate(outlineMilestoneStartDate);
-//                String description = request.getParameter("outlineMilestone");
-                String description = "description";
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, responsibleWriter, startDate, endDate, description, MILESTONE_STATUS.READY );
+                //outline
+                milestoneStartDate = request.getParameter("outlineMilestoneStartDate");
+                milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
-                String draftMilestone = request.getParameter("draftMilestone");
-                System.out.println(draftMilestone);
-                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.DRAFT_STRING, responsibleWriter, new Date(), new Date(), description, MILESTONE_STATUS.READY );
+                //draft
+                milestoneStartDate = request.getParameter("draftMilestoneStartDate");
+                milestoneDueDate = request.getParameter("draftMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("draftMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("draftMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
-                String CRMilestone = request.getParameter("CRMilestone");
-                System.out.println(CRMilestone);
-                tmpMilstone = new ProductMilestone(-1,MILESTONE_NAME.CR_STRING, responsibleWriter ,new Date(), new Date(), description, MILESTONE_STATUS.READY );
+                //CRHtmlCode
+                milestoneStartDate = request.getParameter("CRMilestoneStartDate");
+                milestoneDueDate = request.getParameter("CRMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("CRMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("CRMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.BASIC_FLOW;
             }
             else if(selectFlow.equals("Full Flow"))
             {
+                //outline
+                milestoneStartDate = request.getParameter("outlineMilestoneStartDate");
+                milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
 
-                String outlineMilestone = request.getParameter("outlineMilestone");
-                String draft_1_Milestone = request.getParameter("draft_1_Milestone");
-                String draft_2_Milestone = request.getParameter("draft_2_Milestone");
-                String CRMilestone = request.getParameter("CRMilestone");
+                //draft1
+                milestoneStartDate = request.getParameter("draft_1_MilestoneStartDate");
+                milestoneDueDate = request.getParameter("draft_1_MilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("draft_1_MilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("draft_1_MilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //draft1
+                milestoneStartDate = request.getParameter("draft_2_MilestoneStartDate");
+                milestoneDueDate = request.getParameter("draft_2_MilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("draft_2_MilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("draft_2_MilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //CRHtmlCode
+                milestoneStartDate = request.getParameter("CRMilestoneStartDate");
+                milestoneDueDate = request.getParameter("CRMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("CRMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("CRMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
                 templateFlow = TEMPLATE_FLOW.FULL_FLOW;
             }
-                else if(selectFlow.equals("Course"))
-                {
-                    String sylabusName = request.getParameter("sylabusName");
-                    String presentationName = request.getParameter("presentationName");
-                    String testName = request.getParameter("testName");
-                    String courseName = request.getParameter("courseName");
-                    String fixPresentationName = request.getParameter("fixPresentationName");
-                    templateFlow = TEMPLATE_FLOW.COURSE_FLOW;
-                }
-            System.out.println("product name is : "+productName+" and Selected is : "+selectFlow);
+            else if(selectFlow.equals("Course"))
+            {
+                //sylabus
+                milestoneStartDate = request.getParameter("sylabusMilestoneStartDate");
+                milestoneDueDate = request.getParameter("sylabusMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("sylabusMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("sylabusMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //presentation
+                milestoneStartDate = request.getParameter("presentationMilestoneStartDate");
+                milestoneDueDate = request.getParameter("presentationMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("presentationMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("presentationMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //test
+                milestoneStartDate = request.getParameter("testMilestoneStartDate");
+                milestoneDueDate = request.getParameter("testMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("testMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("testMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //course
+                milestoneStartDate = request.getParameter("courseMilestoneStartDate");
+                milestoneDueDate = request.getParameter("courseMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("courseMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("courseMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                //fixPresentation
+                milestoneStartDate = request.getParameter("fixPresentationMilestoneStartDate");
+                milestoneDueDate = request.getParameter("fixPresentationMilestoneDueDate");
+                milestoneResponsibleWriterName = request.getParameter("fixPresentationMilestoneResponsibleWriterName");
+                milestoneDescriptionName = request.getParameter("fixPresentationMilestoneDescriptionName");
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                productMilsetones.add(tmpMilstone);
+
+                templateFlow = TEMPLATE_FLOW.COURSE_FLOW;
+            }
 
             ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, productMilsetones, templateFlow);
             //TODO:call shira function
@@ -113,7 +179,13 @@ public class AddButtons extends HttpServlet {
 
     }
 
-    private Date stringToDate(String outlineMilestoneStartDate) {
+    private Date stringToDate(String outlineMilestoneStartDate)
+    {
         return null;
+    }
+
+    private int  getIdbyName(String name)
+    {
+        return 0;
     }
 }
