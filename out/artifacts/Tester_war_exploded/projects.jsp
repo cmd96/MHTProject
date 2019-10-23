@@ -20,7 +20,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="projects.css">
+    <link rel="stylesheet" type="text/css" href="projectss.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>
 </head>
@@ -88,7 +88,7 @@
         <div id="projectOutlineID">
             <span id="GFG_Span"></span>
             <div id="projectNameID">פרויקטים</div>
-            <a id="addProjectBtn" href="#popup1"><button class="projectBtn" onclick="AddProjects()">+</button></a>
+            <button class="projectBtn" onclick="AddProjects()"><a id="addProjectBtn" href="#popup1">+</a></button>
         </div>
         <form action="projectListServlet"  id="formWrapper" method="post">
             <div id="dynamicData"></div>
@@ -110,7 +110,7 @@
             <label ><b>שם לקוח</b></label>
             <input type="text" placeholder="שם לקוח" name="customerName" required>
         </div>
-        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" >אישור</button>
+        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitID" >אישור</button>
     </div>
 </form>
 </main>

@@ -249,7 +249,7 @@
         <div id="projectOutlineID">
             <span id="projectName" ><%=Products.getCurrentProjectName()%></span>
             <div id="projectID"></div>
-            <a id="addProductBtn" href="#addProduct"><button onclick="AddProjects()">+</button></a>
+            <button onclick="AddProjects()"><a id="addProductBtn" href="#addProduct">+</a></button>
             <%--<button class="productBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>--%>
         </div>
             <div id="dynamicData">
