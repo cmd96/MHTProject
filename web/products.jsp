@@ -210,7 +210,6 @@
         %>
         var userProjectListJS='<%=htmlDynamicCode%>';
         parent.insertAdjacentHTML('beforeend', userProjectListJS);
-        projectName();
     }
 
     function AddProducts() {
@@ -219,16 +218,6 @@
         parent.insertAdjacentHTML('beforeend', newChild);
     }
 
-    function projectName() {
-
-        var queryString = decodeURIComponent(window.location.search);
-        queryString = queryString.substring(1);
-        var queries = queryString.split("=");
-        for (var i = 0; i < queries.length; i++)
-        {
-            document.getElementById("projectID").innerText = queries[i];
-        }
-    }
 
 </script>
 
@@ -248,8 +237,8 @@
     <div id="projectDataID">
         <div id="projectOutlineID">
             <span id="projectName" ><%=Products.getCurrentProjectName()%></span>
-            <div id="projectID"></div>
-            <button onclick="AddProjects()"><a id="addProductBtn" href="#addProduct">+</a></button>
+
+            <button><a id="addProductBtn" href="#addProduct">+</a></button>
             <%--<button class="productBtn" onclick="AddProducts()"><i class="material-icons" id="addProductBtnID">&#xe03b;</i></button>--%>
         </div>
             <div id="dynamicData">
