@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -36,8 +38,11 @@ public class AddButtons extends HttpServlet {
         if (request.getParameter("addProductButton") != null){
 
             //TODO:get projectId by project name
+
+            String projectName = Products.getCurrentProjectName();
             int responsibleWriter = 1;
             int projectID = 0;
+            //TODO:find id according name;
             int [] templateFlow = null;
             List<ProductMilestone> productMilsetones =  new ArrayList<>();
             String productName = request.getParameter("productName");
@@ -192,11 +197,13 @@ public class AddButtons extends HttpServlet {
 
     }
 
-    private Date stringToDate(String outlineMilestoneStartDate)
-    {
-        return new Date();
+    private Date stringToDate(String outlineMilestoneStartDate) throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        Date DateConvert = formatter.parse(outlineMilestoneStartDate);
+        return  DateConvert;
     }
 
+    //get userID by name
     private int  getIdbyName(String name)
     {
         return 1;
