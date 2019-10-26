@@ -2,10 +2,7 @@ package com.test;
 
 import exception.ProjectExeption;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 
 public class ProjectProduct {
@@ -130,6 +127,19 @@ public class ProjectProduct {
             e.printStackTrace();
         }
         return id;
+
+
+    }
+    public static void setProductNameDB(Connection con, String NewName){
+        String sql = "update ProjectProduct set ProductName = '"+NewName+"'";
+        try {
+          Statement stmt = con.createStatement();
+          int count = stmt.executeUpdate(sql);
+            System.out.println("Number of rows updated by executing query1 =  " + count);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
