@@ -20,7 +20,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="projectss.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>
 </head>
@@ -48,7 +48,7 @@
         var parent = document.getElementById('dynamicData');
         var i;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></div>'
+            var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><a id="setProjectBtn" href="#popupEditProject"><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></a></div>'
 
             parent.insertAdjacentHTML('beforeend', newChild);
         }
@@ -115,6 +115,27 @@
     </div>
 </form>
 </main>
+</div>
+
+
+
+<div class="s-layout">
+    <main class="s-layout__content">
+        <form id="popupEditProject" class="overlay" action="addBtnServlet" method="post">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h2>עריכת פרויקט</h2>
+
+                <div class="content">
+                    <label ><b>שם פרויקט</b></label>
+                    <input type="text" value="שם פרויקט" name="projName" >
+                    <label ><b>שם לקוח</b></label>
+                    <input type="text" value="שם לקוח" name="customerName" required>
+                </div>
+                <button type="submit" value="Login"  onclick="updateDataJS()" name="setProjectButton" id="setProjectBtnID" >אישור</button>
+            </div>
+        </form>
+    </main>
 </div>
 
 
