@@ -7,10 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 @WebServlet("/addBtnServlet")
 public class AddButtons extends HttpServlet {
@@ -36,8 +43,19 @@ public class AddButtons extends HttpServlet {
         if (request.getParameter("addProductButton") != null){
 
             //TODO:get projectId by project name
+            Connection con = null;
+            try {
+                con = SQLConnection.getCon();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            String projectName = Products.getCurrentProjectName();
             int responsibleWriter = 1;
-            int projectID = 0;
+            int projectID = Products.getCurrentProjectIDDB(con, projectName);
+            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n"+projectID);
+            //TODO:find id according name;
             int [] templateFlow = null;
             List<ProductMilestone> productMilsetones =  new ArrayList<>();
             String productName = request.getParameter("productName");
@@ -127,6 +145,8 @@ public class AddButtons extends HttpServlet {
 
                 //presentation
                 milestoneStartDate = request.getParameter("presentationMilestoneStartDate");
+                System.out.println("##############################"+milestoneStartDate+"################################");
+                System.out.println("##############################################################");
                 milestoneDueDate = request.getParameter("presentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("presentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("presentationMilestoneDescriptionName");
@@ -193,13 +213,105 @@ public class AddButtons extends HttpServlet {
 
     }
 
-    private Date stringToDate(String outlineMilestoneStartDate)
-    {
-        return new Date();
+    public static Date stringToDate(String outlineMilestoneStartDate)  { // not working yet !!
+
+
+        String string = "January 2, 2010";
+        DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+        Date date= null;
+        try{
+            date = format.parse(string);
+            System.out.println(date);
+        }catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+
+//
+//        SimpleDateFormat simpledate = new SimpleDateFormat("dd-MM-yyyy");
+////        DateTime parsedDate = DateTime.Parse(dateInput);
+//        Date convertDate = null;
+//        try{
+//            convertDate = simpledate.parse(outlineMilestoneStartDate);
+//            System.out.println(convertDate);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return convertDate;
+
     }
 
-    private int  getIdbyName(String name)
-    {
-        return 1;
+    //get userID by name
+    public static int getIdbyName(String userName) {
+        String sql = "SELECT ID from Users where UserName like '"+userName+"'";
+        int id = -1 ;
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                id = rs.getInt("ID");
+                System.out.println(id);
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return id;
     }
+//        public static int getIdbyNameTesting( String userName) throws ClassNotFoundException {
+//        String sql = "SELECT ID from Users where UserName like '"+userName+"'";
+//        int id = -1 ;
+//        try {
+//            Connection con = SQLConnection.getCon();
+//            Statement stmt = con.createStatement();
+//            ResultSet rs = stmt.executeQuery(sql);
+//            while (rs.next()){
+//                id = rs.getInt("ID");
+//                System.out.println(id);
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        //return id;
+//        return -1;
+//    }
+//    protected static int getIdbyName(String UserName) {
+//        String sql = "Select ID from Users where UserName like '"+UserName+"'";
+//        int id = -1;
+//
+//        Connection con = null;
+//        try {
+//            con = SQLConnection.getCon();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+////
+////
+////
+//        try {
+//            Connection con = SQLConnection.getCon();
+//            Statement stmt = con.createStatement();
+//            ResultSet rs = stmt.executeQuery(sql);
+//            while (rs.next()){
+//                id = rs.getInt("ID");
+//                System.out.println(id);
+//            }
+//        }
+//        catch (SQLException e) {
+//            System.out.println("222222222222222222222222");
+//            e.printStackTrace();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(id +"~~~~");
+//        return id ;
+//    }
 }
