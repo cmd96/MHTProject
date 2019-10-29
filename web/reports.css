@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    direction: rtl;
+    width:100vw;
+    height:100vh;
+}
+button{
+    -webkit-appearance: none;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    /*text-indent: 0px;*/
+    text-shadow: none;
+    /*display: none;*/
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: white;
+    box-sizing: initial;
+    /*font: 400 13.3333px Arial;*/
+    border: none;
+
+}
+html{
+    width:100vw;
+    height:100vh;
+}
+#userDetailsID{
+    width: 40vw;
+    float: right;
+    height: 100%;
+}
+#userDetID{
+
+    color: #2093B4;
+    height: 10%;
+    margin-right:10%;
+    margin-top: 29px;
+
+}
+#userimgID
+{
+    margin-top: 2%;
+    margin-right: 35%;
+    width: 30%;
+    height: 60%;
+}
+#outlineID{
+    width: 100vw;
+    height: 10vh;
+    background-color: #E6E7E9;
+
+}
+.outlineBtn{
+    width: 10vw;
+    height: 97%;
+    background-color: #E6E7E9;
+    border: none;
+    color: #2093B4;
+    float: left;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 100%;
+}
+.outlineBtn:hover {
+    background-color:  #2093B4;
+    color: white;
+}

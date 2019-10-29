@@ -54,6 +54,7 @@ public class AddButtons extends HttpServlet {
             {
                 //outline
                 milestoneStartDate = request.getParameter("outlineMilestoneStartDate");
+                System.out.println("#############################################\n"+milestoneStartDate);
                 milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
