@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class Products {
     private String projectsNames= getAllProjectsNames();
     static private String currentProjectName;
-    static private String currentProjectID;
+    static private int currentProjectID = -1 ;
     public Products() throws SQLException, ClassNotFoundException {
     }
 
@@ -31,10 +31,36 @@ public class Products {
     public static String getCurrentProjectName() {
         return currentProjectName;
     }
-    public static void setCurrentProjectID(String inputProjectID) {
+    public static void setCurrentProjectID(int inputProjectID) {
         currentProjectID = inputProjectID;
     }
-    public static String getCurrentProjectID() {
-        return currentProjectID;
+    public static int getCurrentProjectID() throws SQLException, ClassNotFoundException {
+
+        if(currentProjectID != -1)
+        {
+            return currentProjectID;
+        }
+
+        String sql = "SELECT ProjectID from UserProjects where ProjectName like '"+currentProjectName+"'";
+        int id = -1 ;
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                id = rs.getInt("ProjectID");
+                System.out.println(id);
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        currentProjectID = id;
+        return id;
+
     }
 }

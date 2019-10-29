@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -99,16 +100,28 @@ public class ProjectProduct {
         List<ProductMilestone> productMilestone = insert.getProductMilestone();
 
         int[] template_flow = insert.getTemplate_flow();
-        insert_product_db(con, Name, 14, rw);
+        int template_flow_flag;
+        if( Arrays.equals(template_flow ,TEMPLATE_FLOW.COURSE_FLOW))
+        {
+            template_flow_flag = TEMPLATE_FLOW.COURSE_FLOW_INT;
+        }
+        else if  (Arrays.equals(template_flow , TEMPLATE_FLOW.FULL_FLOW))
+        {
+            template_flow_flag = TEMPLATE_FLOW.FULL_FLOW_INT;
+        }
+        else
+        {
+            template_flow_flag = TEMPLATE_FLOW.BASIC_FLOW_INT;
+        }
+        insert_product_db(con, Name, ProjID, rw, template_flow_flag);
         if (productMilestone != null) {
             int product_id = ( int ) get_product_id(con, Name, ProjID);
             ProductMilestone.insert_MileSton_list(con, productMilestone, product_id);
-//            System.out.println("the new product id is :" + product_id);
         }
     }
 
-    public static void insert_product_db(Connection con, String Name, int ProjID, int rw) {
-        String sql = "INSERT INTO ProjectProduct (ProductName ,ProjectID, ResponsibleWriterID) VALUES ( '" + Name + "','" + ProjID + "','" + rw + "')";
+    public static void insert_product_db(Connection con, String Name, int ProjID, int rw ,int templateFlow) {
+        String sql = "INSERT INTO ProjectProduct (ProductName ,ProjectID, ResponsibleWriterID, FlowType) VALUES ( '" + Name + "','" + ProjID + "','" + rw  + "','" + templateFlow+ "' )";
         try {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(sql);

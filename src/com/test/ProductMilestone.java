@@ -31,6 +31,18 @@ public class ProductMilestone {
         this.status = status;
     }
 
+    public ProductMilestone( int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
+
+        this.milestonID = -1;
+        this.productID = productID;
+        this.milestoneName = milestoneName;
+        ResponsibleWriterId = responsibleWriterId;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.description = description;
+        this.status = status;
+    }
+
     public int getMilestonID(){
         return this.milestonID;
     }
@@ -119,14 +131,21 @@ public class ProductMilestone {
         String strDateEnd = formatter.format(Date_End);
 //        System.out.println("kkkkkkkkkkkkkkk "+ strDateEnd);
 
+        int getCurrentProjectID = -1;
+        try {
+            getCurrentProjectID = Products.getCurrentProjectID();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         String sql = "INSERT INTO ProductMilestons" +
-                "(MilestoneName ,ProjectID ,ProductID, ResponsibleWriterID, StartDate, EndDate, Description) " +
+                "(MilestoneName ,ProjectID ,ProductID, ResponsibleWriterID, StartDate, EndDate, Description , Status) " +
                 "VALUES ('" + insert_mile.getMilestoneName() +
-                //TODO:Get Project ID
-                "','" + 14 +
+                "','" + getCurrentProjectID +
                 "','" + insert_mile.getProductID() +
                 "','" + insert_mile.getResponsibleWriterId() + "','" + strDateStart +
-                "','" + strDateEnd + "','" + insert_mile.getDescription() + "')";
+                "','" + strDateEnd + "','" + insert_mile.getDescription() +"','" +insert_mile.getStatus()+"')";
 
         try {
             Statement stmt = con.createStatement();

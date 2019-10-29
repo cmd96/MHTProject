@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ProjectListController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Products.setCurrentProjectName(request.getParameter("inputProjectName"));
-        Products.setCurrentProjectID(request.getParameter("inputProjectName"));
+        Products.setCurrentProjectID(-1);
         response.sendRedirect("products.jsp");
         return;
     }

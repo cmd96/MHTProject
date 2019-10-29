@@ -11,13 +11,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 @WebServlet("/addBtnServlet")
 public class AddButtons extends HttpServlet {
@@ -25,7 +23,7 @@ public class AddButtons extends HttpServlet {
 
         if (request.getParameter("addProjectButton") != null){
 
-            String name=request.getParameter("projName");
+            String name = request.getParameter("projName");
             String customer=request.getParameter("customerName");
             try {
                 int id = User.getUserID();
@@ -53,7 +51,14 @@ public class AddButtons extends HttpServlet {
             }
             String projectName = Products.getCurrentProjectName();
             int responsibleWriter = 1;
-            int projectID = Products.getCurrentProjectIDDB(con, projectName);
+            int projectID = 0;
+            try {
+                projectID = Products.getCurrentProjectID();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n"+projectID);
             //TODO:find id according name;
             int [] templateFlow = null;
@@ -213,32 +218,18 @@ public class AddButtons extends HttpServlet {
 
     }
 
-    public static Date stringToDate(String outlineMilestoneStartDate)  { // not working yet !!
+    public static Date stringToDate(String outlineMilestoneStartDate) {
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
-
-        String string = "January 2, 2010";
-        DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
-        Date date= null;
-        try{
-            date = format.parse(string);
-            System.out.println(date);
-        }catch (ParseException e) {
+        Date date = null;
+        try {
+            date = simpleDateFormat.parse(outlineMilestoneStartDate);
+        } catch (ParseException e) {
             e.printStackTrace();
         }
+
         return date;
-
-//
-//        SimpleDateFormat simpledate = new SimpleDateFormat("dd-MM-yyyy");
-////        DateTime parsedDate = DateTime.Parse(dateInput);
-//        Date convertDate = null;
-//        try{
-//            convertDate = simpledate.parse(outlineMilestoneStartDate);
-//            System.out.println(convertDate);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return convertDate;
-
     }
 
     //get userID by name
@@ -262,56 +253,4 @@ public class AddButtons extends HttpServlet {
         }
         return id;
     }
-//        public static int getIdbyNameTesting( String userName) throws ClassNotFoundException {
-//        String sql = "SELECT ID from Users where UserName like '"+userName+"'";
-//        int id = -1 ;
-//        try {
-//            Connection con = SQLConnection.getCon();
-//            Statement stmt = con.createStatement();
-//            ResultSet rs = stmt.executeQuery(sql);
-//            while (rs.next()){
-//                id = rs.getInt("ID");
-//                System.out.println(id);
-//            }
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        //return id;
-//        return -1;
-//    }
-//    protected static int getIdbyName(String UserName) {
-//        String sql = "Select ID from Users where UserName like '"+UserName+"'";
-//        int id = -1;
-//
-//        Connection con = null;
-//        try {
-//            con = SQLConnection.getCon();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-////
-////
-////
-//        try {
-//            Connection con = SQLConnection.getCon();
-//            Statement stmt = con.createStatement();
-//            ResultSet rs = stmt.executeQuery(sql);
-//            while (rs.next()){
-//                id = rs.getInt("ID");
-//                System.out.println(id);
-//            }
-//        }
-//        catch (SQLException e) {
-//            System.out.println("222222222222222222222222");
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        System.out.println(id +"~~~~");
-//        return id ;
-//    }
 }
