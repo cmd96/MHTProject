@@ -2,14 +2,12 @@ package com.test;
 
 import java.util.List;
 
-public class userProject
-{
+public class userProject {
     private String projectMame;
     private String projectCustomer;
     private int projectManagerID;
     private int projectID;
     List<ProjectProduct> productList;
-
     public userProject(String projectMame, String projectCustomer, int projectManagerID, int projectID, List<ProjectProduct> productList) {
         this.projectMame = projectMame;
         this.projectCustomer = projectCustomer;
@@ -56,6 +54,50 @@ public class userProject
 
     public void setProductList(List<ProjectProduct> productList) {
         this.productList = productList;
+    }
+
+    //TODO: get values from db
+    public String getProjectName(){
+        int ProjectID = getProjectID();
+        String sql = "SELECT ProjectName from UserProjects where ProductID ='" + ProjectID + "'";
+        String result = ProjectProduct.ExecuteString(sql, "ProjectName", null);
+        return result;
+    }
+
+    public int getProjectManagerIDDB(){
+        int ProjectID = getProjectID();
+        String sql = "SELECT ProjectManagerID from UserProjects where ProductID ='" + ProjectID + "'";
+        int result = ProjectProduct.ExecuteInt(sql, "ProjectManagerID", -1);
+        return result;
+    }
+
+    public String getProjectCustomerDB(){
+        int ProjectID = getProjectID();
+        String sql = "SELECT ProjectCustomer from UserProjects where ProductID ='" + ProjectID + "'";
+        String result = ProjectProduct.ExecuteString(sql, "ProjectManagerID", null);
+        return result;
+    }
+
+    //TODO: set values in db
+    public void setProjectNameDB(String NewName) {
+        int ProjectID = this.getProjectID();
+        String sql = "update UserProjects set ProjectName = '" + NewName + "' where ProjectID ='" + ProjectID + "'";
+        ProjectProduct.ExecuteUpdate(sql);
+
+    }
+
+    public void setProjectManagerIDDB(int NewProjectManagerID) {
+        int ProjectID = this.getProjectID();
+        String sql = "update UserProjects set ProjectManagerID = '" + NewProjectManagerID + "' where ProjectID ='" + ProjectID + "'";
+        ProjectProduct.ExecuteUpdate(sql);
+
+    }
+
+    public void setProjectCustomerDB(String NewProjectCustomer) {
+        int ProjectID = this.getProjectID();
+        String sql = "update UserProjects set ProjectCustomer = '" + NewProjectCustomer + "' where ProjectID ='" + ProjectID + "'";
+        ProjectProduct.ExecuteUpdate(sql);
+
     }
 
 

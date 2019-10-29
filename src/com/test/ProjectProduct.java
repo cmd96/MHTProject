@@ -2,7 +2,11 @@ package com.test;
 
 import exception.ProjectExeption;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Date;
 import java.util.List;
 
 public class ProjectProduct {
@@ -133,52 +137,125 @@ public class ProjectProduct {
 
     }
 
-    public static void setProductNameDB(Connection con, String NewName) {
-        String sql = "update ProjectProduct set ProductName = '" + NewName + "'";
-        try {
-            Statement stmt = con.createStatement();
-            int count = stmt.executeUpdate(sql);
-            System.out.println("Number of rows updated by executing query1 =  " + count);
+    public int getProductIDDB(){
+        return this.productID;
+    }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public  String getProductNameDB(){
+        int productID = getProductID();
+        String sql = "SELECT ProductName from ProjectProduct where ProductID ='" + productID + "'";
+        String reault = ExecuteString(sql ,"ProductName", null);
+        return reault;
+    }
+
+    public int getProjectIDDB(){
+        int productID = getProductID();
+        String sql = "SELECT ProjectID from ProjectProduct where ProductID ='" + productID + "'";
+        int ProjID = ExecuteInt(sql, "ProjectID", -1);
+        return ProjID;
+    }
+
+    public int getResponsibleWriterIDDB(){
+        int ProductID = getProductID();
+        String sql = "SELECT ResponsibleWriterID from ProjectProduct where ProductID ='" + productID + "'";
+        int result = ExecuteInt(sql, "ResponsibleWriterID", -1);
+        return result;
+    }
+
+    public int getFlowtypDB(){
+        int ProductID = getProductID();
+        String sql = "SELECT FlowType from ProjectProduct where ProductID ='" + productID + "'";
+        int result = ExecuteInt(sql, "FlowType", -1);
+        return result;
+    }
+
+    public void setProductNameDB( String NewName) {
+        int ProductID = this.getProductID();
+        String sql = "update ProjectProduct set ProductName = '" + NewName + "' where ProductID ='" + ProductID + "'";
+        ExecuteUpdate(sql);
 
     }
 
-    public static void setProjectIDDB(Connection con, int NewProjID) {
-        String sql = "update ProjectProduct set ProjectID = '" + NewProjID + "'";
+    public void setProjectIDDB(int NewProjID) {
+        int ProductID = this.getProductID();
+        String sql = "update ProjectProduct set ProjectID = '" + NewProjID + "'where ProductID ='" + ProductID + "'";
+        ExecuteUpdate(sql);
+    }
+
+    public void setResponsibleWriterIDDB(int NewResponsibleID) {
+        int ProductID = this.getProductID();
+        String sql = "update ProjectProduct set ResponsibleWriterID = '" + NewResponsibleID + "'where ProductID ='" + ProductID + "'";
+        ExecuteUpdate(sql);
+    }
+
+    public void setFlowTypeDB(int NewFlowType) {
+        int ProductID = this.getProductID();
+        String sql = "update ProjectProduct set FlowType = '" + NewFlowType + "' where ProductID ='" + ProductID + "'";
+        ExecuteUpdate(sql);
+    }
+
+    static void ExecuteUpdate(String sql) {
         try {
+            Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             int count = stmt.executeUpdate(sql);
             System.out.println("Number of rows updated by executing query1 =  " + count);
 
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public static void setResponsibleWriterIDDB(Connection con, int NewResponsibleID) {
-        String sql = "update ProjectProduct set ResponsibleWriterID = '" + NewResponsibleID + "'";
-        try {
-            Statement stmt = con.createStatement();
-            int count = stmt.executeUpdate(sql);
-            System.out.println("Number of rows updated by executing query1 =  " + count);
+//    static int ExecuteInt__(String sql, String label) {
+//        int result = -1;
+//        result = ExecuteInt(sql, label, result);
+//        return result;
+//    }
 
-        } catch (SQLException e) {
+    static int ExecuteInt(String sql, String label, int result) {
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
+            while (rs.next()){
+                result = rs.getInt(label);
+            }
+        }catch (Exception e){
             e.printStackTrace();
         }
+        return result;
     }
-    public static void setFlowTypeDB(Connection con, int NewFlowType) {
-        String sql = "update ProjectProduct set FlowType = '" + NewFlowType + "'";
-        try {
-            Statement stmt = con.createStatement();
-            int count = stmt.executeUpdate(sql);
-            System.out.println("Number of rows updated by executing query1 =  " + count);
 
-        } catch (SQLException e) {
+    static String ExecuteString(String sql, String label, String result) {
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
+            while (rs.next()){
+                result = rs.getString(label);
+            }
+        }catch (Exception e){
             e.printStackTrace();
         }
+        return result;
+    }
+
+    static Date ExecuteDate(String sql, String label ) {
+        Date result = null;
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
+            while (rs.next()){
+                result = rs.getDate(label);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
     }
 
 }

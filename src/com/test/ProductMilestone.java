@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 public class ProductMilestone {
+    private int milestonID;
     private int productID;
     private String milestoneName;
     private int ResponsibleWriterId;
@@ -19,7 +20,8 @@ public class ProductMilestone {
     private String description;
     private int status;
 
-    public ProductMilestone(int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
+    public ProductMilestone(int milestonID, int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
+        this.milestonID = milestonID;
         this.productID = productID;
         this.milestoneName = milestoneName;
         ResponsibleWriterId = responsibleWriterId;
@@ -27,6 +29,14 @@ public class ProductMilestone {
         this.endDate = endDate;
         this.description = description;
         this.status = status;
+    }
+
+    public int getMilestonID(){
+        return this.milestonID;
+    }
+
+    public void setmilestonID(int milestonID){
+        this.milestonID = milestonID;
     }
 
     public int getProductID() {
@@ -135,4 +145,160 @@ public class ProductMilestone {
             InsertNewMilestone(con, insert_mile);
         }
     }
+
+// TODO : Get params from DATA BASE
+    public int getMilestonIDDB(){
+        return getMilestonID();
+    }
+
+    public int getProductIDDB() {
+        int MileID = getMilestonID();
+        String sql = "SELECT ProductID from ProductMilestons where MilestoneID ='" + MileID + "'";
+        int ProdID = ProdID = ProjectProduct.ExecuteInt(sql, "ProductID", -1);
+        return ProdID;
+    }
+
+    public String getMilestoneNameDB() {
+        int MileID = getMilestonID();
+        String sql = "SELECT MilestoneName from ProductMilestons where MilestoneID ='" + MileID + "'";
+        String MileName = ProjectProduct.ExecuteString(sql, "MilestoneName", null);
+        return MileName;
+    }
+
+    public int getResponsibleWriterIdDB(){
+        int MileID = getMilestonID();
+        String sql = "SELECT ResponsibleWriterID from ProductMilestons where MilestoneID ='" + MileID + "'";
+        int ResID  = -1;
+        ResID = ProjectProduct.ExecuteInt(sql, "ResponsibleWriterID", -1);
+        return ResID;
+    }
+
+    public Date getStartDateDB() {
+        int MileID = getMilestonID();
+        String sql = "SELECT DateStart from ProductMilestons where MilestoneID ='" + MileID + "'";
+        Date DateStart = ProjectProduct.ExecuteDate(sql, "DateStart");
+
+        return DateStart;
+    }
+
+    public Date getEndDateDB() {
+        int MileID = getMilestonID();
+        String sql = "SELECT DateToEnd from ProductMilestons where MilestoneID ='" + MileID + "'";
+        Date DateToEnd = ProjectProduct.ExecuteDate(sql, "DateToEnd");
+        return DateToEnd;
+    }
+
+    public String getDescriptionDB() {
+        int MileID = getMilestonID();
+        String sql = "SELECT Description from ProductMilestons where MilestoneID ='" + MileID + "'";
+        String Description = ProjectProduct.ExecuteString(sql, "Description", null);
+        return Description;
+    }
+
+    public int getStatusDB() {
+        //int mileID = this.get_mile_id()???
+        int MileID = getMilestonID();
+        String sql = "SELECT Status from ProductMilestons where MilestoneID ='" + MileID + "'";
+        int Status = -1;
+        Status = ProjectProduct.ExecuteInt(sql, "Status", -1);
+        return Status;
+    }
+
+//TODO: Set values in db
+
+    public void setProductIDDB(int NewProjID) {
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set ProductID = '" + NewProjID + "'where MilestoneID ='" + MileID + "'";
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate(sql);
+           }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void setMilestonNameDB(String NewMileName){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set MilestoneName = '" + NewMileName + "'where MilestoneID ='" + MileID + "'";
+        ProjectProduct.ExecuteUpdate(sql);
+
+    }
+
+    public void setResponsibleWriterIdDB(int ResponsibleWriterID){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set ResponsibleWriterID = '" + ResponsibleWriterID + "'where MilestoneID ='" + MileID + "'";
+        ProjectProduct.ExecuteUpdate(sql);
+    }
+
+    public void setStartDateDB(Date NewStartDate){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set DateStart = '" + NewStartDate + "'where MilestoneID ='" + MileID + "'";
+        int count = 0 ;
+        ExecuteUpdate(sql);
+    }
+
+    public void setEndDateDB(Date NewEndDate){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set DateToEnd = '" + NewEndDate + "'where MilestoneID ='" + MileID + "'";
+        int count = 0 ;
+        ExecuteUpdate(sql);
+    }
+
+    public void setDescriptionDB(String NewDescription){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set Description = '" + NewDescription + "'where MilestoneID ='" + MileID + "'";
+        int count = 0 ;
+        ExecuteUpdate(sql);
+    }
+
+    public void setStatusDB(int NewStatus){
+        int MileID = getMilestonID();
+        String sql = "update ProductMilestons set Status = '" + NewStatus + "'where MilestoneID ='" + MileID + "'";
+        int count = 0 ;
+        ExecuteUpdate(sql);
+    }
+
+    static void ExecuteUpdate(String sql) {
+        int count;
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            count = stmt.executeUpdate(sql);
+            System.out.println("Number of rows updated by executing query1 =  " + count);
+        }catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+//
+//    static int ExecuteInt(String sql, String label) {
+//        int result = -1;
+//        result = ProjectProduct.ExecuteInt(sql, label, result);
+//        return result;
+//    }
+
+//    static String ExecuteString(String sql, String label) {
+//        String result = null;
+//        result = ProjectProduct.ExecuteString(sql, label, result);
+//        return result;
+//    }
+
+//    static Date ExecuteDate(String sql, String label ) {
+//        Date result = null;
+//        try {
+//            Connection con = SQLConnection.getCon();
+//            Statement stmt = con.createStatement();
+//            ResultSet rs = stmt.executeQuery(sql);
+//            System.out.println(rs);
+//            while (rs.next()){
+//                result = rs.getDate(label);
+//            }
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return result;
+//    }
+
+
 }
