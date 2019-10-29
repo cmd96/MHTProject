@@ -229,7 +229,7 @@
             <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
-        <button id="projectBtnID" class="outlineBtn">פרויקטים</button>
+        <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
         <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
         <button id="projectBtnID" class="outlineBtn">הגדרות</button>
         <button id="projectBtnID" class="outlineBtn">דוחות</button>
