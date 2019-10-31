@@ -57,9 +57,9 @@ public class userProject {
     }
 
     //TODO: get values from db
-    public String getProjectName(){
+    public String getProjectNameDB(){
         int ProjectID = getProjectID();
-        String sql = "SELECT ProjectName from UserProjects where ProductID ='" + ProjectID + "'";
+        String sql = "SELECT ProjectName from UserProjects where ProjectID ='" + ProjectID + "'";
         String result = ProjectProduct.ExecuteString(sql, "ProjectName", null);
         return result;
     }
@@ -98,6 +98,14 @@ public class userProject {
         String sql = "update UserProjects set ProjectCustomer = '" + NewProjectCustomer + "' where ProjectID ='" + ProjectID + "'";
         ProjectProduct.ExecuteUpdate(sql);
 
+    }
+
+    public void deleteProject(int ProjectID){
+        String name =  getProjectNameDB();
+        System.out.println(name+ "  "+ ProjectID);
+        String sql = "delete from UserProjects where ProjectID = "+ ProjectID;
+        ProjectProduct.ExecuteUpdate(sql);
+        ProjectProduct.deleteProduct(ProjectID, name);
     }
 
 

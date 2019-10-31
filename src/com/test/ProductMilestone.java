@@ -124,13 +124,8 @@ public class ProductMilestone {
         Date Date_Start = insert_mile.getStartDate();
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/YYYY");
         String strDateStart = formatter.format(Date_Start);
-
-//        System.out.println("jjjjjjjjjjjjjjjjjj "+ strDateStart);
-
         Date Date_End = insert_mile.getEndDate();
         String strDateEnd = formatter.format(Date_End);
-//        System.out.println("kkkkkkkkkkkkkkk "+ strDateEnd);
-
         int getCurrentProjectID = -1;
         try {
             getCurrentProjectID = Products.getCurrentProjectID();
@@ -165,6 +160,11 @@ public class ProductMilestone {
         }
     }
 
+    public static void deleteMileSton(int ProductID){
+
+        String sql = "delete from ProductMilestons where ProductID = "+ ProductID;
+        ProjectProduct.ExecuteUpdate(sql);
+    }
 // TODO : Get params from DATA BASE
     public int getMilestonIDDB(){
         return getMilestonID();

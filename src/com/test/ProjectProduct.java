@@ -115,7 +115,7 @@ public class ProjectProduct {
         }
         insert_product_db(con, Name, ProjID, rw, template_flow_flag);
         if (productMilestone != null) {
-            int product_id = ( int ) get_product_id(con, Name, ProjID);
+            int product_id = ( int ) get_product_id(Name, ProjID);
             ProductMilestone.insert_MileSton_list(con, productMilestone, product_id);
         }
     }
@@ -132,17 +132,27 @@ public class ProjectProduct {
 
     }
 
-    public static int get_product_id(Connection con, String Name, int ProjID) {
+    public static void deleteProduct(int ProjectID, String name){
+//        String name =
+        int ProductID = get_product_id(name, ProjectID);
+        String sql = "delete from ProjectProduct where ProjectID = "+ ProjectID;
+        ExecuteUpdate(sql);
+        ProductMilestone.deleteMileSton(ProductID);
+    }
+
+    public static int get_product_id(String Name, int ProjID) {
+
         String sql = "Select ProductID from ProjectProduct where ProductName like '" + Name + "' and ProjectID like '" + ProjID + "'";
         int id = -1;
         try {
+            Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt("ProductID");
             }
 
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return id;
@@ -219,12 +229,6 @@ public class ProjectProduct {
         }
     }
 
-//    static int ExecuteInt__(String sql, String label) {
-//        int result = -1;
-//        result = ExecuteInt(sql, label, result);
-//        return result;
-//    }
-
     static int ExecuteInt(String sql, String label, int result) {
         try {
             Connection con = SQLConnection.getCon();
@@ -270,5 +274,7 @@ public class ProjectProduct {
         }
         return result;
     }
+
+//    public List<>
 
 }
