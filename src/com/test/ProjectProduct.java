@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Vector;
 
 public class ProjectProduct {
 
@@ -132,14 +133,23 @@ public class ProjectProduct {
 
     }
 
-    public static void deleteProduct(int ProjectID, String name){
-//        String name =
-        int ProductID = get_product_id(name, ProjectID);
+    public static void deleteProduct(int ProductID, int ProjectID){
         String sql = "delete from ProjectProduct where ProjectID = "+ ProjectID;
         ExecuteUpdate(sql);
-        ProductMilestone.deleteMileSton(ProductID);
+        ProductMilestone.deleteMileston(ProductID);
+
     }
 
+    public static void deleteProductList(int ProjectID) throws ProjectExeption {
+
+        String sql = "select ProductID from ProjectProduct where ProjectID = "+ ProjectID;
+        Vector ProductList = ExecuteIntArry(sql, "ProductID");
+
+        for (int i = 0; i < ProductList.size(); i++) {
+            int delete_product = ( int ) ProductList.get(i);
+            deleteProduct(delete_product, ProjectID);
+        }
+    }
     public static int get_product_id(String Name, int ProjID) {
 
         String sql = "Select ProductID from ProjectProduct where ProductName like '" + Name + "' and ProjectID like '" + ProjID + "'";
@@ -274,6 +284,26 @@ public class ProjectProduct {
         }
         return result;
     }
+
+    static Vector ExecuteIntArry(String sql, String label) {
+        Vector<Integer> d ;
+        d = new Vector<Integer>() ;
+
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
+            while (rs.next()){
+                System.out.println(rs.getInt(label));
+                d.add(rs.getInt(label));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return d;
+    }
+
 
 //    public List<>
 

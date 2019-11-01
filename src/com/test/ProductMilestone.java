@@ -160,8 +160,8 @@ public class ProductMilestone {
         }
     }
 
-    public static void deleteMileSton(int ProductID){
 
+    public static void deleteMileston(int ProductID){
         String sql = "delete from ProductMilestons where ProductID = "+ ProductID;
         ProjectProduct.ExecuteUpdate(sql);
     }
@@ -290,6 +290,8 @@ public class ProductMilestone {
             e.printStackTrace();
         }
     }
+
+
 //
 //    static int ExecuteInt(String sql, String label) {
 //        int result = -1;

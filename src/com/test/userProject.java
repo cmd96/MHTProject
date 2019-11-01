@@ -1,5 +1,7 @@
 package com.test;
 
+import exception.ProjectExeption;
+
 import java.util.List;
 
 public class userProject {
@@ -100,13 +102,13 @@ public class userProject {
 
     }
 
-    public void deleteProject(int ProjectID){
+    public void deleteProject(int ProjectID) throws ProjectExeption {
         String name =  getProjectNameDB();
         System.out.println(name+ "  "+ ProjectID);
         String sql = "delete from UserProjects where ProjectID = "+ ProjectID;
+        ProjectProduct.deleteProductList(ProjectID);
         ProjectProduct.ExecuteUpdate(sql);
-        ProjectProduct.deleteProduct(ProjectID, name);
-    }
 
+    }
 
 }
