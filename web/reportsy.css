@@ -1,0 +1,164 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    direction: rtl;
+    width:100vw;
+    height:100vh;
+}
+button{
+    -webkit-appearance: none;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    /*text-indent: 0px;*/
+    text-shadow: none;
+    /*display: none;*/
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: white;
+    box-sizing: initial;
+    /*font: 400 13.3333px Arial;*/
+    border: none;
+
+}
+html{
+    width:100vw;
+    height:100vh;
+}
+#userDetailsID{
+    width: 40vw;
+    float: right;
+    height: 100%;
+}
+#userDetID{
+
+    color: #2093B4;
+    height: 10%;
+    margin-right:10%;
+    margin-top: 29px;
+
+}
+#userimgID
+{
+    margin-top: 2%;
+    margin-right: 35%;
+    width: 30%;
+    height: 60%;
+}
+#outlineID{
+    width: 100vw;
+    height: 10vh;
+    background-color: #E6E7E9;
+
+}
+.outlineBtn{
+    width: 10vw;
+    height: 97%;
+    background-color: #E6E7E9;
+    border: none;
+    color: #2093B4;
+    float: left;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 100%;
+}
+.outlineBtn:hover {
+    background-color:  #2093B4;
+    color: white;
+}
+
+
+
+
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*:root {*/
+    /*--white: #fff;*/
+    /*--divider: lightgrey;*/
+    /*--body: #f5f7f8;*/
+/*}*/
+
+/** {*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*body {*/
+    /*background: var(--body);*/
+    /*font-size: 16px;*/
+    /*font-family: sans-serif;*/
+    /*padding-top: 40px;*/
+/*}*/
+
+.chart-wrapper {
+    direction: ltr;
+    max-width: 1150px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+/* CHART-VALUES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart-wrapper .chart-values {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.chart-wrapper .chart-values li {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+}
+
+.chart-wrapper .chart-values li:not(:last-child) {
+    position: relative;
+}
+
+.chart-wrapper .chart-values li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 510px;
+    border-right: 1px solid var(--divider);
+}
+
+
+/* CHART-BARS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart-wrapper .chart-bars li {
+    position: relative;
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.65s linear 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .chart-wrapper .chart-bars li {
+        padding: 10px;
+    }
+}
+

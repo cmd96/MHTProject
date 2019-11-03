@@ -82,6 +82,7 @@ public class User {
         }
     }
     public static List<userProject> getUserProjectList() {
+        System.out.println("#############################################3333\n");
         try {
             get_Project(1);
         } catch (ProjectExeption projectExeption) {

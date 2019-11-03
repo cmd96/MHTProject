@@ -232,7 +232,7 @@
         <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
         <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
         <button id="projectBtnID" class="outlineBtn">הגדרות</button>
-        <button id="projectBtnID" class="outlineBtn">דוחות</button>
+        <a href="reports.jsp"><button id="projectBtnID" class="outlineBtn">דוחות</button></a>
     </div>
     <div id="projectDataID">
         <div id="projectOutlineID">

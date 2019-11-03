@@ -27,6 +27,8 @@
 <script>
 
     function insterdDataJS() {
+        var myModal = document.getElementById('myModal');
+        myModal.style.display = "none";
         loadProjects();
     }
     function loadProjects() {
@@ -59,6 +61,24 @@
         document.getElementById("frm1").submit();
     }
 
+   // var PROJECT_NAME;
+    function getSelectedProject(){
+        alert(BLAL)
+        return BLABLA;
+    }
+
+    function myFunc()
+    {
+        var myModal = document.getElementById('editDataWrapperID');
+        myModal.style.display = "block";
+        var active = myModal;//element.querySelector('#editDataWrapperID');
+        var prev = active.previousElementSibling.id;
+        document.getElementById(prev).value = '############################';
+
+        alert(prev);
+
+        alert("BLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
 </script>
 <script>
     function myFunction() {
@@ -81,9 +101,9 @@
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
         <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
-        <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
-        <button id="projectBtnID" class="outlineBtn">הגדרות</button>
-        <button id="projectBtnID" class="outlineBtn">דוחות</button>
+        <button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">היסטוריה</button>
+        <button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">הגדרות</button>
+        <a href="reports.jsp"><button id="projectBtnID" class="outlineBtn">דוחות</button></a>
     </div>
     <div id="projectDataID">
         <div id="projectOutlineID">
@@ -94,8 +114,37 @@
         <form action="projectListServlet"  id="formWrapper" method="post">
             <div id="dynamicData"></div>
         </form>
-    </div>
-</div>
+
+        <div class="project">
+            <input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="  TEST BLA" onclick="submit_projectName()">
+            <a id="setProjectBtn" href="#popupEditProject">
+                <div class="editProject">
+                    <i class="far" id="editproductBtnID" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
+
+        <div id="myBtn" onclick="myFunc()">Open Modal</div>
+        <input  id="projectList2" name="inputProjectName" readonly="readonly" value="TEST project ******">
+        <div id="editDataWrapperID" style="display: none">
+                <form action="addBtnServlet" method="post">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <h2>הוסף פרויקט</h2>
+
+                        <div class="content">
+                            <label ><b>שם פרויקט</b></label>
+                            <input type="text" placeholder="שם פרויקט" name="projName" required>
+                            <label ><b>שם לקוח</b></label>
+                            <input type="text" placeholder="שם לקוח" name="customerName" required>
+                        </div>
+                        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitDataID" >אישור</button>
+                    </div>
+
+                </form>
+           </div>
+
+
 
 
 <div class="s-layout">
@@ -113,22 +162,21 @@
         </div>
         <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitID" >אישור</button>
     </div>
+
 </form>
+
 </main>
 </div>
-
-
-
 <div class="s-layout">
-    <main class="s-layout__content">
+    <main class="s-layout__content" onload="getProjectSelected()">
         <form id="popupEditProject" class="overlay" action="addBtnServlet" method="post">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>עריכת פרויקט</h2>
 
                 <div class="content">
-                    <label ><b>שם פרויקט</b></label>
-                    <input type="text" value="שם פרויקט" name="projName" >
+                    <label><b>שם פרויקט</b></label>
+                    <input type="text" value=getProjectSelected() name="projName" >
                     <label ><b>שם לקוח</b></label>
                     <input type="text" value="שם לקוח" name="customerName" required>
                 </div>
