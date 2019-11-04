@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/reportsy.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/products.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reports.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reports.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reports.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,9 +76,9 @@
           <entry key="css" value="1357" />
           <entry key="dummy" value="8" />
           <entry key="iml" value="2" />
-          <entry key="java" value="8500" />
+          <entry key="java" value="8501" />
           <entry key="js" value="284" />
-          <entry key="jsp" value="7713" />
+          <entry key="jsp" value="8081" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -94,8 +86,8 @@
         <counts>
           <entry key="CSS" value="1357" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="8499" />
-          <entry key="JSP" value="7713" />
+          <entry key="JAVA" value="8500" />
+          <entry key="JSP" value="8081" />
           <entry key="JavaScript" value="284" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SQL" value="1" />
@@ -268,8 +260,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/userProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -277,16 +269,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/projects.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-757">
-              <caret line="69" column="19" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="24" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5187#5194#1#HTML" expanded="true" />
+                <element signature="e#6519#6526#1#HTML" expanded="true" />
+                <element signature="e#7273#7280#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -337,10 +330,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ProjectP</find>
-      <find>dynamicData</find>
-      <find>inp</find>
-      <find>exampleDataSetUp</find>
       <find>getIdbyName</find>
       <find>connec</find>
       <find>css</find>
@@ -367,6 +356,10 @@
       <find>getUserProjectList</find>
       <find>getProjectSelected</find>
       <find>loadProjects</find>
+      <find>editDataWrappe</find>
+      <find>editDataWrapperID</find>
+      <find>projectNameInputID</find>
+      <find>setValue</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -385,7 +378,6 @@
         <option value="$PROJECT_DIR$/src/com/test/ConstMembers.java" />
         <option value="$PROJECT_DIR$/src/com/test/MILESTONE_STATUS.java" />
         <option value="$PROJECT_DIR$/src/com/test/ProductProject.java" />
-        <option value="$PROJECT_DIR$/src/com/test/userProject.java" />
         <option value="$PROJECT_DIR$/web/indexStyle.css" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/com/test/LoginController.java" />
@@ -425,6 +417,7 @@
         <option value="$PROJECT_DIR$/web/reports.jsp" />
         <option value="$PROJECT_DIR$/web/reportsssss.css" />
         <option value="$PROJECT_DIR$/src/com/test/User.java" />
+        <option value="$PROJECT_DIR$/src/com/test/userProject.java" />
         <option value="$PROJECT_DIR$/web/projects.jsp" />
       </list>
     </option>
@@ -530,7 +523,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572822937711" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572894387535" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gwt-2.8.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -858,7 +851,7 @@
       <workItem from="1570916886070" duration="647000" />
       <workItem from="1570919285001" duration="34402000" />
       <workItem from="1572380018985" duration="14363000" />
-      <workItem from="1572469666041" duration="17149000" />
+      <workItem from="1572469666041" duration="28066000" />
     </task>
     <servers />
   </component>
@@ -871,7 +864,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562668000" />
+    <option name="totallyTimeSpent" value="573585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,7 +890,7 @@
       <window_info id="DB Browser" order="8" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6020134" visible="true" weight="0.1317716" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6020134" visible="true" weight="0.1522694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23133236" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -906,7 +899,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329429" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329429" />
       <window_info anchor="bottom" id="Application Servers" order="10" sideWeight="0.4986577" weight="0.18594436" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329429" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.15812592" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.19619326" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.3979866" side_tool="true" weight="0.2591508" />
@@ -1212,20 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/Products.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/userProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/reports.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1253,18 +1232,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/userProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/projects.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="69" column="19" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="19" />
+        <state relative-caret-position="306">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="24" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5187#5194#1#HTML" expanded="true" />
+            <element signature="e#6519#6526#1#HTML" expanded="true" />
+            <element signature="e#7273#7280#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

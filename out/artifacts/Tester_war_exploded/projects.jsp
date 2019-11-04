@@ -49,9 +49,11 @@
         var projectIDsArray=projectIDsList.split(" ");
         var parent = document.getElementById('dynamicData');
         var i;
+        var btnID;
         for (i = 0; i < projectNamesArray.length-1; i++) {
-            var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><a id="setProjectBtn" href="#popupEditProject"><div class="editProject"><i class="far" id="editproductBtnID">&#xf044;</i></div></a></div>'
+            btnID = "setProjectBtn"+projectIDsArray[i];
 
+            var newChild='<div class="project"><input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="'+projectNamesArray[i]+'"\ onclick="submit_projectName()"><a id="setProjectBtn" href="#popupEditProject"><div class="editProject" id="'+btnID+'" onclick="setValue(this.id)"><i class="far" id="editproductBtnID">&#xf044;</i></div></a></div>'
             parent.insertAdjacentHTML('beforeend', newChild);
         }
     }
@@ -74,11 +76,11 @@
         var active = myModal;//element.querySelector('#editDataWrapperID');
         var prev = active.previousElementSibling.id;
         document.getElementById(prev).value = '############################';
-        
+
         alert(prev);
 
-        alert("BLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
+
 </script>
 <script>
     function myFunction() {
@@ -94,6 +96,15 @@
     };
 </script>
 <body onload="loadProjects()">
+
+<script>
+
+    function  setValue(idProject) {
+        var divAdapper = document.getElementById(idProject);
+        document.getElementById("projectNameInputID").value = divAdapper.parentElement.previousElementSibling.value;
+
+    }
+</script>
 <div>
     <div id="outlineID">
         <div id="userDetailsID">
@@ -115,14 +126,7 @@
             <div id="dynamicData"></div>
         </form>
 
-        <div class="project">
-            <input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="  TEST BLA" onclick="submit_projectName()">
-            <a id="setProjectBtn" href="#popupEditProject">
-                <div class="editProject">
-                    <i class="far" id="editproductBtnID" aria-hidden="true"></i>
-                </div>
-            </a>
-        </div>
+
 
         <div id="myBtn" onclick="myFunc()">Open Modal</div>
         <input  id="projectList2" name="inputProjectName" readonly="readonly" value="TEST project ******">
@@ -144,7 +148,15 @@
                 </form>
            </div>
 
-
+        <%--test --%>
+        <div class="project">
+            <input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="dd" onclick="submit_projectName()">
+            <a id="setProjectBtn55" href="#popupEditProject" >
+                <div onclick="setValue(this.id)" class="editProject" id="setProjectBtn555">
+                    <i class="far" id="editproductBtnID" aria-hidden="true"></i>
+            </div>
+            </a>
+        </div>
 
 
 <div class="s-layout">
@@ -176,7 +188,7 @@
 
                 <div class="content">
                     <label><b>שם פרויקט</b></label>
-                    <input type="text" value=getProjectSelected() name="projName" >
+                    <input type="text" value=getProjectSelected()  id="projectNameInputID" name="projName" >
                     <label ><b>שם לקוח</b></label>
                     <input type="text" value="שם לקוח" name="customerName" required>
                 </div>
