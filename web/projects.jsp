@@ -27,8 +27,6 @@
 <script>
 
     function insterdDataJS() {
-        var myModal = document.getElementById('myModal');
-        myModal.style.display = "none";
         loadProjects();
     }
     function loadProjects() {
@@ -39,13 +37,13 @@
         String projectsNames="";
         String projectsIDs="";
         for (int i=0;i<userProjectList.size();i++){
-            projectsNames+=userProjectList.get(i).getProjectMame()+" ";
+            projectsNames+=userProjectList.get(i).getProjectMame()+"#";
             projectsIDs+=userProjectList.get(i).getProjectID()+" ";
         }
         %>
         var projectNamesList='<%=projectsNames%>';
         var projectIDsList='<%=projectsIDs%>';
-        var projectNamesArray=projectNamesList.split(" ");
+        var projectNamesArray=projectNamesList.split("#");
         var projectIDsArray=projectIDsList.split(" ");
         var parent = document.getElementById('dynamicData');
         var i;
@@ -103,9 +101,30 @@
         var divAdapper = document.getElementById(idProject);
         document.getElementById("projectNameInputID").value = divAdapper.parentElement.previousElementSibling.value;
         <%
-        user.
+
+        String projectsCustomers = "";
+        for (int i=0;i<userProjectList.size();i++){
+            projectsCustomers+=userProjectList.get(i).getProjectCustomer()+"#";
+        }
         %>
-    }
+        var projectCustomerList='<%=projectsCustomers%>';
+        var projectCustomerNamesArray = projectCustomerList.split("#");
+        var projectIDsList='<%=projectsIDs%>';
+        var projectIDsArray=projectIDsList.split(" ");
+        var customerName;
+        var projectEditID;
+        for (i = 0; i < projectCustomerNamesArray.length-1; i++) {
+            if( "setProjectBtn"+ projectIDsArray[i]==  idProject)
+            {
+                customerName = projectCustomerNamesArray[i];
+                projectEditID = projectIDsArray[i];
+                break;
+            }
+        }
+        document.getElementById("customerNameInputID").value = customerName;
+        document.getElementById("editProjectID").value = projectEditID;
+
+        }
 </script>
 <div>
     <div id="outlineID">
@@ -150,16 +169,6 @@
                 </form>
            </div>
 
-        <%--test --%>
-        <div class="project">
-            <input type="submit" id="projectList" name="inputProjectName" readonly="readonly" value="dd" onclick="submit_projectName()">
-            <a id="setProjectBtn55" href="#popupEditProject" >
-                <div onclick="setValue(this.id)" class="editProject" id="setProjectBtn555">
-                    <i class="far" id="editproductBtnID" aria-hidden="true"></i>
-            </div>
-            </a>
-        </div>
-
 
 <div class="s-layout">
 <main class="s-layout__content">
@@ -182,7 +191,7 @@
 </main>
 </div>
 <div class="s-layout">
-    <main class="s-layout__content" onload="getProjectSelected()">
+    <main class="s-layout__content" >
         <form id="popupEditProject" class="overlay" action="addBtnServlet" method="post">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
@@ -190,9 +199,10 @@
 
                 <div class="content">
                     <label><b>שם פרויקט</b></label>
-                    <input type="text" value=getProjectSelected()  id="projectNameInputID" name="projName" >
+                    <input type="text" id="projectNameInputID" name="projName" required >
                     <label ><b>שם לקוח</b></label>
-                    <input type="text" value="שם לקוח" name="customerName" required>
+                    <input type="text" value="שם לקוח" name="customerName" id="customerNameInputID" required>
+                    <input type="text" style="display: none;" name="editProjectIDName" id="editProjectID" >
                 </div>
                 <button type="submit" value="Login"  onclick="updateDataJS()" name="setProjectButton" id="setProjectBtnID" >אישור</button>
             </div>

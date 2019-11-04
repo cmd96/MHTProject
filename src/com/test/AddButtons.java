@@ -38,6 +38,21 @@ public class AddButtons extends HttpServlet {
 
         }
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //set project data
+        if (request.getParameter("setProjectButton") != null){
+
+            String projectName =  request.getParameter("projName");
+            String customerName = request.getParameter("customerName");
+            String projectIDString = request.getParameter("editProjectIDName");
+            int projectID =  Integer.parseInt(projectIDString);
+
+            userProject.setProjectNameDB(projectName,projectID);
+            userProject.setProjectCustomerDB(customerName,projectID);
+            User.refreshDB();
+            response.sendRedirect("projects.jsp");
+
+        }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (request.getParameter("addProductButton") != null){
 
             //TODO:get projectId by project name

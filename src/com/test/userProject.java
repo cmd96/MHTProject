@@ -79,22 +79,20 @@ public class userProject {
     }
 
     //TODO: set values in db
-    public void setProjectNameDB(String NewName) {
-        int ProjectID = this.getProjectID();
+    public static void setProjectNameDB(String NewName, int ProjectID) {
         String sql = "update UserProjects set ProjectName = '" + NewName + "' where ProjectID ='" + ProjectID + "'";
         ProjectProduct.ExecuteUpdate(sql);
 
     }
 
-    public void setProjectManagerIDDB(int NewProjectManagerID) {
+    public  void setProjectManagerIDDB(int NewProjectManagerID) {
         int ProjectID = this.getProjectID();
         String sql = "update UserProjects set ProjectManagerID = '" + NewProjectManagerID + "' where ProjectID ='" + ProjectID + "'";
         ProjectProduct.ExecuteUpdate(sql);
 
     }
 
-    public void setProjectCustomerDB(String NewProjectCustomer) {
-        int ProjectID = this.getProjectID();
+    public static void setProjectCustomerDB(String NewProjectCustomer, int ProjectID) {
         String sql = "update UserProjects set ProjectCustomer = '" + NewProjectCustomer + "' where ProjectID ='" + ProjectID + "'";
         ProjectProduct.ExecuteUpdate(sql);
 
