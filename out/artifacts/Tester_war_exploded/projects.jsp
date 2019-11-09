@@ -148,28 +148,6 @@
         </form>
 
 
-
-        <div id="myBtn" onclick="myFunc()">Open Modal</div>
-        <input  id="projectList2" name="inputProjectName" readonly="readonly" value="TEST project ******">
-        <div id="editDataWrapperID" style="display: none">
-                <form action="addBtnServlet" method="post">
-                    <div class="popup">
-                        <a class="close" href="#">&times;</a>
-                        <h2>הוסף פרויקט</h2>
-
-                        <div class="content">
-                            <label ><b>שם פרויקט</b></label>
-                            <input type="text" placeholder="שם פרויקט" name="projName" required>
-                            <label ><b>שם לקוח</b></label>
-                            <input type="text" placeholder="שם לקוח" name="customerName" required>
-                        </div>
-                        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitDataID" >אישור</button>
-                    </div>
-
-                </form>
-           </div>
-
-
 <div class="s-layout">
 <main class="s-layout__content">
 <form id="popup1" class="overlay" action="addBtnServlet" method="post">
