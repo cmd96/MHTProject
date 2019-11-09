@@ -230,9 +230,9 @@
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
         <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
-        <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
-        <button id="projectBtnID" class="outlineBtn">הגדרות</button>
-        <a href="reports.jsp"><button id="projectBtnID" class="outlineBtn">דוחות</button></a>
+        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">היסטוריה</button>
+        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">הגדרות</button>
+        <a href="reportsList.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">דוחות</button></a>
     </div>
     <div id="projectDataID">
         <div id="projectOutlineID">
@@ -246,70 +246,135 @@
     </div>
 
 </div>
+    <div class="s-layout">
+        <main class="s-layout__content">
+            <form id="addProduct" class="overlay" action="addBtnServlet" method="post">
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <h2>הוסף תוצר</h2>
 
-<div class="s-layout">
-    <main class="s-layout__content">
-        <form id="addProduct" class="overlay" action="addBtnServlet" method="post">
-            <div class="popup">
-                <a class="close" href="#">&times;</a>
-                <h2>הוסף תוצר</h2>
+                    <div class="content">
+                        <label ><b>שם תוצר</b></label>
+                        <input type="text" placeholder="שם תוצר" name="productName" required>
+                        <label ><b>שם כתב אחראי</b></label>
+                        <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
+                        <select name="select" onchange="selectOnChnageFunction()" id="selectFlowID">
+                            <option>Short Flow</option>
+                            <option>Full Flow</option>
+                            <option>Course</option>
+                        </select>
+                        <div id="productMilstonesDataID">
 
-                <div class="content">
-                    <label ><b>שם תוצר</b></label>
-                    <input type="text" placeholder="שם תוצר" name="productName" required>
-                    <label ><b>שם כתב אחראי</b></label>
-                    <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
-                    <select name="select" onchange="selectOnChnageFunction()" id="selectFlowID">
-                        <option>Short Flow</option>
-                        <option>Full Flow</option>
-                        <option>Course</option>
-                    </select>
-                    <div id="productMilstonesDataID">
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">מתווה</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="outlineMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="outlineMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="outlineMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="outlineMilestoneDescriptionName" >
+                            </fieldset>
 
-                        <fieldset class="milestoneWrapper">
-                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">מתווה</legend>
-                            <label>תאריך התחלה</label>
-                            <input type="date" name="outlineMilestoneStartDate">
-                            <label>תאריך סיום</label>
-                            <input type="date" name="outlineMilestoneDueDate">
-                            <label>כותב אחראי</label>
-                            <input type="text" placeholder="שם כתב אחראי" name="outlineMilestoneResponsibleWriterName" required>
-                            <label>תאור</label>
-                            <input type="text" placeholder="תאור" name="outlineMilestoneDescriptionName" >
-                        </fieldset>
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">טיוטה</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="draftMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="draftMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="draftMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="draftMilestoneDescriptionName" >
+                            </fieldset>
 
-                        <fieldset class="milestoneWrapper">
-                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">טיוטה</legend>
-                            <label>תאריך התחלה</label>
-                            <input type="date" name="draftMilestoneStartDate">
-                            <label>תאריך סיום</label>
-                            <input type="date" name="draftMilestoneDueDate">
-                            <label>כותב אחראי</label>
-                            <input type="text" placeholder="שם כתב אחראי" name="draftMilestoneResponsibleWriterName" required>
-                            <label>תאור</label>
-                            <input type="text" placeholder="תאור" name="draftMilestoneDescriptionName" >
-                        </fieldset>
-
-                        <fieldset class="milestoneWrapper">
-                            <legend style="margin-left: 1em; padding: 0.2em 0.8em ">CR</legend>
-                            <label>תאריך התחלה</label>
-                            <input type="date" name="CRMilestoneStartDate">
-                            <label>תאריך סיום</label>
-                            <input type="date" name="CRMilestoneDueDate">
-                            <label>כותב אחראי</label>
-                            <input type="text" placeholder="שם כתב אחראי" name="CRMilestoneResponsibleWriterName" required>
-                            <label>תאור</label>
-                            <input type="text" placeholder="תאור" name="CRMilestoneDescriptionName" >
-                        </fieldset>
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">CR</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="CRMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="CRMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="CRMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="CRMilestoneDescriptionName" >
+                            </fieldset>
 
 
+                        </div>
                     </div>
+                    <button type="submit" value="Login" name="addProductButton" id="submitID">אישור</button>
                 </div>
-                <button type="submit" value="Login" name="addProductButton" id="submitID">אישור</button>
-            </div>
-        </form>
+            </form>
 
-    </main>
-</div>
+        </main>
+    </div>
+
+//popup for editing project
+    <div class="s-layout">
+        <main class="s-layout__content">
+            <form id="setProduct" class="overlay" action="addBtnServlet" method="post">
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <h2>עריכת תוצר</h2>
+
+                    <div class="content">
+                        <label ><b>שם תוצר</b></label>
+                        <input type="text" placeholder="שם תוצר" name="productName" required>
+                        <label ><b>שם כתב אחראי</b></label>
+                        <input type="text" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
+                        <select name="select" onchange="selectOnChnageFunction()" id="selectFlowID">
+                            <option>Short Flow</option>
+                            <option>Full Flow</option>
+                            <option>Course</option>
+                        </select>
+                        <div id="productMilstonesDataID">
+
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">מתווה</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="outlineMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="outlineMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="outlineMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="outlineMilestoneDescriptionName" >
+                            </fieldset>
+
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">טיוטה</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="draftMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="draftMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="draftMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="draftMilestoneDescriptionName" >
+                            </fieldset>
+
+                            <fieldset class="milestoneWrapper">
+                                <legend style="margin-left: 1em; padding: 0.2em 0.8em ">CR</legend>
+                                <label>תאריך התחלה</label>
+                                <input type="date" name="CRMilestoneStartDate">
+                                <label>תאריך סיום</label>
+                                <input type="date" name="CRMilestoneDueDate">
+                                <label>כותב אחראי</label>
+                                <input type="text" placeholder="שם כתב אחראי" name="CRMilestoneResponsibleWriterName" required>
+                                <label>תאור</label>
+                                <input type="text" placeholder="תאור" name="CRMilestoneDescriptionName" >
+                            </fieldset>
+
+
+                        </div>
+                    </div>
+                    <button type="submit" value="Login" name="addProductButton" id="submitID">אישור</button>
+                </div>
+            </form>
+
+        </main>
+    </div>
 </body>
 </html>

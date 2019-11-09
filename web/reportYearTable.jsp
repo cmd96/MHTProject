@@ -11,7 +11,7 @@
 <jsp:useBean id="user" class="com.test.User" scope="request" />
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="reportsy.css">
+    <link rel="stylesheet" type="text/css" href="reportYearTable.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
           crossorigin='anonymous'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -70,10 +70,10 @@
             <div style="font-family: 'Font Awesome 5 Free'; font-size: 25px; color: #2093B4; float: right; margin: 25px"></div>
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
-        <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
-        <button id="projectBtnID" class="outlineBtn">היסטוריה</button>
-        <button id="projectBtnID" class="outlineBtn">הגדרות</button>
-        <a href="reports.jsp"><button id="projectBtnID" class="outlineBtn">דוחות</button></a>
+        <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים</button></a>
+        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">היסטוריה</button>
+        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">הגדרות</button>
+        <a href="reportsList.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">דוחות</button></a>
     </div>
     <div >
         <div class="chart-wrapper">
