@@ -327,8 +327,24 @@ public class User {
         return productList;
     }
 
-    private static String getNameByID(int responsibleWriterID) {
-        return "BLA";
+    private static String getNameByID(int UserID) {
+
+        String sql = "SELECT * FROM Users WHERE ID="+ UserID;
+        String name = "";
+        try {
+            Connection con = SQLConnection.getCon();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                name = rs.getString("UserName");
+                System.out.println(name);
+            }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+                return name;
     }
 
     //fill milestone

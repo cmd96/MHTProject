@@ -6,20 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/web/products.jsp" line="175" />
+    <bookmark url="file://$PROJECT_DIR$/web/products.jsp" line="312" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2991a4c-c89b-4525-b7ed-07a864ef2532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/CONST_HTML_CODE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/CONST_HTML_CODE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/ProjectProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Tester_war_exploded/WEB-INF/classes/com/test/ProjectProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/CONST_HTML_CODE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/CONST_HTML_CODE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tester/com/test/ProjectProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tester/com/test/ProjectProduct.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/test/AddButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/AddButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/CONST_HTML_CODE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/CONST_HTML_CODE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/ProductMilestone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/ProductMilestone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/test/ProjectProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/ProjectProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/test/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/products.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,9 +78,9 @@
           <entry key="css" value="1443" />
           <entry key="dummy" value="8" />
           <entry key="iml" value="2" />
-          <entry key="java" value="9059" />
+          <entry key="java" value="9258" />
           <entry key="js" value="284" />
-          <entry key="jsp" value="9562" />
+          <entry key="jsp" value="9733" />
           <entry key="scss" value="6" />
           <entry key="xml" value="1" />
         </counts>
@@ -97,8 +89,8 @@
         <counts>
           <entry key="CSS" value="1443" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="9058" />
-          <entry key="JSP" value="9562" />
+          <entry key="JAVA" value="9257" />
+          <entry key="JSP" value="9733" />
           <entry key="JavaScript" value="284" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SCSS" value="6" />
@@ -216,11 +208,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/test/ProjectProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+            <state relative-caret-position="239">
+              <caret line="132" column="38" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1206#1207#0" expanded="true" />
@@ -232,8 +224,8 @@
                 <element signature="e#1308#1309#0" expanded="true" />
                 <element signature="e#1340#1341#0" expanded="true" />
                 <element signature="method#getHtmlCode#0;class#ProjectProduct#0" />
-                <element signature="e#5912#5913#0" expanded="true" />
-                <element signature="e#5949#5950#0" expanded="true" />
+                <element signature="e#6286#6287#0" expanded="true" />
+                <element signature="e#6323#6324#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -242,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-783">
-              <caret line="202" column="12" selection-start-line="202" selection-start-column="12" selection-end-line="202" selection-end-column="12" />
+            <state relative-caret-position="318">
+              <caret line="206" column="38" selection-start-line="206" selection-start-column="38" selection-end-line="206" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -289,15 +281,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="321" column="72" selection-start-line="321" selection-start-column="53" selection-end-line="321" selection-end-column="72" />
+            <state relative-caret-position="-189">
+              <caret line="338" column="47" selection-start-line="338" selection-start-column="47" selection-end-line="338" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12670#12671#0" expanded="true" />
-                <element signature="e#12694#12695#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -315,9 +305,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/products.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="282" selection-start-line="282" selection-end-line="282" />
+            <state relative-caret-position="236">
+              <caret line="718" column="74" selection-start-line="718" selection-start-column="58" selection-end-line="718" selection-end-column="74" />
               <folding>
+                <element signature="e#1836#10525#0#HTML" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
@@ -388,13 +389,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>outlineb</find>
-      <find>edit</find>
-      <find>submi</find>
-      <find>AddProjects</find>
-      <find>projectID</find>
-      <find>outlineBtn</find>
-      <find>projectName</find>
       <find>btn</find>
       <find>editproductBtnID</find>
       <find>submitID</find>
@@ -415,9 +409,16 @@
       <find>foc</find>
       <find>open mode</find>
       <find>set</find>
-      <find>getIdbyName</find>
-      <find>selectOnEditFunction</find>
       <find>selectOnChnageFunction</find>
+      <find>FROM Users</find>
+      <find>getIdbyName</find>
+      <find>productID</find>
+      <find>outlineMilestoneDescriptionNam</find>
+      <find>sylabusHtmlCode</find>
+      <find>selectOnEditFunction</find>
+      <find>productMilstonesDataID</find>
+      <find>selectEditFunction</find>
+      <find>EditselectFlowID</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -472,11 +473,11 @@
         <option value="$PROJECT_DIR$/web/sumTable.css" />
         <option value="$PROJECT_DIR$/web/projects.jsp" />
         <option value="$PROJECT_DIR$/src/com/test/CONST_HTML_CODE.java" />
-        <option value="$PROJECT_DIR$/src/com/test/ProjectProduct.java" />
         <option value="$PROJECT_DIR$/src/com/test/ProductMilestone.java" />
-        <option value="$PROJECT_DIR$/src/com/test/AddButtons.java" />
         <option value="$PROJECT_DIR$/src/com/test/User.java" />
         <option value="$PROJECT_DIR$/web/products.jsp" />
+        <option value="$PROJECT_DIR$/src/com/test/AddButtons.java" />
+        <option value="$PROJECT_DIR$/src/com/test/ProjectProduct.java" />
       </list>
     </option>
   </component>
@@ -504,7 +505,7 @@
       <path value="$PROJECT_DIR$/node_modules/jquery/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1195" />
     <option name="width" value="745" />
     <option name="height" value="1030" />
@@ -575,7 +576,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573344959392" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573429910577" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gwt-2.8.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -904,7 +905,7 @@
       <workItem from="1570919285001" duration="34402000" />
       <workItem from="1572380018985" duration="14363000" />
       <workItem from="1572469666041" duration="46805000" />
-      <workItem from="1573330527883" duration="14281000" />
+      <workItem from="1573330527883" duration="21207000" />
     </task>
     <servers />
   </component>
@@ -917,7 +918,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="606605000" />
+    <option name="totallyTimeSpent" value="613531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -930,6 +931,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49341142" visible="true" weight="0.1852349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -942,7 +944,7 @@
       <window_info id="DB Browser" order="8" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6020134" visible="true" weight="0.7833089" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6020134" visible="true" weight="0.17423134" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23133236" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -994,6 +996,12 @@
           <line>14</line>
           <properties />
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/test/AddButtons.java</url>
+          <line>206</line>
+          <properties />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/test/AddButtons.java</url>
@@ -1246,6 +1254,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/ProductMilestone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="23" column="186" selection-start-line="23" selection-start-column="175" selection-end-line="23" selection-end-column="186" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3934#3935#0" expanded="true" />
+            <element signature="e#3992#3993#0" expanded="true" />
+            <element signature="e#4042#4043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/AddMileston.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/TEMPLATE_FLOW.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="338" column="47" selection-start-line="338" selection-start-column="47" selection-end-line="338" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/userProject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1276,48 +1324,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/ProductMilestone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="23" column="186" selection-start-line="23" selection-start-column="175" selection-end-line="23" selection-end-column="186" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2206#2207#0" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
-            <element signature="e#3934#3935#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/ProjectProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="method#getHtmlCode#0;class#ProjectProduct#0" />
-            <element signature="e#5912#5913#0" expanded="true" />
-            <element signature="e#5949#5950#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="282" selection-start-line="282" selection-end-line="282" />
+        <state relative-caret-position="236">
+          <caret line="718" column="74" selection-start-line="718" selection-start-column="58" selection-end-line="718" selection-end-column="74" />
           <folding>
+            <element signature="e#1836#10525#0#HTML" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#legend#0;n#fieldset#0;n#!!top" expanded="true" />
@@ -1333,35 +1355,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/AddMileston.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/TEMPLATE_FLOW.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/AddButtons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-783">
-          <caret line="202" column="12" selection-start-line="202" selection-start-column="12" selection-end-line="202" selection-end-column="12" />
+        <state relative-caret-position="318">
+          <caret line="206" column="38" selection-start-line="206" selection-start-column="38" selection-end-line="206" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/test/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/test/ProjectProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="321" column="72" selection-start-line="321" selection-start-column="53" selection-end-line="321" selection-end-column="72" />
+        <state relative-caret-position="239">
+          <caret line="132" column="38" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12670#12671#0" expanded="true" />
-            <element signature="e#12694#12695#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="method#getHtmlCode#0;class#ProjectProduct#0" />
+            <element signature="e#6286#6287#0" expanded="true" />
+            <element signature="e#6323#6324#0" expanded="true" />
           </folding>
         </state>
       </provider>

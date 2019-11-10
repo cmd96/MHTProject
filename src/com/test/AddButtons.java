@@ -21,7 +21,8 @@ import java.util.List;
 public class AddButtons extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if (request.getParameter("addProjectButton") != null){
+        if (request.getParameter("addProjectButton") != null)
+        {
 
             String name = request.getParameter("projName");
             String customer=request.getParameter("customerName");
@@ -214,6 +215,7 @@ public class AddButtons extends HttpServlet {
             User.refreshDB();
             response.sendRedirect("products.jsp");
         }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (request.getParameter("addMilestonButton") != null){
             String name=request.getParameter("mailstonName");
             String description=request.getParameter("description");
@@ -229,8 +231,12 @@ public class AddButtons extends HttpServlet {
             }
             response.sendRedirect("products.jsp");
         }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        if (request.getParameter("setProductButton") != null)
+        {
+            //same to insertProduct - just create editing
 
-
+        }
     }
 
     public static Date stringToDate(String outlineMilestoneStartDate) {

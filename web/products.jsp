@@ -173,6 +173,143 @@
         dynamicCodeParent.innerHTML = dynamicCode;
     }
 
+    function selectEditFunction()
+    {
+        var outlineHtmlCode ="<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">מתווה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"outlineMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"outlineMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"outlineMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"outlineMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var draftHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draftMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draftMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draftMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draftMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var CRHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">CR</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"CRMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"CRMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"CRMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"CRMilestoneDescriptionName\" >\n" +
+            "</fieldset>";
+        var draft_1HtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה 1</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draft_1_MilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draft_1_MilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draft_1_MilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draft_1_MilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var draft_2HtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">טיוטה 2</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"draft_2_MilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"draft_2_MilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"draft_2_MilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"draft_2_MilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var sylabusHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">סילבוס</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"sylabusMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"sylabusMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"sylabusMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"sylabusMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var presentationHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">הצגה</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"presentationMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"presentationMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"presentationMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"presentationMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var testHtmlCode = " <fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">מבחן</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"testMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"testMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"testMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"testMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var courseHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">קורס</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"courseMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"courseMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"courseMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"courseMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var fixPresentationHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">תיקון מצגת</legend>\n" +
+            "    <label>תאריך התחלה</label>\n" +
+            "    <input type=\"date\" name=\"fixPresentationMilestoneStartDate\">\n" +
+            "    <label>תאריך סיום</label>\n" +
+            "    <input type=\"date\" name=\"fixPresentationMilestoneDueDate\">\n" +
+            "    <label>כותב אחראי</label>\n" +
+            "    <input type=\"text\" placeholder=\"שם כתב אחראי\" name=\"fixPresentationMilestoneResponsibleWriterName\" required>\n" +
+            "    <label>תאור</label>\n" +
+            "    <input type=\"text\" placeholder=\"תאור\" name=\"fixPresentationMilestoneDescriptionName\" >\n" +
+            "</fieldset> ";
+        var basic_flow_html = outlineHtmlCode+draftHtmlCode+CRHtmlCode;
+        var full_flow_html = outlineHtmlCode + draft_1HtmlCode+draft_2HtmlCode+CRHtmlCode;
+        var course_flow_html = sylabusHtmlCode+presentationHtmlCode+ testHtmlCode+courseHtmlCode+fixPresentationHtmlCode;
+
+        var e = document.getElementById("EditselectFlowID");
+        var strUser = e.options[e.selectedIndex].value;
+        var dynamicCodeParent = document.getElementById('productMilstonesEditDataID');
+        var dynamicCode="";
+        //basic flow is a defoult
+        if(strUser == "Course")
+        {
+            dynamicCode=course_flow_html;
+        }
+        else
+        if(strUser == "Full Flow")
+        {
+            dynamicCode=full_flow_html;
+        }
+        else
+        {
+            dynamicCode=basic_flow_html;
+        }
+        dynamicCodeParent.innerHTML = dynamicCode;
+    }
+
     function getProjectName() {
 
         var queryString = decodeURIComponent(window.location.search);
@@ -267,19 +404,35 @@
         }
         editWRProductName.value = RWproductIDArray[myProductIndex];
         var selected;
+        currentMilsetones = MilestonesArray [myProductIndex];
+        currentMilsetones = currentMilsetones.split("@@@");
+
+        if(FlowArray[myProductIndex] == 0) {
+            selected = "Short Flow"
+        }
+        else if(FlowArray[myProductIndex] == 1) {
+            selected = "Full Flow"
+        }
+        else
+        {
+            selected = "Course"
+        }
+        document.getElementById("EditselectFlowID").value = selected;
+        selectEditFunction();
         if(FlowArray[myProductIndex] == 0)
         {
-            selected = "Short Flow"
-            currentMilsetones = MilestonesArray [myProductIndex];
-            currentMilsetones = currentMilsetones.split("@@@");
-
             //outline
             tmpMilstone = currentMilsetones[0].split("$$");
             startDate = tmpMilstone[0];
             endDate = tmpMilstone[1];
             RW_name = tmpMilstone[2];
             description = tmpMilstone[3];
-            document.getElementsByName("outlineMilestoneDescriptionName").values()[0].value = description;
+
+            // 1 for edit [0] for add
+            document.getElementsByName("outlineMilestoneStartDate")[1].value = startDate;
+            document.getElementsByName("outlineMilestoneDueDate")[1].value = endDate;
+            document.getElementsByName("outlineMilestoneResponsibleWriterName")[1].value = RW_name;
+            document.getElementsByName("outlineMilestoneDescriptionName")[1].value = description;
 
             //draft
             tmpMilstone = currentMilsetones[1].split("$$");
@@ -287,6 +440,10 @@
             endDate = tmpMilstone[1];
             RW_name = tmpMilstone[2];
             description = tmpMilstone[3];
+            document.getElementsByName("draftMilestoneStartDate")[1].value = startDate;
+            document.getElementsByName("draftMilestoneDueDate")[1].value = endDate;
+            document.getElementsByName("draftMilestoneResponsibleWriterName")[1].value = RW_name;
+            document.getElementsByName("draftMilestoneDescriptionName")[1].value = description;
 
             //CR
             tmpMilstone = currentMilsetones[2].split("$$");
@@ -294,23 +451,120 @@
             endDate = tmpMilstone[1];
             RW_name = tmpMilstone[2];
             description = tmpMilstone[3];
-
+            document.getElementsByName("CRMilestoneStartDate")[1].value = startDate;
+            document.getElementsByName("CRMilestoneDueDate")[1].value = endDate;
+            document.getElementsByName("CRMilestoneResponsibleWriterName")[1].value = RW_name;
+            document.getElementsByName("CRMilestoneDescriptionName")[1].value = description;
 
         }
         if(FlowArray[myProductIndex] == 1)
         {
-            selected = "Full Flow"
 
+            //outline
+            tmpMilstone = currentMilsetones[0].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+
+            // 1 for edit [0] for add
+            document.getElementsByName("outlineMilestoneStartDate")[1].value = startDate;
+            document.getElementsByName("outlineMilestoneDueDate")[1].value = endDate;
+            document.getElementsByName("outlineMilestoneResponsibleWriterName")[1].value = RW_name;
+            document.getElementsByName("outlineMilestoneDescriptionName")[1].value = description;
+
+            //draft1
+            tmpMilstone = currentMilsetones[1].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("draft_1_MilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("draft_1_MilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("draft_1_MilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("draft_1_MilestoneDescriptionName")[0].value = description;
+
+            //draft2
+            tmpMilstone = currentMilsetones[2].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("draft_2_MilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("draft_2_MilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("draft_2_MilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("draft_2_MilestoneDescriptionName")[0].value = description;
+
+            //CR
+            tmpMilstone = currentMilsetones[3].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("CRMilestoneStartDate")[1].value = startDate;
+            document.getElementsByName("CRMilestoneDueDate")[1].value = endDate;
+            document.getElementsByName("CRMilestoneResponsibleWriterName")[1].value = RW_name;
+            document.getElementsByName("CRMilestoneDescriptionName")[1].value = description;
 
         }
         if(FlowArray[myProductIndex] == 2)
         {
-            selected = "Course"
 
+            //sylabus
+            tmpMilstone = currentMilsetones[0].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("sylabusMilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("sylabusMilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("sylabusMilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("sylabusMilestoneDescriptionName")[0].value = description;
+
+            //presentation
+            tmpMilstone = currentMilsetones[1].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("presentationMilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("presentationMilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("presentationMilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("presentationMilestoneDescriptionName")[0].value = description;
+
+            //test
+            tmpMilstone = currentMilsetones[2].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("testMilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("testMilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("testMilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("testMilestoneDescriptionName")[0].value = description;
+
+            //course
+            tmpMilstone = currentMilsetones[3].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("courseMilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("courseMilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("courseMilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("courseMilestoneDescriptionName")[0].value = description;
+
+            //fixPresentation
+            tmpMilstone = currentMilsetones[4].split("$$");
+            startDate = tmpMilstone[0];
+            endDate = tmpMilstone[1];
+            RW_name = tmpMilstone[2];
+            description = tmpMilstone[3];
+            document.getElementsByName("fixPresentationMilestoneStartDate")[0].value = startDate;
+            document.getElementsByName("fixPresentationMilestoneDueDate")[0].value = endDate;
+            document.getElementsByName("fixPresentationMilestoneResponsibleWriterName")[0].value = RW_name;
+            document.getElementsByName("fixPresentationMilestoneDescriptionName")[0].value = description;
         }
-
-        document.getElementById("EditselectFlowID").value = selected;
-
     }
 </script>
 
@@ -421,7 +675,7 @@
                         <option>Full Flow</option>
                         <option>Course</option>
                     </select>
-                    <div id="productMilstonesDataID">
+                    <div id="productMilstonesEditDataID">
 
                         <fieldset class="milestoneWrapper">
                             <legend style="margin-left: 1em; padding: 0.2em 0.8em ">מתווה</legend>
@@ -462,7 +716,7 @@
 
                     </div>
                 </div>
-                <button type="submit" value="Login" name="addProductButton" id="submitID">אישור</button>
+                <button type="submit" value="Login" name="setProductButton" id="submitID">אישור</button>
             </div>
         </form>
 
