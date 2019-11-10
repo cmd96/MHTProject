@@ -19,8 +19,9 @@ public class ProductMilestone {
     private Date endDate;
     private String description;
     private int status;
+    private String resWriterName;
 
-    public ProductMilestone(int milestonID, int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
+    public ProductMilestone(int milestonID, int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status, String RWriterName) {
         this.milestonID = milestonID;
         this.productID = productID;
         this.milestoneName = milestoneName;
@@ -29,9 +30,10 @@ public class ProductMilestone {
         this.endDate = endDate;
         this.description = description;
         this.status = status;
+        this.resWriterName = RWriterName;
     }
 
-    public ProductMilestone( int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status) {
+    public ProductMilestone( int productID, String milestoneName, int responsibleWriterId, Date startDate, Date endDate, String description, int status, String RWriterName) {
 
         this.milestonID = -1;
         this.productID = productID;
@@ -41,6 +43,7 @@ public class ProductMilestone {
         this.endDate = endDate;
         this.description = description;
         this.status = status;
+        this.resWriterName = RWriterName;
     }
 
     public int getMilestonID(){
@@ -116,6 +119,14 @@ public class ProductMilestone {
         htmlString = htmlString.replaceAll(CONST_HTML_CODE.PLACEHOLDER_MILESTONE_CLASS, (milestoneName.equals(MILESTONE_NAME.DELIVERY_DATE_STRING)) ? CONST_HTML_CODE.MILESTONE_END_CLASS : CONST_HTML_CODE.MILESTONE_CLASS);
         return htmlString;
 
+    }
+
+    public String getResWriterName() {
+        return resWriterName;
+    }
+
+    public void setResWriterName(String resWriterName) {
+        this.resWriterName = resWriterName;
     }
 
     //TODO: insert new milestone to current project

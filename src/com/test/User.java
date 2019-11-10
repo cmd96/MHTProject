@@ -318,12 +318,17 @@ public class User {
                         rs.getInt("ProductID"),
                         rs.getInt("ResponsibleWriterID"),
                         (List<ProductMilestone>)get_MileStons(con,rs.getInt("ProductID")),
-                        flowArr));
+                        flowArr,
+                        User.getNameByID((rs.getInt("ResponsibleWriterID")))));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return productList;
+    }
+
+    private static String getNameByID(int responsibleWriterID) {
+        return "BLA";
     }
 
     //fill milestone
@@ -342,7 +347,8 @@ public class User {
                                 rs.getDate("StartDate"),
                                 rs.getDate("EndDate"),
                                 rs.getString("Description"),
-                                rs.getInt("Status")));
+                                rs.getInt("Status"),
+                                User.getNameByID(rs.getInt("ResponsibleWriterID"))));
             }
         } catch (SQLException e1) {
             e1.printStackTrace();

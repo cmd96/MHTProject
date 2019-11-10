@@ -96,7 +96,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //draft
@@ -104,7 +104,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("draftMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("draftMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("draftMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //CRHtmlCode
@@ -112,7 +112,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("CRMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("CRMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("CRMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.BASIC_FLOW;
@@ -124,7 +124,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.OUTLINE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //draft1
@@ -132,7 +132,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("draft_1_MilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("draft_1_MilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("draft_1_MilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_1_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_1_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //draft2
@@ -140,7 +140,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("draft_2_MilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("draft_2_MilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("draft_2_MilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_2_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.DRAFT_2_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //CRHtmlCode
@@ -148,7 +148,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("CRMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("CRMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("CRMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.CR_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.FULL_FLOW;
@@ -160,7 +160,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("sylabusMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("sylabusMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("sylabusMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.SYLLABUS_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.SYLLABUS_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //presentation
@@ -170,7 +170,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("presentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("presentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("presentationMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY, milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //test
@@ -178,7 +178,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("testMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("testMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("testMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.TEST_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.TEST_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //course
@@ -186,7 +186,7 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("courseMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("courseMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("courseMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.COURSE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.COURSE_STRING, getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 //fixPresentation
@@ -194,13 +194,13 @@ public class AddButtons extends HttpServlet {
                 milestoneDueDate = request.getParameter("fixPresentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("fixPresentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("fixPresentationMilestoneDescriptionName");
-                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_CHECKING_STRING ,getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY );
+                tmpMilstone = new ProductMilestone(-1, MILESTONE_NAME.PRESENTATION_CHECKING_STRING ,getIdbyName(milestoneResponsibleWriterName), stringToDate(milestoneStartDate), stringToDate(milestoneDueDate), milestoneDescriptionName, MILESTONE_STATUS.READY ,milestoneResponsibleWriterName);
                 productMilsetones.add(tmpMilstone);
 
                 templateFlow = TEMPLATE_FLOW.COURSE_FLOW;
             }
 
-            ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, getIdbyName(productResponsibleWriterName), productMilsetones, templateFlow);
+            ProjectProduct newProduct = new ProjectProduct(projectID, productName , -1, getIdbyName(productResponsibleWriterName), productMilsetones, templateFlow, productResponsibleWriterName);
             //TODO:call shira function
             try {
                 ProjectProduct.InsertNewProduct(newProduct);

@@ -13,21 +13,33 @@ import java.util.Vector;
 
 public class ProjectProduct {
 
+    private String RWriterString;
     private int projectID;
     private String productName;
     private int productID;
     private int ResponsibleWriterId;
     private List<ProductMilestone> productMilestone;
     private int[] template_flow;
+    public static String EDIT_BTN_ID = "editBtnID";
+    private String editBtnId;
 
-
-    public ProjectProduct(int projectID, String productName, int productID, int responsibleWriterId, List<ProductMilestone> productMilestone, int[] template_flow) {
+    public ProjectProduct(int projectID, String productName, int productID, int responsibleWriterId, List<ProductMilestone> productMilestone, int[] template_flow, String RWname) {
         this.projectID = projectID;
         this.productName = productName;
         this.productID = productID;
-        ResponsibleWriterId = responsibleWriterId;
+        this.ResponsibleWriterId = responsibleWriterId;
         this.productMilestone = productMilestone;
         this.template_flow = template_flow;
+        this.editBtnId = EDIT_BTN_ID + this.productID;
+        this.RWriterString = RWname;
+    }
+
+    public String getRWriterString() {
+        return RWriterString;
+    }
+
+    public void setRWriterString(String RWriterString) {
+        this.RWriterString = RWriterString;
     }
 
     public int getResponsibleWriterId() {
@@ -88,7 +100,9 @@ public class ProjectProduct {
         htmlCode += CONST_HTML_CODE.HTML_PRODUCT_WRAPPER_END;
         htmlCode += CONST_HTML_CODE.HTML_PRODUCT_BTN;
         htmlCode += CONST_HTML_CODE.HTML_PRODUCT_UP_WRAPPER_END;
+        htmlCode = htmlCode.replaceAll(CONST_HTML_CODE.PLACEHOLDER_BTN_ID, this.editBtnId);
         htmlCode = htmlCode.replaceAll(CONST_HTML_CODE.PLACEHOLDER_PRODUCT_NAME, getProductName());
+
         return htmlCode;
     }
 
@@ -102,27 +116,22 @@ public class ProjectProduct {
 
         int[] template_flow = insert.getTemplate_flow();
         int template_flow_flag;
-        if( Arrays.equals(template_flow ,TEMPLATE_FLOW.COURSE_FLOW))
-        {
+        if (Arrays.equals(template_flow, TEMPLATE_FLOW.COURSE_FLOW)) {
             template_flow_flag = TEMPLATE_FLOW.COURSE_FLOW_INT;
-        }
-        else if  (Arrays.equals(template_flow , TEMPLATE_FLOW.FULL_FLOW))
-        {
+        } else if (Arrays.equals(template_flow, TEMPLATE_FLOW.FULL_FLOW)) {
             template_flow_flag = TEMPLATE_FLOW.FULL_FLOW_INT;
-        }
-        else
-        {
+        } else {
             template_flow_flag = TEMPLATE_FLOW.BASIC_FLOW_INT;
         }
         insert_product_db(con, Name, ProjID, rw, template_flow_flag);
         if (productMilestone != null) {
-            int product_id = ( int ) get_product_id(Name, ProjID);
+            int product_id = (int) get_product_id(Name, ProjID);
             ProductMilestone.insert_MileSton_list(con, productMilestone, product_id);
         }
     }
 
-    public static void insert_product_db(Connection con, String Name, int ProjID, int rw ,int templateFlow) {
-        String sql = "INSERT INTO ProjectProduct (ProductName ,ProjectID, ResponsibleWriterID, FlowType) VALUES ( '" + Name + "','" + ProjID + "','" + rw  + "','" + templateFlow+ "' )";
+    public static void insert_product_db(Connection con, String Name, int ProjID, int rw, int templateFlow) {
+        String sql = "INSERT INTO ProjectProduct (ProductName ,ProjectID, ResponsibleWriterID, FlowType) VALUES ( '" + Name + "','" + ProjID + "','" + rw + "','" + templateFlow + "' )";
         try {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(sql);
@@ -133,8 +142,8 @@ public class ProjectProduct {
 
     }
 
-    public static void deleteProduct(int ProductID, int ProjectID){
-        String sql = "delete from ProjectProduct where ProjectID = "+ ProjectID;
+    public static void deleteProduct(int ProductID, int ProjectID) {
+        String sql = "delete from ProjectProduct where ProjectID = " + ProjectID;
         ExecuteUpdate(sql);
         ProductMilestone.deleteMileston(ProductID);
 
@@ -142,14 +151,15 @@ public class ProjectProduct {
 
     public static void deleteProductList(int ProjectID) throws ProjectExeption {
 
-        String sql = "select ProductID from ProjectProduct where ProjectID = "+ ProjectID;
+        String sql = "select ProductID from ProjectProduct where ProjectID = " + ProjectID;
         Vector ProductList = ExecuteIntArry(sql, "ProductID");
 
         for (int i = 0; i < ProductList.size(); i++) {
-            int delete_product = ( int ) ProductList.get(i);
+            int delete_product = (int) ProductList.get(i);
             deleteProduct(delete_product, ProjectID);
         }
     }
+
     public static int get_product_id(String Name, int ProjID) {
 
         String sql = "Select ProductID from ProjectProduct where ProductName like '" + Name + "' and ProjectID like '" + ProjID + "'";
@@ -170,39 +180,39 @@ public class ProjectProduct {
 
     }
 
-    public int getProductIDDB(){
+    public int getProductIDDB() {
         return this.productID;
     }
 
-    public  String getProductNameDB(){
+    public String getProductNameDB() {
         int productID = getProductID();
         String sql = "SELECT ProductName from ProjectProduct where ProductID ='" + productID + "'";
-        String reault = ExecuteString(sql ,"ProductName", null);
+        String reault = ExecuteString(sql, "ProductName", null);
         return reault;
     }
 
-    public int getProjectIDDB(){
+    public int getProjectIDDB() {
         int productID = getProductID();
         String sql = "SELECT ProjectID from ProjectProduct where ProductID ='" + productID + "'";
         int ProjID = ExecuteInt(sql, "ProjectID", -1);
         return ProjID;
     }
 
-    public int getResponsibleWriterIDDB(){
+    public int getResponsibleWriterIDDB() {
         int ProductID = getProductID();
         String sql = "SELECT ResponsibleWriterID from ProjectProduct where ProductID ='" + productID + "'";
         int result = ExecuteInt(sql, "ResponsibleWriterID", -1);
         return result;
     }
 
-    public int getFlowtypDB(){
+    public int getFlowtypDB() {
         int ProductID = getProductID();
         String sql = "SELECT FlowType from ProjectProduct where ProductID ='" + productID + "'";
         int result = ExecuteInt(sql, "FlowType", -1);
         return result;
     }
 
-    public void setProductNameDB( String NewName) {
+    public void setProductNameDB(String NewName) {
         int ProductID = this.getProductID();
         String sql = "update ProjectProduct set ProductName = '" + NewName + "' where ProductID ='" + ProductID + "'";
         ExecuteUpdate(sql);
@@ -245,10 +255,10 @@ public class ProjectProduct {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println(rs);
-            while (rs.next()){
+            while (rs.next()) {
                 result = rs.getInt(label);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
@@ -260,51 +270,47 @@ public class ProjectProduct {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println(rs);
-            while (rs.next()){
+            while (rs.next()) {
                 result = rs.getString(label);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
 
-    static Date ExecuteDate(String sql, String label ) {
+    static Date ExecuteDate(String sql, String label) {
         Date result = null;
         try {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println(rs);
-            while (rs.next()){
+            while (rs.next()) {
                 result = rs.getDate(label);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
 
     static Vector ExecuteIntArry(String sql, String label) {
-        Vector<Integer> d ;
-        d = new Vector<Integer>() ;
+        Vector<Integer> d;
+        d = new Vector<Integer>();
 
         try {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println(rs);
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getInt(label));
                 d.add(rs.getInt(label));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return d;
     }
-
-
-//    public List<>
-
 }
