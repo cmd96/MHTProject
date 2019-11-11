@@ -577,8 +577,8 @@
             <div id="userDetID"><%= user.getUserName() %></div>
         </div>
         <a href="projects.jsp"><button id="projectBtnID" class="outlineBtn"  style="font-family: Rubik">פרויקטים  </button></a>
-        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">היסטוריה</button>
-        <button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">הגדרות</button>
+        <a href="history.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">היסטוריה</button></a>
+        <a href="settings.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">הגדרות</button></a>
         <a href="reportsList.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">דוחות</button></a>
     </div>
     <div id="projectDataID">
