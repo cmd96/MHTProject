@@ -15,15 +15,24 @@ public class User {
     static private String password;
     static private String firstName;
     static private String lastName;
+
+    public static void setHistoryList(List<HistoryAction> historyList) {
+        User.historyList = historyList;
+    }
+
     static private List<userProject> userProjectList;
 
+    public static List<HistoryAction> getHistoryList() {
+        return historyList;
+    }
+
+    static private List<HistoryAction> historyList;
     public User()
     {
 
     }
 
-    public User(String un,String pw)
-    {
+    public User(String un,String pw) throws ClassNotFoundException, ProjectExeption, SQLException {
         username=un;
         password=pw;
         try {
@@ -35,6 +44,30 @@ public class User {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        
+        historyList = readHistory();
+    }
+    private List<HistoryAction> readHistory() throws ProjectExeption, SQLException, ClassNotFoundException{
+
+        Connection con = SQLConnection.getCon();
+        Statement stmt = con.createStatement();
+        List<HistoryAction> historyList= new ArrayList<>();
+        String sql= "Select * from History";
+
+        ResultSet rs = stmt.executeQuery(sql);
+        while (rs.next())
+        {
+            historyList.add(new HistoryAction(
+                    rs.getInt("ID"),
+                    rs.getString("personName"),
+                    rs.getString("projectName"),
+                    rs.getString("productName"),
+                    rs.getString("description"),
+                    rs.getDate("actionDate")));
+        }
+        con.close();
+        return (List<HistoryAction>) historyList;
+
     }
 
     public static String getUsername() {
@@ -82,7 +115,6 @@ public class User {
         }
     }
     public static List<userProject> getUserProjectList() {
-        System.out.println("#############################################3333\n");
         try {
             get_Project(1);
         } catch (ProjectExeption projectExeption) {
@@ -186,7 +218,7 @@ public class User {
         while (rs.next()) {
             id=rs.getInt("ID");
         }
-        System.out.println(" /////  "+id);
+//        System.out.println(" /////  "+id);
         return id;
     }
     public boolean isExist() throws SQLException, ClassNotFoundException {
@@ -211,20 +243,20 @@ public class User {
 
     public static List<userProject> get_Project(int user_id) throws ProjectExeption, SQLException, ClassNotFoundException {
 //        qwery that return the list of project
-        System.out.println("11");
+//        System.out.println("11");
         Connection con = SQLConnection.getCon();
         Statement stmt = con.createStatement();
         List<userProject> projectsList= new ArrayList<>();
         String sql= "Select * from UserProjects WHERE projectManagerID = "+ user_id;
 
             ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
+//            System.out.println(rs);
             while (rs.next())
             {
-                System.out.println(rs.getString("ProjectName"));
-                System.out.println(rs.getString("ProjectCustomer"));
-                System.out.println(rs.getString("ProjectManagerID"));
-                System.out.println(rs.getString("ProjectID"));
+//                System.out.println(rs.getString("ProjectName"));
+//                System.out.println(rs.getString("ProjectCustomer"));
+//                System.out.println(rs.getString("ProjectManagerID"));
+//                System.out.println(rs.getString("ProjectID"));
 
                 projectsList.add(new userProject(
                         rs.getString("ProjectName"),
@@ -337,7 +369,7 @@ public class User {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 name = rs.getString("UserName");
-                System.out.println(name);
+//                System.out.println(name);
             }
             } catch (SQLException e) {
                 e.printStackTrace();

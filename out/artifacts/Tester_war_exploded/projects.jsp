@@ -146,48 +146,48 @@
         <form action="projectListServlet"  id="formWrapper" method="post">
             <div id="dynamicData"></div>
         </form>
-
-
-<div class="s-layout">
-<main class="s-layout__content">
-<form id="popup1" class="overlay" action="addBtnServlet" method="post">
-    <div class="popup">
-        <a class="close" href="#">&times;</a>
-        <h2>הוסף פרויקט</h2>
-
-        <div class="content">
-            <label ><b>שם פרויקט</b></label>
-            <input type="text" placeholder="שם פרויקט" name="projName" required>
-            <label ><b>שם לקוח</b></label>
-            <input type="text" placeholder="שם לקוח" name="customerName" required>
-        </div>
-        <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitID" >אישור</button>
     </div>
 
-</form>
+    <div class="s-layout">
+        <main class="s-layout__content">
+            <form id="popup1" class="overlay" action="addBtnServlet" method="post">
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <h2>הוסף פרויקט</h2>
 
-</main>
-</div>
-<div class="s-layout">
-    <main class="s-layout__content" >
-        <form id="popupEditProject" class="overlay" action="addBtnServlet" method="post">
-            <div class="popup">
-                <a class="close" href="#">&times;</a>
-                <h2>עריכת פרויקט</h2>
-
-                <div class="content">
-                    <label><b>שם פרויקט</b></label>
-                    <input type="text" id="projectNameInputID" name="projName" required >
-                    <label ><b>שם לקוח</b></label>
-                    <input type="text" value="שם לקוח" name="customerName" id="customerNameInputID" required>
-                    <input type="text" style="display: none;" name="editProjectIDName" id="editProjectID" >
+                    <div class="content">
+                        <label ><b>שם פרויקט</b></label>
+                        <input type="text" placeholder="שם פרויקט" name="projName" required>
+                        <label ><b>שם לקוח</b></label>
+                        <input type="text" placeholder="שם לקוח" name="customerName" required>
+                    </div>
+                    <button type="submit" value="Login"  onclick="insterdDataJS()" name="addProjectButton" id="submitID" >אישור</button>
                 </div>
-                <button type="submit" value="Login"  onclick="updateDataJS()" name="setProjectButton" id="setProjectBtnID" >אישור</button>
-            </div>
-        </form>
-    </main>
+
+            </form>
+
+        </main>
+    </div>
+    <div class="s-layout">
+        <main class="s-layout__content" >
+            <form id="popupEditProject" class="overlay" action="addBtnServlet" method="post">
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <h2>עריכת פרויקט</h2>
+
+                    <div class="content">
+                        <label><b>שם פרויקט</b></label>
+                        <input type="text" id="projectNameInputID" name="projName" required >
+                        <label ><b>שם לקוח</b></label>
+                        <input type="text" value="שם לקוח" name="customerName" id="customerNameInputID" required>
+                        <input type="text" style="display: none;" name="editProjectIDName" id="editProjectID" >
+                    </div>
+                    <button type="submit" value="Login"  onclick="updateDataJS()" name="setProjectButton" id="setProjectBtnID" >אישור</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
 </div>
-
-
 </body>
 </html>

@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.test.HistoryAction" %>
+<%@ page import="com.test.User" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 1
   Date: 11/11/2019
@@ -39,8 +41,23 @@
             }
         }
     }
+    function getHistory()
+    {
+      var htmlCodeParent = document.getElementById("myTable");
+      <%
+        String htmlCodejava ="";
+        List<HistoryAction> actionList = User.getHistoryList();
+        for (HistoryAction history : actionList ) {
+            htmlCodejava+= history.getHTMLCode();
+            System.out.println(htmlCodejava+ " &&&&&&&&&&&&&&&&&&");
+        }
+        htmlCodejava = "\""+ htmlCodejava +"\"";
+      %>
+       var htmlcode = <%=htmlCodejava%>;
+       htmlCodeParent.insertAdjacentHTML("beforeend", htmlcode);
+    }
 </script>
-<body>
+<body onload="getHistory()">
 <div id="outlineID">
     <div id="userDetailsID">
         <%--<img src="student.png" style="float: right; margin: 25px">--%>
@@ -66,6 +83,7 @@
             <th style="width:15%;">שם תוצר</th>
             <th style="width:45%;">תיאור</th>
         </tr>
+        <%--<div id="historyDynamicID"></div>--%>
         <tr>
             <td>18/02/2019</td>
             <td>rb</td>

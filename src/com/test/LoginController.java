@@ -1,5 +1,7 @@
 package com.test;
 
+import exception.ProjectExeption;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +21,16 @@ public class LoginController extends HttpServlet {
         String un=request.getParameter("username");
         String pw=request.getParameter("password");
 
-        User user = new User(un,pw);
+        User user = null;
+        try {
+            user = new User(un,pw);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (ProjectExeption projectExeption) {
+            projectExeption.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         this.projectUser = user;
         boolean isUserExist = false;
         try {

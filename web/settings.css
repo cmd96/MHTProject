@@ -70,3 +70,34 @@ html{
     background-color:  #2093B4;
     color: white;
 }
+
+
+
+.settingBtn{
+    background-color: white;
+    color: #2093B4;
+    width: 200px;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #2093B4;
+    border-style: solid;
+    float: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 120%;
+    margin-right: 2%;
+    margin-top: 2%;
+    font-family: Rubik;
+}
+.settingBtn:hover{
+    background-color:  #2093B4;
+    color: white;
+    cursor: pointer;
+}
+.settingBtn:focus{
+    outline: none;
+}
+.settingsButtons{
+    margin-top: 3%;
+}

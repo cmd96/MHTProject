@@ -49,7 +49,7 @@ public class Products {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
                 id = rs.getInt("ProjectID");
-                System.out.println(id);
+//                System.out.println(id);
             }
 
 

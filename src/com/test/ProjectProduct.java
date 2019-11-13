@@ -248,7 +248,7 @@ public class ProjectProduct {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             int count = stmt.executeUpdate(sql);
-            System.out.println("Number of rows updated by executing query1 =  " + count);
+//            System.out.println("Number of rows updated by executing query1 =  " + count);
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -260,7 +260,7 @@ public class ProjectProduct {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
+//            System.out.println(rs);
             while (rs.next()) {
                 result = rs.getInt(label);
             }
@@ -275,7 +275,7 @@ public class ProjectProduct {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
+//            System.out.println(rs);
             while (rs.next()) {
                 result = rs.getString(label);
             }
@@ -291,7 +291,7 @@ public class ProjectProduct {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
+//            System.out.println(rs);
             while (rs.next()) {
                 result = rs.getDate(label);
             }
@@ -309,9 +309,9 @@ public class ProjectProduct {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
+//            System.out.println(rs);
             while (rs.next()) {
-                System.out.println(rs.getInt(label));
+//                System.out.println(rs.getInt(label));
                 d.add(rs.getInt(label));
             }
         } catch (Exception e) {

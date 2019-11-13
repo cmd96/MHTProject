@@ -330,7 +330,7 @@
         for (userProject currentProject : userProjectList) {
             if(currentProject.getProjectMame().equals(Products.getCurrentProjectName()))
                 {
-                    System.out.println(i);
+//                    System.out.println(i);
                     break;
                 }
                 i++;
@@ -340,7 +340,7 @@
         if(ProductList!= null)
         {
             for (ProjectProduct user_project : ProductList ) {
-                System.out.println(user_project.getHtmlCode());
+//                System.out.println(user_project.getHtmlCode());
                 htmlDynamicCode += user_project.getHtmlCode();
             }
         }

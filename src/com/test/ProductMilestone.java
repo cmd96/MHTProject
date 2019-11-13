@@ -296,7 +296,7 @@ public class ProductMilestone {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
             count = stmt.executeUpdate(sql);
-            System.out.println("Number of rows updated by executing query1 =  " + count);
+//            System.out.println("Number of rows updated by executing query1 =  " + count);
         }catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

@@ -37,7 +37,13 @@ public class AddButtons extends HttpServlet {
             }
             User.refreshDB();
             response.sendRedirect("projects.jsp");
-
+            try {
+                User.getHistoryList().add(new HistoryAction(new Date(),User.getUsername() ,name,"---", "create a new project"));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //set project data
@@ -52,7 +58,13 @@ public class AddButtons extends HttpServlet {
             userProject.setProjectCustomerDB(customerName, projectID);
             User.refreshDB();
             response.sendRedirect("projects.jsp");
-
+            try {
+                User.getHistoryList().add(new HistoryAction(new Date(),User.getUsername() ,projectName,"---", "set project Data"));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (request.getParameter("addProductButton") != null)
@@ -76,7 +88,6 @@ public class AddButtons extends HttpServlet {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" + projectID);
             //TODO:find id according name;
             int[] templateFlow = null;
             List<ProductMilestone> productMilsetones = new ArrayList<>();
@@ -93,7 +104,6 @@ public class AddButtons extends HttpServlet {
             if (selectFlow.equals("Short Flow")) {
                 //outline
                 milestoneStartDate = request.getParameter("outlineMilestoneStartDate");
-                System.out.println("#############################################\n" + milestoneStartDate);
                 milestoneDueDate = request.getParameter("outlineMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("outlineMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("outlineMilestoneDescriptionName");
@@ -162,8 +172,6 @@ public class AddButtons extends HttpServlet {
 
                 //presentation
                 milestoneStartDate = request.getParameter("presentationMilestoneStartDate");
-                System.out.println("##############################" + milestoneStartDate + "################################");
-                System.out.println("##############################################################");
                 milestoneDueDate = request.getParameter("presentationMilestoneDueDate");
                 milestoneResponsibleWriterName = request.getParameter("presentationMilestoneResponsibleWriterName");
                 milestoneDescriptionName = request.getParameter("presentationMilestoneDescriptionName");
@@ -203,6 +211,13 @@ public class AddButtons extends HttpServlet {
                 ProjectProduct.InsertNewProduct(newProduct);
             } catch (ProjectExeption projectExeption) {
                 projectExeption.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                User.getHistoryList().add(new HistoryAction(new Date(),User.getUsername() ,projectName,productName, "create a new product"));
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
@@ -349,6 +364,13 @@ public class AddButtons extends HttpServlet {
                 myCurrentProduct.getProductMilestone().get(4).setEndDateDB(request.getParameter("fixPresentationMilestoneDueDate"));
                 myCurrentProduct.getProductMilestone().get(4).setDescriptionDB(request.getParameter("fixPresentationMilestoneDescriptionName"));
 
+            }
+            try {
+                User.getHistoryList().add(new HistoryAction(new Date(),User.getUsername() ,Products.getCurrentProjectName() ,productName, "edit product data"));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
             User.refreshDB();
             response.sendRedirect("products.jsp");
