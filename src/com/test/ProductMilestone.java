@@ -238,7 +238,7 @@ public class ProductMilestone {
 
     public void setProductIDDB(int NewProjID) {
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set ProductID = '" + NewProjID + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET ProductID = '" + NewProjID + "'WHERE  MilestoneID ='" + MileID + "'";
         try {
             Connection con = SQLConnection.getCon();
             Statement stmt = con.createStatement();
@@ -251,41 +251,41 @@ public class ProductMilestone {
 
     public void setMilestonNameDB(String NewMileName){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set MilestoneName = '" + NewMileName + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET MilestoneName = '" + NewMileName + "'WHERE  MilestoneID ='" + MileID + "'";
         ProjectProduct.ExecuteUpdate(sql);
 
     }
 
     public void setResponsibleWriterIdDB(int ResponsibleWriterID){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set ResponsibleWriterID = '" + ResponsibleWriterID + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET ResponsibleWriterID = '" + ResponsibleWriterID + "'WHERE  MilestoneID ='" + MileID + "'";
         ProjectProduct.ExecuteUpdate(sql);
     }
 
-    public void setStartDateDB(Date NewStartDate){
+    public void setStartDateDB(String NewStartDate){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set DateStart = '" + NewStartDate + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET StartDate = '" + NewStartDate + "'WHERE  MilestoneID ='" + MileID + "'";
         int count = 0 ;
         ExecuteUpdate(sql);
     }
 
-    public void setEndDateDB(Date NewEndDate){
+    public void setEndDateDB(String NewEndDate){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set DateToEnd = '" + NewEndDate + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET EndDate = '" + NewEndDate + "'WHERE  MilestoneID ='" + MileID + "'";
         int count = 0 ;
         ExecuteUpdate(sql);
     }
 
     public void setDescriptionDB(String NewDescription){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set Description = '" + NewDescription + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET Description = '" + NewDescription + "'WHERE  MilestoneID ='" + MileID + "'";
         int count = 0 ;
         ExecuteUpdate(sql);
     }
 
     public void setStatusDB(int NewStatus){
         int MileID = getMilestonID();
-        String sql = "update ProductMilestons set Status = '" + NewStatus + "'where MilestoneID ='" + MileID + "'";
+        String sql = "UPDATE  ProductMilestons SET Status = '" + NewStatus + "'WHERE  MilestoneID ='" + MileID + "'";
         int count = 0 ;
         ExecuteUpdate(sql);
     }

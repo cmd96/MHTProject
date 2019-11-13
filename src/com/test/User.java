@@ -357,7 +357,8 @@ public class User {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 mileStonList.add(new ProductMilestone
-                        (rs.getInt("ProductID"),
+                        (rs.getInt("MilestoneID"),
+                                rs.getInt("ProductID"),
                                 rs.getString("MilestoneName"),
                                 rs.getInt("ResponsibleWriterID"),
                                 rs.getDate("StartDate"),

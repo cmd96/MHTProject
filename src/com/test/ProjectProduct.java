@@ -319,4 +319,16 @@ public class ProjectProduct {
         }
         return d;
     }
+
+    public String getTemplate_flow_String() {
+        if(this.template_flow == TEMPLATE_FLOW.COURSE_FLOW)
+        {
+            return TEMPLATE_FLOW.COURSE_FLOW_STRING;
+        }
+        else
+            if(this.template_flow == TEMPLATE_FLOW.BASIC_FLOW){
+            return TEMPLATE_FLOW.Basic_FLOW_STRING;
+        }
+        return TEMPLATE_FLOW.Full_FLOW_STRING;
+    }
 }

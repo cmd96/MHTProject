@@ -356,6 +356,8 @@
     }
     function  setProductBtn(productID)
     {
+        //save product ID
+        document.getElementsByName("saveIDProductName")[0].value = productID;
         var editProductName = document.getElementById("editProductNameID");
         var editWRProductName = document.getElementById("editResWriterNameID");
         var productButton = document.getElementById(productID);
@@ -670,7 +672,10 @@
                     <input type="text" id="editProductNameID" placeholder="שם תוצר" name="productName" required>
                     <label ><b>שם כתב אחראי</b></label>
                     <input type="text" id="editResWriterNameID" placeholder="שם כתב אחראי" name="responsibleWriterName" required>
-                    <select name="select" onchange="selectOnEditFunction()" id="EditselectFlowID">
+                    <%--save ID--%>
+                    <input type="text"  name="saveIDProductName" style="display: none" >
+
+                    <select name="select"  id="EditselectFlowID" disabled>
                         <option>Short Flow</option>
                         <option>Full Flow</option>
                         <option>Course</option>
