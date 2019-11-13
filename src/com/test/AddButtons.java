@@ -234,7 +234,7 @@ public class AddButtons extends HttpServlet {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (request.getParameter("setProductButton") != null)
         {
-            //same to insertProduct - just create editing
+
 
         }
     }

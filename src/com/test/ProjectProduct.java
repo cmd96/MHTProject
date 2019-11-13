@@ -133,6 +133,7 @@ public class ProjectProduct {
     //TODO: SHira - fill this function
     public static void editProduct(ProjectProduct product) throws ProjectExeption, SQLException, ClassNotFoundException
     {
+
     }
 
     public static void insert_product_db(Connection con, String Name, int ProjID, int rw, int templateFlow) {
