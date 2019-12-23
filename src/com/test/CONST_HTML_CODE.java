@@ -9,8 +9,14 @@ public class CONST_HTML_CODE
     public static final String PLACEHOLDER_MILESTONE_CLASS = "##MILESTEONE_CLASS##";
     public static final String MILESTONE_CLASS = "milestone";
     public static final String MILESTONE_END_CLASS = "milestoneEnd";
-    public static final String PLACEHOLDER_MILESTONE_STATUS_DONE_CODE = "<i class=\"far fa-check-circle\"> </i>";
-    public static final String PLACEHOLDER_MILESTONE_STATUS_IN_PROGRESS_CODE = "<i class=\"fas fa-sync-alt\"></i>";
+    public static final String PLACEHOLDER_MILESTONE_STATUS_DONE_CODE = "<label class=\"container\"><input type=\"checkbox\" checked><span class=\"checkmark\" ></span></label>";
+    public static final String PLACEHOLDER_MILESTONE_STATUS_IN_PROGRESS_CODE = "<label class=\"container\"><input type=\"checkbox\" ><span class=\"checkmark\"></span></label>";
+    public static final String PLACEHOLDER_MILESTONE_STATUS_REDY_CODE = "<label class=\"container\"><input type=\"checkbox\" ><span class=\"checkmark\"></span></label>";
+    public static final String PLACEHOLDER_MILESTONE_STATUS_DELIVERY_CODE = "<label class=\"container\"><input type=\"checkbox\" ><span class=\"checkmark\"></span></label>";
+//    public static final String PLACEHOLDER_MILESTONE_STATUS_DONE_CODE = "<i class=\"far fa-check-circle\"> </i>";
+//    public static final String PLACEHOLDER_MILESTONE_STATUS_IN_PROGRESS_CODE = "<i class=\"fas fa-sync-alt\"></i>";
+//    public static final String PLACEHOLDER_MILESTONE_STATUS_REDY_CODE = "<i class=\"fas fa-sync-alt\"></i>";
+//    public static final String PLACEHOLDER_MILESTONE_STATUS_DELIVERY_CODE = "<i class=\"fas fa-sync-alt\"></i>";
     public static final String CSS_MILESTONE_CLASS= "\""+PLACEHOLDER_MILESTONE_CLASS+"\"";
     public static final String CSS_MILESTONE_DATE_DIV_CLASS="\"milestoneDateDiv\"";
     public static final String HTML_MILESTONE_DATE_DIV = "<div class=" + CSS_MILESTONE_DATE_DIV_CLASS+">"+ PLACEHOLDER_MILESTONE_DATE_CODE +"</div>";

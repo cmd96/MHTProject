@@ -31,6 +31,8 @@
     <div class="reportsButtons">
         <a href="reportYearTable.jsp"><button id="projectBtnID" class="reportBtn">לוח תאריכים שנתי</button></a>
         <a href="sumTable.jsp"><button id="projectBtnID" class="reportBtn">טבלת סכומים</button></a>
+        <a href="sumTable.jsp"><button id="projectBtnID" class="reportBtn">מעקב עובדים</button></a>
+        <a href="sumTable.jsp"><button id="projectBtnID" class="reportBtn">תעקב תוצרים</button></a>
     </div>
 </div>
 </body>

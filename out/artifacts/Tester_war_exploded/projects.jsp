@@ -3,7 +3,7 @@
 <%@page import="Creat_Projects.Create_Project" %>
 <%@page import="Project.db.handling.ProjectDBHandling" %>
 <%@ page import="javax.swing.text.Document" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <%@ page import="com.test.*" %>
 <%@ page import="com.test.User" %>
 <%@ page import="com.test.ProjectListController" %>
@@ -17,9 +17,9 @@
   Time: 22:19
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>--%>
     <link rel="stylesheet" type="text/css" href="projects.css">
     <script src="https://kit.fontawesome.com/6c7c7be256.js"></script>
     <title>Projects</title>

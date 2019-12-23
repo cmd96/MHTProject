@@ -11,7 +11,7 @@
 <jsp:useBean id="user" class="com.test.User" scope="request" />
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="reportYearTable.css">
+    <link rel="stylesheet" type="text/css" href="reportYearTables.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
           crossorigin='anonymous'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,7 +25,7 @@
         const days = document.querySelectorAll(".chart-values li");
         const tasks = document.querySelectorAll(".chart-bars li");
         const daysArray = [...days];
-
+tasks[0].
         tasks.forEach(el => {
             const duration = el.dataset.duration.split("-");
             const startDay = duration[0];
@@ -35,18 +35,22 @@
 
             if (startDay.endsWith("½")) {
                 const filteredArray = daysArray.filter(day => day.textContent == startDay.slice(0, -1));
-                left = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth / 2;
+                // left = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth / 2;
+                left=40;
             } else {
                 const filteredArray = daysArray.filter(day => day.textContent == startDay);
-                left = filteredArray[0].offsetLeft;
+                // left = filteredArray[0].offsetLeft;
+                left=10;
             }
 
             if (endDay.endsWith("½")) {
                 const filteredArray = daysArray.filter(day => day.textContent == endDay.slice(0, -1));
-                width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth / 2 - left;
+                // width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth / 2 - left;
+                width=100;
             } else {
                 const filteredArray = daysArray.filter(day => day.textContent == endDay);
-                width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth - left;
+                // width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth - left;
+                width=200;
             }
 
             // apply css
@@ -76,26 +80,32 @@
         <a href="reportsList.jsp"><button id="projectBtnID" class="outlineBtn" style="font-family: Rubik">דוחות</button></a>
     </div>
     <div >
+        <span id="productNameID">Aeronautics</span>
         <div class="chart-wrapper">
             <ul class="chart-values">
-                <li>sun</li>
-                <li>mon</li>
-                <li>tue</li>
-                <li>wed</li>
-                <li>thu</li>
-                <li>fri</li>
-                <li>sat</li>
+                <li>ינואר</li>
+                <li>פברואר</li>
+                <li>מרץ</li>
+                <li>אפריל</li>
+                <li>מאי</li>
+                <li>יוני</li>
+                <li>יולי</li>
+                <li>אוגוסט</li>
+                <li>ספטמבר</li>
+                <li>אוקטובר</li>
+                <li>נובמבר</li>
+                <li>דצמבר</li>
             </ul>
             <ul class="chart-bars">
-                <li data-duration="tue½-wed" data-color="#b03532">Task</li>
-                <li data-duration="wed-sat" data-color="#33a8a5">Task</li>
-                <li data-duration="sun-tue" data-color="#30997a">Task</li>
-                <li data-duration="tue½-thu" data-color="#6a478f">Task</li>
-                <li data-duration="mon-tue½" data-color="#da6f2b">Task</li>
-                <li data-duration="wed-wed" data-color="#3d8bb1">Task</li>
-                <li data-duration="thu-fri½" data-color="#e03f3f">Task</li>
-                <li data-duration="mon½-wed½" data-color="#59a627">Task</li>
-                <li data-duration="fri-sat" data-color="#4464a1">Task</li>
+                <li data-duration="tue½-wed" data-color="#b03532">סילבוס</li>
+                <li data-duration="wed-sat" data-color="#33a8a5">מצגת</li>
+                <li data-duration="sun-tue" data-color="#30997a">מבחן</li>
+                <li data-duration="tue½-thu" data-color="#6a478f">קורס</li>
+                <li data-duration="mon-tue½" data-color="#da6f2b">בדיקת מצגת</li>
+                <li data-duration="wed-wed" data-color="#3d8bb1"></li>
+                <li data-duration="thu-fri½" data-color="#e03f3f"></li>
+                <li data-duration="mon½-wed½" data-color="#59a627"></li>
+                <li data-duration="fri-sat" data-color="#4464a1"></li>
             </ul>
         </div>
     </div>

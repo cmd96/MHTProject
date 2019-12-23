@@ -12,7 +12,7 @@
   Time: 14:32
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage=""%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <%@ page import="com.test.*" %>
 <%@ page import="com.test.User" %>
 
@@ -105,7 +105,7 @@
             "    <input type=\"text\" placeholder=\"תאור\" name=\"sylabusMilestoneDescriptionName\" >\n" +
             "</fieldset> ";
         var presentationHtmlCode = "<fieldset class=\"milestoneWrapper\">\n" +
-            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">הצגה</legend>\n" +
+            "    <legend style=\"margin-left: 1em; padding: 0.2em 0.8em \">מצגת</legend>\n" +
             "    <label>תאריך התחלה</label>\n" +
             "    <input type=\"date\" name=\"presentationMilestoneStartDate\">\n" +
             "    <label>תאריך סיום</label>\n" +
@@ -340,7 +340,6 @@
         if(ProductList!= null)
         {
             for (ProjectProduct user_project : ProductList ) {
-//                System.out.println(user_project.getHtmlCode());
                 htmlDynamicCode += user_project.getHtmlCode();
             }
         }

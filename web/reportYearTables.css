@@ -104,9 +104,15 @@ a {
     /*font-family: sans-serif;*/
     /*padding-top: 40px;*/
 /*}*/
-
+#productNameID{
+    color: #2093B4;
+    font-size: 120%;
+    float: right;
+    margin-right: 3%;
+    margin-top: 3%;
+}
 .chart-wrapper {
-    direction: ltr;
+    direction: rtl;
     max-width: 1150px;
     padding: 0 10px;
     margin: 0 auto;

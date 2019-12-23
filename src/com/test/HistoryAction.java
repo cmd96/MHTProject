@@ -25,8 +25,10 @@ public class HistoryAction {
         this.description = description;
         this.historyID = historyID;
         this.actionDate = actionDate;
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/YYYY");
+        String strActionDate = formatter.format(actionDate);
         this.HTMLCode = HISTORY_BASIC_CODE;
-        this.HTMLCode = this.HTMLCode.replaceAll("#DATE#",actionDate.toString());
+        this.HTMLCode = this.HTMLCode.replaceAll("#DATE#",strActionDate);
         this.HTMLCode = this.HTMLCode.replaceAll("#PERSON#",personName);
         this.HTMLCode = this.HTMLCode.replaceAll("#PROJECT_NAME#",projectName);
         this.HTMLCode = this.HTMLCode.replaceAll("#PRODUCT_NAME#",productName);
@@ -40,8 +42,9 @@ public class HistoryAction {
         this.productName = productName;
         this.description = description;
         this.HTMLCode = HISTORY_BASIC_CODE;
-
-        this.HTMLCode = this.HTMLCode.replaceAll("#DATE#",actionDate.toString());
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/YYYY");
+        String strActionDate = formatter.format(actionDate);
+        this.HTMLCode = this.HTMLCode.replaceAll("#DATE#",strActionDate);
         this.HTMLCode = this.HTMLCode.replaceAll("#PERSON#",personName);
         this.HTMLCode = this.HTMLCode.replaceAll("#PROJECT_NAME#",projectName);
         this.HTMLCode = this.HTMLCode.replaceAll("#PRODUCT_NAME#",productName);

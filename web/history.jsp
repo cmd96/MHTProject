@@ -83,14 +83,7 @@
             <th style="width:15%;">שם תוצר</th>
             <th style="width:45%;">תיאור</th>
         </tr>
-        <%--<div id="historyDynamicID"></div>--%>
-        <tr>
-            <td>18/02/2019</td>
-            <td>rb</td>
-            <td>AAA</td>
-            <td>jj</td>
-            <td>שינוי שם תוצר מ AA ל AAA</td>
-        </tr>
+
     </table>
 </div>
 

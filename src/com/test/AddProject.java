@@ -22,7 +22,7 @@ public class AddProject{
         Connection con = SQLConnection.getCon();
         Statement stmt = con.createStatement();
 
-        int i=stmt.executeUpdate("insert into UserProjects values('"+name+"','"+pmID+"','"+customer+"')");
+        int i=stmt.executeUpdate("insert into UserProjects values(N'"+name+"','"+pmID+"',N'"+customer+"')");
 //        if(i>0)
 //            out.println(name+" project Inserted Successfully");
 //        else
